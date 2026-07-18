@@ -2000,3 +2000,69 @@ header.hide{
     }
 
 }
+
+
+
+/* =====================================
+      Trust Section Responsive
+===================================== */
+
+@media (max-width:1200px){
+
+    .Trust-container{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .trust-section{
+
+        padding:20px 0 50px;
+
+    }
+
+    .Trust-container{
+
+        grid-template-columns:1fr;
+
+        gap:20px;
+
+    }
+
+    .Trust-card{
+
+        min-height:auto;
+
+        padding:30px 25px;
+
+    }
+
+    .Trust-card h3{
+
+        font-size:24px;
+
+    }
+
+    .Trust-card p{
+
+        font-size:16px;
+
+        line-height:28px;
+
+    }
+
+    .icon{
+
+        width:70px;
+
+        height:70px;
+
+        font-size:30px;
+
+    }
+
+}
