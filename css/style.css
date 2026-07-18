@@ -2200,3 +2200,172 @@ header.hide{
     }
 
 }
+
+
+
+/* =====================================
+        FAQ Responsive
+===================================== */
+
+@media (max-width:768px){
+
+    .faq{
+
+        width:92%;
+
+        margin:60px auto;
+
+    }
+
+    .faq-container{
+
+        margin-top:40px;
+
+    }
+
+    .faq-question{
+
+        padding:20px;
+
+        font-size:17px;
+
+        text-align:left;
+
+        gap:15px;
+
+    }
+
+    .faq-question span{
+
+        font-size:24px;
+
+        flex-shrink:0;
+
+    }
+
+    .faq-answer p{
+
+        padding:0 20px 20px;
+
+        font-size:15px;
+
+        line-height:26px;
+
+    }
+
+}
+
+
+
+/* =====================================
+        Footer Responsive
+===================================== */
+
+@media (max-width:992px){
+
+    .footer-top{
+
+        flex-direction:column;
+
+        gap:50px;
+
+    }
+
+    .footer-logo{
+
+        max-width:100%;
+
+    }
+
+    .footer-links{
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:35px;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .footer{
+
+        padding:50px 0 20px;
+
+    }
+
+    .footer-links{
+
+        grid-template-columns:1fr;
+
+        gap:30px;
+
+    }
+
+    .footer-column h4{
+
+        font-size:18px;
+
+    }
+
+    .footer-column a{
+
+        font-size:15px;
+
+    }
+
+    .footer-bottom{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .footer-bottom-links{
+
+        justify-content:center;
+
+        flex-wrap:wrap;
+
+        gap:15px;
+
+    }
+
+}
+
+
+/* =====================================
+        Global Mobile Fix
+===================================== */
+
+img{
+
+    max-width:100%;
+
+    height:auto;
+
+}
+
+button{
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+@media (max-width:768px){
+
+    body{
+
+        overflow-x:hidden;
+
+    }
+
+    .container{
+
+        width:92%;
+
+    }
+
+}
