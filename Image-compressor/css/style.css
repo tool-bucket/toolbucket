@@ -1554,3 +1554,85 @@ background:#23365d;
     color:#94A3B8;
 
 }
+
+
+
+
+
+/* =====================================
+        Footer Responsive
+===================================== */
+
+@media (max-width:992px){
+
+    .footer-top{
+
+        flex-direction:column;
+
+        gap:50px;
+
+    }
+
+    .footer-logo{
+
+        max-width:100%;
+
+    }
+
+    .footer-links{
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:35px;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .footer{
+
+        padding:50px 0 20px;
+
+    }
+
+    .footer-links{
+
+        grid-template-columns:1fr;
+
+        gap:30px;
+
+    }
+
+    .footer-column h4{
+
+        font-size:18px;
+
+    }
+
+    .footer-column a{
+
+        font-size:15px;
+
+    }
+
+    .footer-bottom{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .footer-bottom-links{
+
+        justify-content:center;
+
+        flex-wrap:wrap;
+
+        gap:15px;
+
+    }
+
+}
