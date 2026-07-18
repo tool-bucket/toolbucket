@@ -89,3 +89,209 @@
     }
 
 }
+
+
+/* =========================
+      Section Title
+========================= */
+
+@media(max-width:768px){
+
+.section-title{
+
+    margin-bottom:40px;
+
+}
+
+.section-title h2{
+
+    font-size:34px;
+
+}
+
+.section-title p{
+
+    font-size:16px;
+
+    line-height:28px;
+
+}
+
+.section-badge{
+
+    font-size:13px;
+
+    padding:8px 16px;
+
+}
+
+}
+
+
+/* =========================
+      Result Card
+========================= */
+
+@media(max-width:576px){
+
+.result-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.result-card{
+
+    padding:18px;
+
+}
+
+.result-box{
+
+    padding:14px;
+
+}
+
+.result-box strong{
+
+    font-size:17px;
+
+}
+
+.download-btn{
+
+    font-size:16px;
+
+}
+
+}
+
+/* =========================
+        FAQ
+========================= */
+
+@media(max-width:768px){
+
+.faq{
+
+    width:92%;
+
+    margin:60px auto;
+
+}
+
+.faq-container{
+
+    margin-top:40px;
+
+}
+
+.faq-question{
+
+    padding:20px;
+
+    font-size:17px;
+
+    text-align:left;
+
+}
+
+.faq-question span{
+
+    font-size:24px;
+
+}
+
+.faq-answer p{
+
+    padding:0 20px 20px;
+
+    font-size:15px;
+
+    line-height:26px;
+
+}
+
+}
+
+/* =========================
+      Footer
+========================= */
+
+@media(max-width:992px){
+
+.footer-top{
+
+    flex-direction:column;
+
+    gap:45px;
+
+}
+
+.footer-links{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.footer{
+
+    padding:50px 0 20px;
+
+}
+
+.footer-links{
+
+    grid-template-columns:1fr;
+
+    gap:30px;
+
+}
+
+.footer-bottom{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+.footer-bottom-links{
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+}
+
+}
+
+/* =========================
+      Global Fix
+========================= */
+
+img{
+
+    max-width:100%;
+
+}
+
+@media(max-width:768px){
+
+body{
+
+    overflow-x:hidden;
+
+}
+
+.container{
+
+    width:92%;
+
+}
+
+}
