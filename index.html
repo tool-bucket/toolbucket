@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
+   
     <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -13,13 +12,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO -->
-    <title>ToolBucket - Free Online Image, PDF & Developer Tools</title>
+<title>Free Image Cropper Online - Crop JPG, PNG & WEBP | ToolBucket</title>
 
-    <meta name="description"
-        content="ToolBucket offers free online image, PDF, text and developer tools. Compress, resize, convert, crop images and optimize files securely in your browser.">
+   <meta name="description"
+content="Crop JPG, PNG and WEBP images online for free with ToolBucket. Fast, secure and browser-based image cropper with no upload limits or registration required.">
 
-    <meta name="keywords"
-        content="ToolBucket, Image Compressor, Image Resizer, Image Converter, PDF Tools, Developer Tools, Online Tools, Free Tools">
+   <meta name="keywords"
+content="image cropper, crop image online, free image cropper, crop jpg online, crop png online, webp cropper, image editing tool">
 
     <meta name="author" content="ToolBucket">
 
@@ -27,32 +26,34 @@
 
     <meta name="theme-color" content="#0F172A">
 
-    <link rel="canonical" href="https://toolbucket.site/">
+    <link rel="canonical" href="https://toolbucket.site/Image-cropper/">
 
     <!-- Open Graph -->
 
     <meta property="og:type" content="website">
 
-    <meta property="og:title" content="ToolBucket - Free Online Image & PDF Tools">
+    <meta property="og:title"
+     content="Free Image Cropper Online | ToolBucket">
 
-    <meta property="og:description"
-        content="Free online image, PDF and developer tools. Fast, secure and 100% browser based.">
+     <meta property="og:description"
+        content="Crop images online for free. Supports JPG, PNG and WEBP with high-quality output.">
 
-    <meta property="og:url" content="https://toolbucket.site/">
+    <meta property="og:url"
+    content="https://toolbucket.site/Image-cropper/">
 
-    <meta property="og:image" content="https://toolbucket.site/assets/preview.jpg">
+
 
     <!-- Twitter -->
 
     <meta name="twitter:card" content="summary_large_image">
 
-    <meta name="twitter:title" content="ToolBucket">
+    <meta name="twitter:title"
+     content="Free Image Cropper Online | ToolBucket">
 
     <meta name="twitter:description"
-        content="Free Online Image & PDF Tools">
+     content="Crop JPG, PNG & WEBP images online for free. Fast and secure browser-based image cropper.">
 
-    <meta name="twitter:image"
-        content="https://toolbucket.site/assets/preview.jpg">
+    
 
     <!-- Favicon -->
 
@@ -75,10 +76,17 @@
     <!-- CSS -->
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/cropperjs@1.6.2/dist/cropper.min.css">
 
 </head>
 <body>
 
+
+    
     <header>
 
     <nav class="navbar">
@@ -96,7 +104,6 @@
             <h2>Tool<span>Bucket</span></h2>
 
         </a>
-
 
         <!-- Navigation -->
 
@@ -188,7 +195,7 @@
 
         <!-- Button -->
 
-        <a href="#" class="nav-btn">
+        <a href="/Image-cropper/" class="nav-btn">
 
             <i class="fa-solid fa-layer-group"></i>
 
@@ -203,7 +210,6 @@
             <i class="fa-solid fa-bars"></i>
 
         </div>
-
 
         <div class="mobile-menu">
 
@@ -255,595 +261,262 @@
 </header>
 
 
-
 <section class="hero">
 
-    <div class="hero-left">
+    <div class="container">
 
-        <div class="hero-badge">
+        <!-- Left -->
 
-            <i class="fa-solid fa-shield-heart"></i>
+        <div class="hero-content">
 
-            100% Free • Secure • Browser Based
+            <span class="badge">
+                <i class="fa-solid fa-crop-simple"></i>
+                Free Online Image Cropper
+            </span>
 
-        </div>
+            <h1>
+                Crop Images
+                <span>Online</span>
+                Instantly
+            </h1>
 
-        <h1>
+            <p>
+                Crop JPG, PNG and WEBP images directly in your browser.
+                No upload limits, no watermark and completely free.
+            </p>
 
-            The Ultimate <span>Online</span><br>
+            <div class="hero-features">
 
-            Image & PDF Toolbox
+                <div>
+                    <i class="fa-solid fa-bolt"></i>
+                    Fast
+                </div>
 
-        </h1>
+                <div>
+                    <i class="fa-solid fa-lock"></i>
+                    Secure
+                </div>
 
-        <p>
+                <div>
+                    <i class="fa-solid fa-mobile-screen"></i>
+                    Mobile Friendly
+                </div>
 
-            Compress, resize, convert and optimize your files
-            directly in your browser.
-            No signup, no installation and completely free.
-
-        </p>
-
-        <div class="hero-btns">
-
-            <a href="#" class="primary-btn">
-
-                Explore All Tools
-
-            </a>
-
-            <a href="Image-compressor/index.html" class="secondary-btn">
-
-                Image Compressor
-
-            </a>
-
-        </div>
-
-        <div class="hero-features">
-
-            <span><i class="fa-solid fa-lock"></i> Privacy First</span>
-
-            <span><i class="fa-solid fa-bolt"></i> Lightning Fast</span>
-
-            <span><i class="fa-solid fa-mobile-screen"></i> Works Everywhere</span>
+            </div>
 
         </div>
 
-    </div>
-
-    <div class="hero-right">
+        <!-- Right -->
 
         <div class="preview-card">
 
-            <div class="preview-header">
+            <div class="upload-area" id="uploadArea">
 
-                <i class="fa-solid fa-image"></i>
+                <input type="file"
+                    id="fileInput"
+                    accept="image/*"
+                    hidden>
 
-                Image Compressor
+                <i class="fa-solid fa-cloud-arrow-up upload-icon"></i>
 
-            </div>
+                <h3>Drag & Drop Image</h3>
 
-            <div class="upload-preview">
+                <p>or</p>
 
-                <i class="fa-solid fa-cloud-arrow-up"></i>
+                <button class="upload-btn"
+                    id="uploadBtn">
 
-                <p>Drag & Drop Image</p>
+                    Select Image
 
-            </div>
-
-            <div class="quality">
-
-                <label>Quality</label>
-
-                <input type="range" value="80">
+                </button>
 
             </div>
 
-            <div class="preview-result">
+            <!-- Cropper -->
 
-                <div>
+            <div class="cropper-container hidden" id="cropperContainer">
 
-                    <small>Original</small>
-
-                    <h4>4.2 MB</h4>
-
-                </div>
-
-                <div>
-
-                    <small>Compressed</small>
-
-                    <h4>820 KB</h4>
-
-                </div>
+                <img id="image" alt="Preview">
 
             </div>
 
-            <button>
+            <!-- Controls -->
 
-                Compress Image
+            <div class="controls hidden" id="controls">
 
-            </button>
+    <div class="toolbar">
 
-        </div>
+        <select id="aspectRatio">
+            <option value="NaN">Free</option>
+            <option value="1">1 : 1</option>
+            <option value="1.3333">4 : 3</option>
+            <option value="1.7777">16 : 9</option>
+            <option value="0.5625">9 : 16</option>
+        </select>
+
+        <button id="rotateLeft">
+            <i class="fa-solid fa-rotate-left"></i>
+        </button>
+
+        <button id="rotateRight">
+            <i class="fa-solid fa-rotate-right"></i>
+        </button>
+
+        <button id="zoomIn">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+        </button>
+
+        <button id="zoomOut">
+            <i class="fa-solid fa-magnifying-glass-minus"></i>
+        </button>
+
+        <button id="resetBtn">
+            <i class="fa-solid fa-arrow-rotate-left"></i>
+        </button>
 
     </div>
 
-</section>
+    <button class="crop-btn" id="cropBtn">
+        Crop Image
+    </button>
 
-
-
-
-
-
-
-
-
-
-<section class="trust-section">
-    <div class="section-title">
-        <h2>Why Millions Trust ToolBucket</h2>
-        <p>
-            Fast, secure and easy-to-use online tools designed to save your
-            time without compromising quality.
-        </p>
-    </div>
-
-    <div class="Trust-container">
-        <div class="Trust-card">
-        <div class="icon">⚡</div>
-        <h3>Lightning Fast</h3>
-         <p>
-                Process your files instantly with optimized performance.
-            </p>
-
-        </div>
-
-        <div class="Trust-card">
-            <div class="icon">🔒</div>
-            <h3>100% Secure</h3>
-            <p>
-                Your files remain private and are automatically removed.
-            </p>
-        </div>
-
-        <div class="Trust-card">
-            <div class="icon">🌍</div>
-            <h3>Works Everywhere</h3>
-            <p>
-                Compatible with desktop, tablet and mobile devices.
-            </p>
-        </div>
-
-        <div class="Trust-card">
-             <div class="icon">💎</div>
-            <h3>Free Forever</h3>
-            <p>
-                Use most tools without creating an account or paying anything.
-            </p>
+    <a
+        id="downloadBtn"
+        class="download-btn hidden"
+        download="cropped-image.png">
         
-        </div>
-    </div>
-</section>
 
+        Download Image
 
-
-
-
-
-
-
-
-<section class="popular-tools">
-
-    <div class="container">
-
-        <div class="section-title">
-
-            <span class="section-tag">OUR TOOLS</span>
-
-            <h2>Popular <span>Tools</span></h2>
-
-            <p>
-                Choose from our growing collection of free online tools.
-            </p>
-
-        </div>
-
-        <div class="swiper toolsSwiper">
-
-            <div class="swiper-wrapper">
-
-                <div class="swiper-slide">
-                    <a href="/image-compressor" class="tool-card">
-                        <div class="tool-icon">
-                            <i class="fa-solid fa-file-image"></i>
-                        </div>
-                        <h3>Image Compressor</h3>
-                        <p>Compress images without losing quality.</p>
-                        <span>Open Tool →</span>
-                    </a>
-                </div>
-
-                <div class="swiper-slide">
-                    <a href="/image-resizer" class="tool-card">
-                        <div class="tool-icon">
-                            <i class="fa-solid fa-expand"></i>
-                        </div>
-                        <h3>Image Resizer</h3>
-                        <p>Resize images instantly.</p>
-                        <span>Open Tool →</span>
-                    </a>
-                </div>
-
-                <div class="swiper-slide">
-    <a href="/jpg-to-png" class="tool-card">
-        <div class="tool-icon">
-            <i class="fa-solid fa-image"></i>
-        </div>
-        <h3>JPG to PNG</h3>
-        <p>Convert JPG images into PNG format instantly.</p>
-        <span>Open Tool →</span>
     </a>
+
 </div>
 
-<div class="swiper-slide">
-    <a href="/png-to-jpg" class="tool-card">
-        <div class="tool-icon">
-            <i class="fa-solid fa-images"></i>
-        </div>
-        <h3>PNG to JPG</h3>
-        <p>Convert transparent PNG images into JPG.</p>
-        <span>Open Tool →</span>
-    </a>
-</div>
+<div class="image-info hidden" id="imageInfo">
 
-<div class="swiper-slide">
-    <a href="/image-to-pdf" class="tool-card">
-        <div class="tool-icon">
-            <i class="fa-solid fa-file-pdf"></i>
-        </div>
-        <h3>Image to PDF</h3>
-        <p>Create PDF documents from multiple images.</p>
-        <span>Open Tool →</span>
-    </a>
-</div>
+    <div class="info-box">
 
-<div class="swiper-slide">
-    <a href="/pdf-to-image" class="tool-card">
-        <div class="tool-icon">
-            <i class="fa-solid fa-file-export"></i>
-        </div>
-        <h3>PDF to Image</h3>
-        <p>Extract high-quality images from PDF files.</p>
-        <span>Open Tool →</span>
-    </a>
-</div>
+        <h3>Original Image</h3>
 
-                <div class="swiper-slide">
-                    <a href="/image-converter" class="tool-card">
-                        <div class="tool-icon">
-                            <i class="fa-solid fa-repeat"></i>
-                        </div>
-                        <h3>Image Converter</h3>
-                        <p>Convert JPG PNG WEBP.</p>
-                        <span>Open Tool →</span>
-                    </a>
-                </div>
-
-                <div class="swiper-slide">
-                    <a href="/image-cropper" class="tool-card">
-                        <div class="tool-icon">
-                            <i class="fa-solid fa-crop-simple"></i>
-                        </div>
-                        <h3>Image Cropper</h3>
-                        <p>Crop images online.</p>
-                        <span>Open Tool →</span>
-                    </a>
-                </div>
-
-            </div>
-
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-pagination"></div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<section class="why-toolbucket">
-
-    <div class="container">
-
-        <div class="section-title">
-
-            <span class="section-tag">WHY CHOOSE US</span>
-
-            <h2>Why Choose <span>ToolBucket</span></h2>
-
-            <p>
-                Experience lightning-fast, secure, and completely free online tools
-                designed for everyone.
-            </p>
-
-        </div>
-
-        <div class="why-grid">
-
-            <div class="why-card">
-
-                <div class="why-icon">
-                    <i class="fa-solid fa-bolt"></i>
-                </div>
-
-                <h3>Lightning Fast</h3>
-
-                <p>
-                    Process your files in seconds with optimized performance.
-                </p>
-
-            </div>
-
-            <div class="why-card">
-
-                <div class="why-icon">
-                    <i class="fa-solid fa-lock"></i>
-                </div>
-
-                <h3>100% Secure</h3>
-
-                <p>
-                    Files never leave your browser and are automatically removed.
-                </p>
-
-            </div>
-
-            <div class="why-card">
-
-                <div class="why-icon">
-                    <i class="fa-solid fa-gift"></i>
-                </div>
-
-                <h3>Completely Free</h3>
-
-                <p>
-                    No signup. No hidden charges. Unlimited usage.
-                </p>
-
-            </div>
-
-            <div class="why-card">
-
-                <div class="why-icon">
-                    <i class="fa-solid fa-mobile-screen"></i>
-                </div>
-
-                <h3>Mobile Friendly</h3>
-
-                <p>
-                    Works perfectly on desktop, tablet and mobile devices.
-                </p>
-
-            </div>
-
-            <div class="why-card">
-
-                <div class="why-icon">
-                    <i class="fa-solid fa-layer-group"></i>
-                </div>
-
-                <h3>Multiple Tools</h3>
-
-                <p>
-                    Image, PDF and many more useful tools in one place.
-                </p>
-
-            </div>
-
-            <div class="why-card">
-
-                <div class="why-icon">
-                    <i class="fa-solid fa-rocket"></i>
-                </div>
-
-                <h3>Always Improving</h3>
-
-                <p>
-                    New online tools are added regularly with continuous updates.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<section class="tool-categories">
-
-    <div class="container">
-
-        <div class="section-title">
-
-            <span class="section-tag">CATEGORIES</span>
-
-            <h2>Browse Tool <span>Categories</span></h2>
-
-            <p>
-                Explore our growing collection of powerful online tools organized by category.
-            </p>
-
-        </div>
-
-        <div class="category-grid">
-
-            <a href="#" class="category-card">
-
-                <div class="category-icon">
-                    <i class="fa-regular fa-image"></i>
-                </div>
-
-                <h3>Image Tools</h3>
-
-                <p>Compress, crop, resize, convert and edit images.</p>
-
-                <div class="category-footer">
-
-                    <span>12+ Tools</span>
-
-                    <i class="fa-solid fa-arrow-right"></i>
-
-                </div>
-
-            </a>
-
-            <a href="#" class="category-card">
-
-                <div class="category-icon">
-                    <i class="fa-regular fa-file-pdf"></i>
-                </div>
-
-                <h3>PDF Tools</h3>
-
-                <p>Merge, split, compress and convert PDF files.</p>
-
-                <div class="category-footer">
-
-                    <span>10+ Tools</span>
-
-                    <i class="fa-solid fa-arrow-right"></i>
-
-                </div>
-
-            </a>
-
-            <a href="#" class="category-card">
-
-                <div class="category-icon">
-                    <i class="fa-solid fa-robot"></i>
-                </div>
-
-                <h3>AI Tools</h3>
-
-                <p>Smart AI-powered utilities to boost productivity.</p>
-
-                <div class="category-footer">
-
-                    <span>Coming Soon</span>
-
-                    <i class="fa-solid fa-arrow-right"></i>
-
-                </div>
-
-            </a>
-
-            <a href="#" class="category-card">
-
-                <div class="category-icon">
-                    <i class="fa-solid fa-font"></i>
-                </div>
-
-                <h3>Text Tools</h3>
-
-                <p>Case converter, word counter and text utilities.</p>
-
-                <div class="category-footer">
-
-                    <span>8+ Tools</span>
-
-                    <i class="fa-solid fa-arrow-right"></i>
-
-                </div>
-
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-
-
-
-
-<section class="faq">
-
-    <div class="section-title">
-        <h2>Frequently Asked Questions</h2>
         <p>
-            Everything you need to know about ToolBucket Tools.
+            <i class="fa-solid fa-expand"></i>
+            <span id="originalDimensions">-</span>
         </p>
+
+        <p>
+            <i class="fa-solid fa-file"></i>
+            <span id="originalSize">-</span>
+        </p>
+
     </div>
+
+    <div class="divider"></div>
+
+    <div class="info-box">
+
+        <h3>Cropped Image</h3>
+
+        <p>
+            <i class="fa-solid fa-expand"></i>
+            <span id="croppedDimensions">-</span>
+        </p>
+
+        <p>
+            <i class="fa-solid fa-file"></i>
+            <span id="croppedSize">-</span>
+        </p>
+
+    </div>
+
+</div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<div class="section-title">
+
+    <span class="section-badge">
+        <i class="fa-solid fa-circle-question"></i>
+        FAQ
+    </span>
+
+    <h2>
+        Frequently Asked
+        <span>Questions</span>
+    </h2>
+
+    <p>
+       Find quick answers about our free Image Cropper tool, supported formats, privacy, image quality, and more.
+    </p>
+
+</div>
 
     <div class="faq-container">
 
         <div class="faq-item">
             <button class="faq-question">
-                Is ToolBucket completely free to use?
+              Is ToolBucket Image Cropper free to use?
                 <span>+</span>
             </button>
 
             <div class="faq-answer">
                 <p>
-                   Yes! ToolBucket is completely free to use. You can compress images, convert files, and use our online tools without creating an account or paying any subscription fees.
+                  Yes, ToolBucket Image Cropper is completely free to use. You can crop JPG, PNG, and WEBP images without creating an account or paying any fees. There are no watermarks on your downloaded images.
                 </p>
             </div>
         </div>
 
         <div class="faq-item">
             <button class="faq-question">
-                Are my files safe and secure?
+           Are my images uploaded to your server?
                 <span>+</span>
             </button>
 
             <div class="faq-answer">
                 <p>
-                   Absolutely. Your privacy is our priority. Files are processed securely in your browser whenever possible, and uploaded files are automatically removed after processing. We never store or share your personal data.
-                </p>
+              
+                    No. Your images are processed directly in your browser. We do not upload, store, or share your files, ensuring your privacy and security throughout the cropping process.
+                    </p>
             </div>
+
         </div>
 
         <div class="faq-item">
             <button class="faq-question">
-                Which file formats are supported?
+                Which image formats are supported?
                 <span>+</span>
             </button>
 
             <div class="faq-answer">
                 <p>
-                   ToolBucket supports popular formats such as JPG, PNG, WEBP, PDF, and more. We continuously add support for new file formats and tools to improve your experience.
-                </p>
-            </div>
+              ToolBucket Image Cropper supports popular image formats including JPG, PNG, and WEBP. You can upload, crop, and download your images quickly while maintaining high image quality.
+              </p>
+        </div>
         </div>
 
         <div class="faq-item">
             <button class="faq-question">
-                Do I need to install any software?
+              Will cropping reduce my image quality?
                 <span>+</span>
             </button>
 
             <div class="faq-answer">
                 <p>
-                    No installation is required. ToolBucket works entirely in your web browser on desktop, tablet, and mobile devices. Simply open the tool, upload your file, and get instant results.
-                </p>
+             No. Cropping only removes unwanted areas of your image and keeps the remaining portion in high quality. ToolBucket preserves image clarity during the cropping process.
+             </p>
             </div>
         </div>
 
     </div>
 
 </section>
+
 
 
 
@@ -949,9 +622,8 @@
 
 
 
+<script src="https://cdn.jsdelivr.net/npm/cropperjs@1.6.2/dist/cropper.min.js"></script>
 
-    
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>
