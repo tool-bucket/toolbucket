@@ -1,5 +1,41 @@
 
 
+const revealElements = document.querySelectorAll(
+".tool-card, .category-card, .feature-card"
+);
+
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if(entry.isIntersecting){
+
+            entry.target.classList.add("show");
+
+        }
+
+    });
+
+},{
+    threshold:0.15
+});
+
+revealElements.forEach(item=>observer.observe(item));
+
+const current = window.location.pathname;
+
+document.querySelectorAll(".nav-links a").forEach(link=>{
+
+if(link.getAttribute("href")==current){
+
+link.classList.add("active");
+
+}
+
+});
+
+
+
 
 
 // =========================
