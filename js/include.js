@@ -12,23 +12,46 @@ async function loadComponent(id, file) {
 
         element.innerHTML = await response.text();
 
-if (id === "navbar" && typeof initNavbar === "function") {
-    initNavbar();
-}
+        if (id === "navbar" && typeof initNavbar === "function") {
+            initNavbar();
+        }
 
     } catch (err) {
         console.error(err);
     }
 }
 
-const pathParts = location.pathname.split("/").filter(Boolean);
+// Current page path
+const path = window.location.pathname;
 
-// Home page = / ya /index.html
-const isHome =
-    pathParts.length === 0 ||
-    (pathParts.length === 1 && pathParts[0] === "index.html");
+// Default path
+let basePath = "..";
 
-const basePath = isHome ? "." : "..";
+// Home Page
+if (
+    path === "/" ||
+    path.endsWith("/index.html") && !path.includes("/blog/")
+) {
+    basePath = ".";
+}
 
+// Blog Home
+if (
+    path.includes("/blog/") &&
+    (path.endsWith("/blog/") || path.endsWith("/blog/index.html"))
+) {
+    basePath = "..";
+}
+
+// Blog Articles
+if (
+    path.includes("/blog/") &&
+    !path.endsWith("/blog/") &&
+    !path.endsWith("/blog/index.html")
+) {
+    basePath = "../..";
+}
+
+// Load Components
 loadComponent("navbar", `${basePath}/components/navbar.html`);
 loadComponent("footer", `${basePath}/components/footer.html`);
