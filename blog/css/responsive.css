@@ -1,0 +1,39 @@
+@media (max-width:768px){
+
+.blog-hero{
+    padding:140px 20px 70px;
+}
+
+.blog-hero h1{
+    font-size:2.2rem;
+}
+
+.blog-stats{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.blog-search{
+    margin:35px auto;
+}
+
+}
+
+@media (max-width:480px){
+
+.blog-stats{
+    grid-template-columns:1fr;
+}
+
+.blog-search input{
+    padding:16px 18px;
+}
+
+.blog-search button{
+    width:60px;
+}
+
+.blog-hero h1{
+    font-size:1.9rem;
+}
+
+}
