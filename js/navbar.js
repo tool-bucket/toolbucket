@@ -25,29 +25,41 @@ function initNavbar() {
 
     }
 
-    // =========================
-    // Tools Dropdown
-    // =========================
+// =========================
+// Tools Dropdown
+// =========================
 
-    const toolsDropdown = document.querySelector(".tools-dropdown");
-    const toolsBtn = document.querySelector(".tools-btn");
+const dropdowns = document.querySelectorAll(".tools-dropdown");
 
-    if (toolsDropdown && toolsBtn) {
+dropdowns.forEach(dropdown => {
 
-        toolsBtn.addEventListener("click", (e) => {
+    const btn = dropdown.querySelector(".tools-btn");
 
-            e.stopPropagation();
-            toolsDropdown.classList.toggle("active");
+    btn.addEventListener("click", (e) => {
 
+        e.stopPropagation();
+
+        // Dusre dropdown close karo
+        dropdowns.forEach(item => {
+            if (item !== dropdown) {
+                item.classList.remove("active");
+            }
         });
 
-        document.addEventListener("click", () => {
+        // Current toggle
+        dropdown.classList.toggle("active");
 
-            toolsDropdown.classList.remove("active");
+    });
 
-        });
+});
 
-    }
+document.addEventListener("click", () => {
+
+    dropdowns.forEach(dropdown => {
+        dropdown.classList.remove("active");
+    });
+
+});
 
     // =========================
     // Mobile Menu
@@ -83,17 +95,20 @@ function initNavbar() {
     // Mobile Dropdown
     // =========================
 
-    const mobileTools = document.querySelector(".mobile-tools");
-    const mobileToolsBtn = document.querySelector(".mobile-tools-btn");
+   const mobileDropdowns = document.querySelectorAll(".mobile-tools");
 
-    if (mobileTools && mobileToolsBtn) {
+mobileDropdowns.forEach(dropdown => {
 
-        mobileToolsBtn.addEventListener("click", () => {
+    const btn = dropdown.querySelector(".mobile-tools-btn");
 
-            mobileTools.classList.toggle("active");
+    btn.addEventListener("click", () => {
 
-        });
+        dropdown.classList.toggle("active");
 
-    }
+    });
+
+});
+
+ 
 
 }
