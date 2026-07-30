@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Basic -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <!-- ===========================
+        SEO
+=========================== -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Free JSON Formatter & Validator Online | Beautify, Minify & Validate JSON - ToolBucket</title>
+
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="icon" href="/favicon.ico">
+
+<meta name="description"
+content="Free online JSON Formatter & Validator by ToolBucket. Beautify, format, validate, and minify JSON instantly. Upload JSON files, fix syntax errors, and improve readability. Fast, secure, and works entirely in your browser.">
+
+<meta name="keywords"
+content="json formatter, json validator, json beautifier, format json online, validate json, json pretty print, json formatter online, json minifier, json beautify tool, json parser, json editor, free json formatter, developer tools">
+
+<meta name="author" content="ToolBucket">
+
+<meta name="robots" content="index,follow,max-image-preview:large">
+
+<meta name="theme-color" content="#0F172A">
+
+<link rel="canonical"
+href="https://toolbucket.site/developer-tools/json-formatter/">
+
+<!-- Open Graph -->
+
+<meta property="og:type" content="website">
+
+<meta property="og:title"
+content="Free JSON Formatter & Validator Online | ToolBucket">
+
+<meta property="og:description"
+content="Beautify, validate, format, and minify JSON online for free. Fast, secure, and developer-friendly JSON Formatter by ToolBucket.">
+
+<meta property="og:url"
+content="https://toolbucket.site/developer-tools/json-formatter/">
+
+<meta property="og:image"
+content="https://toolbucket.site/assets/json-formatter.webp">
+
+<meta property="og:image:alt"
+content="JSON Formatter & Validator Tool by ToolBucket">
+
+<meta property="og:site_name"
+content="ToolBucket">
+
+<meta property="og:locale"
+content="en_US">
+
+<!-- Twitter -->
+
+<meta name="twitter:card"
+content="summary_large_image">
+
+<meta name="twitter:title"
+content="Free JSON Formatter & Validator Online | ToolBucket">
+
+<meta name="twitter:description"
+content="Format, validate, beautify, and minify JSON online for free. Secure, fast, and browser-based JSON Formatter.">
+
+
+<meta name="twitter:image:alt"
+content="JSON Formatter & Validator Tool">
+
+<!-- Google Fonts -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<!-- Font Awesome -->
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+
+    <div id="navbar"></div>
+
+
+  <main class="json-tool">
+
+    <!-- Hero -->
+
+    <section class="hero">
+
+        <span class="badge">
+            <i class="fa-solid fa-code"></i>
+            Developer Tool
+        </span>
+
+        <button id="themeBtn" class="theme-btn" aria-label="Toggle Theme">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <h1>JSON Formatter & Validator</h1>
+
+        <p>
+            Format, validate, beautify and minify JSON instantly.
+            Everything runs inside your browser for maximum privacy.
+            No data is uploaded to any server.
+        </p>
+
+    </section>
+
+    <!-- Tool -->
+
+    <section class="tool-box">
+
+        <!-- Toolbar -->
+
+        <div class="editor-toolbar">
+
+            <div class="tool-title">
+                <i class="fa-solid fa-code"></i>
+                <span>JSON Editor</span>
+            </div>
+
+            <div class="toolbar-actions">
+
+                <input
+                    type="file"
+                    id="jsonFile"
+                    accept=".json,application/json"
+                    hidden>
+
+                <button
+                    class="toolbar-btn"
+                    id="uploadBtn">
+
+                    <i class="fa-solid fa-folder-open"></i>
+                    Upload
+
+                </button>
+
+                <button
+                    class="toolbar-btn"
+                    id="pasteBtn">
+
+                    <i class="fa-solid fa-paste"></i>
+                    Paste
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Editor -->
+
+        <textarea
+            id="jsonInput"
+            spellcheck="false"
+            placeholder='Paste JSON here...
+
+Example:
+
+{
+    "name":"ToolBucket",
+    "tool":"JSON Formatter",
+    "version":1
+}'></textarea>
+
+        <!-- Action Buttons -->
+
+        <div class="buttons">
+
+            <button id="formatBtn">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                Format
+            </button>
+
+            <button id="minifyBtn">
+                <i class="fa-solid fa-compress"></i>
+                Minify
+            </button>
+
+            <button id="validateBtn">
+                <i class="fa-solid fa-circle-check"></i>
+                Validate
+            </button>
+
+            <button id="copyBtn">
+                <i class="fa-solid fa-copy"></i>
+                Copy
+            </button>
+
+            <button id="downloadBtn">
+                <i class="fa-solid fa-download"></i>
+                Download
+            </button>
+
+            <button id="clearBtn">
+                <i class="fa-solid fa-trash"></i>
+                Clear
+            </button>
+
+        </div>
+
+        <!-- Statistics -->
+
+        <div class="stats">
+
+            <div class="stat-box">
+                <span>Characters</span>
+                <strong id="charCount">0</strong>
+            </div>
+
+            <div class="stat-box">
+                <span>Lines</span>
+                <strong id="lineCount">0</strong>
+            </div>
+
+            <div class="stat-box">
+                <span>File Size</span>
+                <strong id="fileSize">0 KB</strong>
+            </div>
+
+            <div class="stat-box">
+                <span>Status</span>
+                <strong id="statusText">Ready</strong>
+            </div>
+
+        </div>
+
+        <!-- Status -->
+
+        <div id="status" class="status success">
+
+            <i class="fa-solid fa-circle-info"></i>
+
+            <span>
+                Ready to format your JSON.
+            </span>
+
+        </div>
+
+    </section>
+
+    <!-- Features -->
+
+    <section class="features">
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-lock"></i>
+
+            <h3>100% Private</h3>
+
+            <p>
+                Your JSON never leaves your browser.
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-bolt"></i>
+
+            <h3>Instant Processing</h3>
+
+            <p>
+                Beautify and validate JSON instantly.
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-code"></i>
+
+            <h3>Developer Friendly</h3>
+
+            <p>
+                Built for developers with keyboard shortcuts.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===========================
+     How To Use
+=========================== -->
+
+<section class="content-section">
+
+    <div class="section-heading">
+
+        <span class="section-badge">
+
+            <i class="fa-solid fa-list-check"></i>
+
+            User Guide
+
+        </span>
+
+        <h2>How to Use the JSON Formatter</h2>
+
+        <p>
+
+            Formatting JSON with ToolBucket takes only a few seconds. Simply
+            paste your JSON data, click the required action, and download or
+            copy the result instantly.
+
+        </p>
+
+    </div>
+
+    <div class="guide-grid">
+
+        <div class="guide-card">
+
+            <span>1</span>
+
+            <h3>Paste JSON</h3>
+
+            <p>
+
+                Paste your JSON directly into the editor or upload a JSON file.
+
+            </p>
+
+        </div>
+
+        <div class="guide-card">
+
+            <span>2</span>
+
+            <h3>Format or Validate</h3>
+
+            <p>
+
+                Click Format to beautify your JSON or Validate to check for
+                syntax errors.
+
+            </p>
+
+        </div>
+
+        <div class="guide-card">
+
+            <span>3</span>
+
+            <h3>Download</h3>
+
+            <p>
+
+                Copy the formatted JSON or download it as a .json file.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===========================
+     Why Use
+=========================== -->
+
+<section class="content-section">
+
+    <div class="section-heading">
+
+        <span class="section-badge">
+
+            <i class="fa-solid fa-circle-info"></i>
+
+            About Tool
+
+        </span>
+
+        <h2>Why Use a JSON Formatter?</h2>
+
+    </div>
+
+    <p>
+
+        JSON (JavaScript Object Notation) is one of the most widely used data
+        formats for APIs, web applications, databases, cloud platforms, and
+        modern software development. Although JSON is lightweight and easy for
+        computers to process, large JSON files quickly become difficult for
+        humans to read.
+
+    </p>
+
+    <p>
+
+        A JSON Formatter automatically adds proper indentation, spacing, and
+        line breaks to your JSON, making it much easier to understand and edit.
+        This is especially useful when debugging API responses, working with
+        configuration files, or developing applications with JavaScript,
+        React, Node.js, Express, MongoDB, PHP, Python, or Java.
+
+    </p>
+
+    <p>
+
+        ToolBucket's JSON Formatter works entirely inside your browser. Your
+        data never leaves your device, providing complete privacy while
+        delivering fast formatting and validation.
+
+    </p>
+
+</section>
+
+
+<!-- =====================================
+        Benefits of Formatting JSON
+====================================== -->
+
+<section class="content-section">
+
+    <div class="section-heading">
+
+        <span class="section-badge">
+
+            <i class="fa-solid fa-star"></i>
+
+            Benefits
+
+        </span>
+
+        <h2>Benefits of Formatting JSON</h2>
+
+        <p>
+
+            Properly formatted JSON improves readability, reduces development
+            errors, and makes debugging much faster. Whether you're working with
+            APIs or configuration files, clean JSON saves time.
+
+        </p>
+
+    </div>
+
+    <div class="benefits-grid">
+
+        <div class="benefit-card">
+
+            <i class="fa-solid fa-eye"></i>
+
+            <h3>Easy to Read</h3>
+
+            <p>
+
+                Indentation and spacing make complex JSON structures easier to
+                understand.
+
+            </p>
+
+        </div>
+
+        <div class="benefit-card">
+
+            <i class="fa-solid fa-bug"></i>
+
+            <h3>Faster Debugging</h3>
+
+            <p>
+
+                Quickly identify missing commas, brackets, quotes and syntax
+                mistakes.
+
+            </p>
+
+        </div>
+
+        <div class="benefit-card">
+
+            <i class="fa-solid fa-code"></i>
+
+            <h3>Cleaner Development</h3>
+
+            <p>
+
+                Perfect for APIs, JavaScript projects, React, Node.js,
+                Express and MongoDB applications.
+
+            </p>
+
+        </div>
+
+        <div class="benefit-card">
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+            <h3>Secure Processing</h3>
+
+            <p>
+
+                Everything happens locally inside your browser. Your JSON never
+                leaves your device.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================
+            Where JSON is Used
+====================================== -->
+
+<section class="content-section">
+
+    <div class="section-heading">
+
+        <span class="section-badge">
+
+            <i class="fa-solid fa-globe"></i>
+
+            Applications
+
+        </span>
+
+        <h2>Where is JSON Used?</h2>
+
+    </div>
+
+    <p>
+
+        JSON has become the standard format for exchanging data between
+        applications. It is lightweight, human-readable, and supported by
+        almost every modern programming language.
+
+    </p>
+
+    <div class="use-grid">
+
+        <div class="use-card">
+
+            <i class="fa-solid fa-cloud"></i>
+
+            <h3>REST APIs</h3>
+
+            <p>
+
+                Almost every modern REST API sends and receives JSON data.
+
+            </p>
+
+        </div>
+
+        <div class="use-card">
+
+            <i class="fa-solid fa-laptop-code"></i>
+
+            <h3>Web Development</h3>
+
+            <p>
+
+                JavaScript, React, Vue, Angular and many frameworks use JSON
+                extensively.
+
+            </p>
+
+        </div>
+
+        <div class="use-card">
+
+            <i class="fa-solid fa-database"></i>
+
+            <h3>Databases</h3>
+
+            <p>
+
+                MongoDB and many NoSQL databases store documents in JSON-like
+                formats.
+
+            </p>
+
+        </div>
+
+        <div class="use-card">
+
+            <i class="fa-solid fa-mobile-screen-button"></i>
+
+            <h3>Mobile Apps</h3>
+
+            <p>
+
+                Android and iOS applications use JSON to communicate with
+                backend servers.
+
+            </p>
+
+        </div>
+
+        <div class="use-card">
+
+            <i class="fa-solid fa-gear"></i>
+
+            <h3>Configuration Files</h3>
+
+            <p>
+
+                Many software tools use JSON files for settings and project
+                configuration.
+
+            </p>
+
+        </div>
+
+        <div class="use-card">
+
+            <i class="fa-solid fa-robot"></i>
+
+            <h3>AI Applications</h3>
+
+            <p>
+
+                AI APIs like OpenAI, Gemini and Claude commonly exchange data
+                using JSON.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================
+          Why Developers Love JSON
+====================================== -->
+
+<section class="content-section">
+
+    <div class="section-heading">
+
+        <span class="section-badge">
+
+            <i class="fa-solid fa-heart"></i>
+
+            Developer Choice
+
+        </span>
+
+        <h2>Why Developers Prefer JSON</h2>
+
+    </div>
+
+    <p>
+
+        Developers choose JSON because it is simple, lightweight, language-independent,
+        and easy to integrate into modern applications. From frontend frameworks
+        to cloud services, JSON is the preferred format for data exchange.
+
+    </p>
+
+    <p>
+
+        Using a reliable JSON Formatter helps maintain clean code, improves
+        debugging, and reduces syntax errors before deploying applications.
+        ToolBucket makes this process quick, secure, and completely free.
+
+    </p>
+
+</section>
+
+
+
+
+<!-- =====================================
+         Common JSON Errors
+====================================== -->
+
+<section class="content-section">
+
+    <div class="section-heading">
+
+        <span class="section-badge">
+
+            <i class="fa-solid fa-triangle-exclamation"></i>
+
+            Common Mistakes
+
+        </span>
+
+        <h2>Common JSON Errors</h2>
+
+        <p>
+
+            Even experienced developers occasionally make JSON syntax mistakes.
+            Understanding these common errors helps you debug faster and create
+            valid JSON every time.
+
+        </p>
+
+    </div>
+
+    <div class="error-grid">
+
+        <div class="error-card">
+
+            <h3>Missing Comma</h3>
+
+            <p>
+
+                Every key-value pair must be separated by a comma. Missing commas
+                are one of the most common JSON syntax errors.
+
+            </p>
+
+        </div>
+
+        <div class="error-card">
+
+            <h3>Extra Trailing Comma</h3>
+
+            <p>
+
+                JSON does not allow a comma after the last property inside an
+                object or array.
+
+            </p>
+
+        </div>
+
+        <div class="error-card">
+
+            <h3>Single Quotes</h3>
+
+            <p>
+
+                JSON only supports double quotes for property names and string
+                values.
+
+            </p>
+
+        </div>
+
+        <div class="error-card">
+
+            <h3>Missing Closing Brackets</h3>
+
+            <p>
+
+                Objects and arrays must always be properly closed with matching
+                braces and brackets.
+
+            </p>
+
+        </div>
+
+        <div class="error-card">
+
+            <h3>Invalid Data Types</h3>
+
+            <p>
+
+                JSON supports strings, numbers, objects, arrays, booleans, and
+                null values only.
+
+            </p>
+
+        </div>
+
+        <div class="error-card">
+
+            <h3>Incorrect Nesting</h3>
+
+            <p>
+
+                Deeply nested JSON should maintain proper indentation and
+                matching braces for better readability.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================
+            JSON Best Practices
+====================================== -->
+
+<section class="content-section">
+
+    <div class="section-heading">
+
+        <span class="section-badge">
+
+            <i class="fa-solid fa-lightbulb"></i>
+
+            Best Practices
+
+        </span>
+
+        <h2>JSON Best Practices</h2>
+
+    </div>
+
+    <div class="practice-grid">
+
+        <div class="practice-card">
+
+            <i class="fa-solid fa-check"></i>
+
+            <h3>Use Proper Indentation</h3>
+
+            <p>
+
+                Consistent indentation improves readability and makes debugging
+                easier.
+
+            </p>
+
+        </div>
+
+        <div class="practice-card">
+
+            <i class="fa-solid fa-check"></i>
+
+            <h3>Validate Before Deployment</h3>
+
+            <p>
+
+                Always validate JSON before using it in production
+                applications or APIs.
+
+            </p>
+
+        </div>
+
+        <div class="practice-card">
+
+            <i class="fa-solid fa-check"></i>
+
+            <h3>Keep Structure Consistent</h3>
+
+            <p>
+
+                Maintain consistent property names and object structures across
+                your project.
+
+            </p>
+
+        </div>
+
+        <div class="practice-card">
+
+            <i class="fa-solid fa-check"></i>
+
+            <h3>Use UTF-8 Encoding</h3>
+
+            <p>
+
+                Save JSON files using UTF-8 encoding to avoid character issues.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================
+          JSON vs XML
+====================================== -->
+
+<section class="content-section">
+
+    <div class="section-heading">
+
+        <span class="section-badge">
+
+            <i class="fa-solid fa-code-compare"></i>
+
+            Comparison
+
+        </span>
+
+        <h2>JSON vs XML</h2>
+
+    </div>
+
+    <div class="comparison-table">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Feature</th>
+
+                    <th>JSON</th>
+
+                    <th>XML</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>Readability</td>
+
+                    <td>Simple & Lightweight</td>
+
+                    <td>More Verbose</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Speed</td>
+
+                    <td>Faster</td>
+
+                    <td>Slower</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>File Size</td>
+
+                    <td>Smaller</td>
+
+                    <td>Larger</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>API Support</td>
+
+                    <td>Excellent</td>
+
+                    <td>Limited</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Modern Web Apps</td>
+
+                    <td>Preferred</td>
+
+                    <td>Rarely Used</td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <p>
+
+        While XML is still used in some enterprise systems, JSON has become
+        the preferred format for modern web development due to its lightweight
+        structure, faster parsing, and seamless integration with JavaScript.
+
+    </p>
+
+</section>
+
+
+
+<!-- =====================================
+                FAQ
+====================================== -->
+
+<section class="content-section">
+
+    <div class="section-heading">
+
+        <span class="section-badge">
+
+            <i class="fa-solid fa-circle-question"></i>
+
+            Frequently Asked Questions
+
+        </span>
+
+        <h2>JSON Formatter FAQ</h2>
+
+        <p>
+
+            Here are answers to some of the most common questions about JSON
+            formatting, validation, and minification.
+
+        </p>
+
+    </div>
+
+    <div class="faq-container">
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+
+                What is JSON?
+
+                <i class="fa-solid fa-plus"></i>
+
+            </button>
+
+            <div class="faq-answer">
+
+                <p>
+
+                    JSON (JavaScript Object Notation) is a lightweight data
+                    exchange format used by APIs, websites, mobile apps, and
+                    software applications worldwide.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+
+                Is this JSON Formatter free?
+
+                <i class="fa-solid fa-plus"></i>
+
+            </button>
+
+            <div class="faq-answer">
+
+                <p>
+
+                    Yes. ToolBucket's JSON Formatter & Validator is completely
+                    free with no registration required.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+
+                Is my JSON secure?
+
+                <i class="fa-solid fa-plus"></i>
+
+            </button>
+
+            <div class="faq-answer">
+
+                <p>
+
+                    Absolutely. Everything is processed locally inside your
+                    browser. Your JSON data is never uploaded to our servers.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+
+                Can I format large JSON files?
+
+                <i class="fa-solid fa-plus"></i>
+
+            </button>
+
+            <div class="faq-answer">
+
+                <p>
+
+                    Yes. ToolBucket supports formatting both small and large
+                    JSON documents directly in your browser.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+
+                Can I validate JSON?
+
+                <i class="fa-solid fa-plus"></i>
+
+            </button>
+
+            <div class="faq-answer">
+
+                <p>
+
+                    Yes. Click the Validate button to instantly detect syntax
+                    errors and confirm whether your JSON is valid.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+
+                Can I minify JSON?
+
+                <i class="fa-solid fa-plus"></i>
+
+            </button>
+
+            <div class="faq-answer">
+
+                <p>
+
+                    Yes. The Minify feature removes unnecessary spaces and line
+                    breaks to create a compact JSON file.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+
+                Which browsers are supported?
+
+                <i class="fa-solid fa-plus"></i>
+
+            </button>
+
+            <div class="faq-answer">
+
+                <p>
+
+                    ToolBucket works with Chrome, Edge, Firefox, Safari, and
+                    other modern browsers.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+
+                Can I use this tool on mobile?
+
+                <i class="fa-solid fa-plus"></i>
+
+            </button>
+
+            <div class="faq-answer">
+
+                <p>
+
+                    Yes. The JSON Formatter is fully responsive and works on
+                    desktops, tablets, and smartphones.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================
+          Related Developer Tools
+====================================== -->
+
+<section class="content-section">
+
+    <div class="section-heading">
+
+        <span class="section-badge">
+
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+
+            More Tools
+
+        </span>
+
+        <h2>Related Developer Tools</h2>
+
+        <p>
+
+            Explore more free developer tools from ToolBucket to improve your
+            development workflow.
+
+        </p>
+
+    </div>
+
+    <div class="related-tools">
+
+        <a href="/developer-tools/base64-encoder/" class="related-card">
+
+            <i class="fa-solid fa-lock"></i>
+
+            <h3>Base64 Encoder</h3>
+
+        </a>
+
+        <a href="/developer-tools/url-encoder/" class="related-card">
+
+            <i class="fa-solid fa-link"></i>
+
+            <h3>URL Encoder</h3>
+
+        </a>
+
+        <a href="/developer-tools/uuid-generator/" class="related-card">
+
+            <i class="fa-solid fa-fingerprint"></i>
+
+            <h3>UUID Generator</h3>
+
+        </a>
+
+        <a href="/developer-tools/jwt-decoder/" class="related-card">
+
+            <i class="fa-solid fa-key"></i>
+
+            <h3>JWT Decoder</h3>
+
+        </a>
+
+    </div>
+
+</section>
+
+<!-- =====================================
+               CTA
+====================================== -->
+
+<section class="cta-section">
+
+    <h2>Build Faster with ToolBucket</h2>
+
+    <p>
+
+        Discover powerful online developer tools designed to save time,
+        improve productivity, and simplify your workflow.
+
+    </p>
+
+    <a href="/developer-tools/" class="cta-btn">
+
+        Explore More Developer Tools
+
+        <i class="fa-solid fa-arrow-right"></i>
+
+    </a>
+
+</section>
+
+</main>
+
+<!-- Toast -->
+
+<div id="toast"></div>
+
+
+
+
+
+
+   <div id="footer"></div>
+
+<script src="../../js/include.js"></script>
+<script src="../../js/navbar.js"></script>
+<script src="./script.js"></script>
+
+</body>
+</html>
