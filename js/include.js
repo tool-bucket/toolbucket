@@ -53,5 +53,5 @@ if (
 }
 
 // Load Components
-loadComponent("navbar", `${basePath}/components/navbar.html`);
-loadComponent("footer", `${basePath}/components/footer.html`);
+loadComponent("navbar", "/components/navbar.html");
+loadComponent("footer", "/components/footer.html");
