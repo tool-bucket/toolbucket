@@ -2551,35 +2551,3 @@ padding:18px;
 }
 
 
-
-/* Mobile Fix */
-
-@media (max-width:768px){
-
-    html{
-        font-size:16px;
-    }
-
-    .navbar{
-        padding:18px 0;
-    }
-
-    .logo h2{
-        font-size:28px;
-    }
-
-    .footer{
-        padding:60px 0 25px;
-    }
-
-    .footer-logo p,
-    .footer-column a,
-    .footer-bottom p{
-        font-size:16px;
-    }
-
-    .footer-column h4{
-        font-size:20px;
-    }
-
-}
