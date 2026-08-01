@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Basic -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <!-- ===========================
+        SEO
+=========================== -->
+
+<!-- ===========================
+        SEO
+=========================== -->
+
+<title>Free JWT Decoder Online | Decode JSON Web Tokens Instantly - ToolBucket</title>
+
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="icon" href="/favicon.ico">
+
+<meta name="description"
+content="Decode JSON Web Tokens (JWT) online for free with ToolBucket. Instantly view JWT Header, Payload, and Signature in your browser. Secure, fast, privacy-friendly, and no data is uploaded.">
+
+<meta name="keywords"
+content="jwt decoder, decode jwt, jwt token decoder, json web token decoder, jwt parser, jwt viewer, jwt payload decoder, jwt online tool, decode json web token, developer tools">
+
+<meta name="author" content="ToolBucket">
+
+<meta name="robots" content="index,follow,max-image-preview:large">
+
+<meta name="theme-color" content="#0F172A">
+
+<link rel="canonical"
+href="https://toolbucket.site/developer-tools/jwt-decoder/">
+
+<!-- Open Graph -->
+
+<meta property="og:type" content="website">
+
+<meta property="og:title"
+content="Free JWT Decoder Online | Decode JSON Web Tokens - ToolBucket">
+
+<meta property="og:description"
+content="Decode JWT tokens instantly and securely. View Header, Payload, and Signature directly in your browser without uploading your token.">
+
+<meta property="og:url"
+content="https://toolbucket.site/developer-tools/jwt-decoder/">
+
+<meta property="og:image"
+content="https://toolbucket.site/assets/jwt-decoder.webp">
+
+<meta property="og:image:alt"
+content="JWT Decoder Tool by ToolBucket">
+
+<meta property="og:site_name"
+content="ToolBucket">
+
+<meta property="og:locale"
+content="en_US">
+
+<!-- Twitter -->
+
+<meta name="twitter:card"
+content="summary_large_image">
+
+<meta name="twitter:title"
+content="Free JWT Decoder Online | ToolBucket">
+
+<meta name="twitter:description"
+content="Decode JSON Web Tokens online for free. View JWT Header, Payload, and Signature securely in your browser.">
+
+<meta name="twitter:image"
+content="https://toolbucket.site/assets/jwt-decoder.webp">
+
+<meta name="twitter:image:alt"
+content="JWT Decoder Tool">
+
+<!-- Google Fonts -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<!-- Font Awesome -->
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+
+    <div id="navbar"></div>
+
+
+
+
+     <!-- =========================
+            HERO
+    ========================== -->
+
+    <section class="hero">
+
+        <div class="container">
+
+            <div class="hero-content">
+
+                <span class="badge">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    Secure Browser Decoder
+
+                </span>
+
+                <h1>
+
+                    JWT Decoder
+
+                </h1>
+
+                <p>
+
+                    Decode JSON Web Tokens instantly inside your browser.
+                    Your token never leaves your device, making it completely
+                    private and secure.
+
+                </p>
+
+                <div class="hero-features">
+
+                    <span>
+
+                        <i class="fa-solid fa-check"></i>
+
+                        100% Free
+
+                    </span>
+
+                    <span>
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                        Privacy First
+
+                    </span>
+
+                    <span>
+
+                        <i class="fa-solid fa-bolt"></i>
+
+                        Instant Decode
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+            TOOL
+    ========================== -->
+
+    <section class="tool">
+
+        <div class="container">
+
+            <div class="tool-card">
+
+                <h2>Paste JWT Token</h2>
+
+                <p>
+
+                    Enter your JWT below to decode its Header, Payload and
+                    Signature.
+
+                </p>
+
+                <textarea
+                    id="jwtInput"
+                    placeholder="Paste your JWT token here..."></textarea>
+
+                <div class="tool-buttons">
+
+                    <button id="decodeBtn">
+
+                        <i class="fa-solid fa-unlock"></i>
+
+                        Decode Token
+
+                    </button>
+
+                    <button id="exampleBtn">
+
+                        <i class="fa-solid fa-file"></i>
+
+                        Example
+
+                    </button>
+
+                    <button id="clearBtn">
+
+                        <i class="fa-solid fa-trash"></i>
+
+                        Clear
+
+                    </button>
+
+                </div>
+
+
+                                <!-- Error Message -->
+
+                <div class="error-message" id="errorMessage">
+
+                    <i class="fa-solid fa-circle-exclamation"></i>
+
+                    <span>Invalid JWT Token</span>
+
+                </div>
+
+                <!-- =========================
+                        HEADER
+                ========================== -->
+
+                <div class="result-card">
+
+                    <div class="result-header">
+
+                        <h3>
+
+                            <i class="fa-solid fa-code"></i>
+
+                            Header
+
+                        </h3>
+
+                        <button class="copy-btn" id="copyHeader">
+
+                            <i class="fa-regular fa-copy"></i>
+
+                            Copy
+
+                        </button>
+
+                    </div>
+
+                    <pre id="headerOutput">{}</pre>
+
+                </div>
+
+                <!-- =========================
+                        PAYLOAD
+                ========================== -->
+
+                <div class="result-card">
+
+                    <div class="result-header">
+
+                        <h3>
+
+                            <i class="fa-solid fa-database"></i>
+
+                            Payload
+
+                        </h3>
+
+                        <button class="copy-btn" id="copyPayload">
+
+                            <i class="fa-regular fa-copy"></i>
+
+                            Copy
+
+                        </button>
+
+                    </div>
+
+                    <pre id="payloadOutput">{}</pre>
+
+                </div>
+
+                <!-- =========================
+                        SIGNATURE
+                ========================== -->
+
+                <div class="result-card">
+
+                    <div class="result-header">
+
+                        <h3>
+
+                            <i class="fa-solid fa-key"></i>
+
+                            Signature
+
+                        </h3>
+
+                        <button class="copy-btn" id="copySignature">
+
+                            <i class="fa-regular fa-copy"></i>
+
+                            Copy
+
+                        </button>
+
+                    </div>
+
+                    <pre id="signatureOutput">Signature will appear here...</pre>
+
+                </div>
+
+                <!-- =========================
+                        ACTION BUTTONS
+                ========================== -->
+
+                <div class="download-section">
+
+                    <button id="downloadBtn">
+
+                        <i class="fa-solid fa-download"></i>
+
+                        Download JSON
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+        <!-- =========================
+            WHY USE JWT DECODER
+    ========================== -->
+
+    <section class="why-use">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Why Use ToolBucket JWT Decoder?</h2>
+
+                <p>
+                    Decode JSON Web Tokens quickly and securely without uploading
+                    your data to any server.
+                </p>
+
+            </div>
+
+            <div class="features-grid">
+
+                <div class="feature-card">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                    <h3>100% Private</h3>
+
+                    <p>
+                        Everything happens inside your browser. Your JWT token is
+                        never sent to our servers.
+                    </p>
+
+                </div>
+
+                <div class="feature-card">
+
+                    <i class="fa-solid fa-bolt"></i>
+
+                    <h3>Fast Decoding</h3>
+
+                    <p>
+                        Instantly decode the Header, Payload and Signature with a
+                        single click.
+                    </p>
+
+                </div>
+
+                <div class="feature-card">
+
+                    <i class="fa-solid fa-code"></i>
+
+                    <h3>Developer Friendly</h3>
+
+                    <p>
+                        Beautiful formatted JSON output makes debugging much
+                        easier.
+                    </p>
+
+                </div>
+
+                <div class="feature-card">
+
+                    <i class="fa-solid fa-copy"></i>
+
+                    <h3>Copy & Download</h3>
+
+                    <p>
+                        Copy decoded data or download it as a JSON file for later
+                        use.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="guide">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>How to Use the JWT Decoder</h2>
+
+            <p>
+                Decoding a JWT token with ToolBucket is quick and easy. Follow these simple steps:
+            </p>
+
+        </div>
+
+        <div class="steps">
+
+            <div class="step">
+
+                <h3>Step 1</h3>
+
+                <p>
+                    Copy your JWT token from your application, API response, browser storage, or authentication service.
+                </p>
+
+            </div>
+
+            <div class="step">
+
+                <h3>Step 2</h3>
+
+                <p>
+                    Paste the complete token into the input box at the top of this page.
+                </p>
+
+            </div>
+
+            <div class="step">
+
+                <h3>Step 3</h3>
+
+                <p>
+                    Click the Decode Token button to instantly decode the Header, Payload, and Signature.
+                </p>
+
+            </div>
+
+            <div class="step">
+
+                <h3>Step 4</h3>
+
+                <p>
+                    Copy the decoded JSON or download it for debugging and development.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+        WHERE JWT IS USED
+========================= -->
+
+<section class="uses">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Where Are JWT Tokens Used?</h2>
+
+            <p>
+                JWT tokens are commonly used in modern web applications and APIs.
+                They provide a secure and lightweight way to transfer user information
+                between the client and server.
+            </p>
+
+        </div>
+
+        <div class="content-card">
+
+            <ul>
+
+                <li>User Authentication</li>
+
+                <li>REST APIs</li>
+
+                <li>OAuth Login</li>
+
+                <li>Firebase Authentication</li>
+
+                <li>Node.js Applications</li>
+
+                <li>React Applications</li>
+
+                <li>Next.js</li>
+
+                <li>Laravel APIs</li>
+
+                <li>Spring Boot</li>
+
+                <li>Django REST Framework</li>
+
+                <li>Microservices</li>
+
+                <li>Single Sign-On (SSO)</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+        JWT STRUCTURE
+========================= -->
+
+<section class="jwt-structure">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Understanding JWT Structure</h2>
+
+            <p>
+                Every JWT contains three Base64URL encoded sections separated by dots.
+            </p>
+
+        </div>
+
+        <div class="content-card">
+
+            <div class="jwt-box">
+
+                Header
+
+                ↓
+
+                Payload
+
+                ↓
+
+                Signature
+
+            </div>
+
+            <h3>Header</h3>
+
+            <p>
+                The Header contains information about the token type and signing
+                algorithm such as HS256 or RS256.
+            </p>
+
+            <h3>Payload</h3>
+
+            <p>
+                The Payload contains claims including user ID, email,
+                permissions, expiration time, issued time, and custom data.
+            </p>
+
+            <h3>Signature</h3>
+
+            <p>
+                The Signature verifies that the token has not been modified after
+                it was generated.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+        SECURITY
+========================= -->
+
+<section class="security">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>JWT Security Best Practices</h2>
+
+            <p>
+                Follow these security recommendations when using JSON Web Tokens
+                in production applications.
+            </p>
+
+        </div>
+
+        <div class="content-card">
+
+            <ul>
+
+                <li>Never share sensitive JWT tokens publicly.</li>
+
+                <li>Always use HTTPS.</li>
+
+                <li>Use short expiration times.</li>
+
+                <li>Store tokens securely.</li>
+
+                <li>Rotate signing keys regularly.</li>
+
+                <li>Always validate signatures on the server.</li>
+
+                <li>Avoid storing sensitive personal information inside the payload.</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- =========================
+            ABOUT TOOL
+    ========================== -->
+
+    <section class="about-tool">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>What is a JWT?</h2>
+
+            </div>
+
+            <p>
+
+                JWT (JSON Web Token) is an open standard used for securely
+                transmitting information between two parties. It is commonly used
+                for authentication and authorization in web applications.
+
+            </p>
+
+            <p>
+
+                A JWT consists of three Base64URL encoded parts separated by dots:
+
+            </p>
+
+            <ul>
+
+                <li><strong>Header</strong> – Contains token type and signing algorithm.</li>
+
+                <li><strong>Payload</strong> – Contains claims such as user ID, email or roles.</li>
+
+                <li><strong>Signature</strong> – Used to verify that the token has not been modified.</li>
+
+            </ul>
+
+            <p>
+
+                ToolBucket's JWT Decoder lets you inspect these three parts safely
+                without sending your token anywhere. Everything is decoded locally
+                in your browser for maximum privacy.
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+            FAQ
+    ========================== -->
+
+    <section class="faq">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Frequently Asked Questions</h2>
+
+            </div>
+
+            <div class="faq-container">
+
+                                <!-- FAQ 1 -->
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+
+                        What is a JWT Token?
+
+                        <i class="fa-solid fa-plus"></i>
+
+                    </button>
+
+                    <div class="faq-answer">
+
+                        <p>
+
+                            JWT (JSON Web Token) is a compact token used to securely
+                            transfer information between applications. It is widely
+                            used for authentication and authorization.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- FAQ 2 -->
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+
+                        Is my JWT token uploaded?
+
+                        <i class="fa-solid fa-plus"></i>
+
+                    </button>
+
+                    <div class="faq-answer">
+
+                        <p>
+
+                            No. ToolBucket never uploads your JWT token. Everything
+                            is decoded locally inside your browser.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- FAQ 3 -->
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+
+                        Can this tool verify JWT signatures?
+
+                        <i class="fa-solid fa-plus"></i>
+
+                    </button>
+
+                    <div class="faq-answer">
+
+                        <p>
+
+                            No. This tool only decodes the Header, Payload and
+                            Signature. Signature verification requires the secret
+                            key or public key.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- FAQ 4 -->
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+
+                        Does this tool work offline?
+
+                        <i class="fa-solid fa-plus"></i>
+
+                    </button>
+
+                    <div class="faq-answer">
+
+                        <p>
+
+                            Yes. Once the page is loaded, the decoder works
+                            completely inside your browser.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- FAQ 5 -->
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+
+                        Is ToolBucket JWT Decoder free?
+
+                        <i class="fa-solid fa-plus"></i>
+
+                    </button>
+
+                    <div class="faq-answer">
+
+                        <p>
+
+                            Yes. The JWT Decoder is completely free with no signup
+                            or installation required.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- FAQ 6 -->
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+
+                        Which JWT algorithms are supported?
+
+                        <i class="fa-solid fa-plus"></i>
+
+                    </button>
+
+                    <div class="faq-answer">
+
+                        <p>
+
+                            The decoder can display any valid JWT token regardless
+                            of the signing algorithm because it only decodes the
+                            Base64URL encoded data.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+   
+
+
+
+
+   <div id="footer"></div>
+
+<script src="../../js/include.js"></script>
+<script src="../../js/navbar.js"></script>
+<script src="./script.js"></script>
+
+</body>
+</html>
