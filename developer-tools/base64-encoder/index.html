@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Basic -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <!-- ===========================
+        SEO
+=========================== -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- ===========================
+        SEO
+=========================== -->
+
+<title>Free Base64 Encoder & Decoder Online | Encode & Decode Base64 - ToolBucket</title>
+
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="icon" href="/favicon.ico">
+
+<meta name="description"
+content="Free online Base64 Encoder & Decoder by ToolBucket. Instantly encode text to Base64 or decode Base64 back to plain text. Fast, secure, browser-based, and works without uploading your data.">
+
+<meta name="keywords"
+content="base64 encoder, base64 decoder, base64 encode online, base64 decode online, base64 converter, encode base64, decode base64, online base64 tool, free base64 encoder, developer tools">
+
+<meta name="author" content="ToolBucket">
+
+<meta name="robots" content="index,follow,max-image-preview:large">
+
+<meta name="theme-color" content="#0F172A">
+
+<link rel="canonical"
+href="https://toolbucket.site/developer-tools/base64-encoder/">
+
+<!-- Open Graph -->
+
+<meta property="og:type" content="website">
+
+<meta property="og:title"
+content="Free Base64 Encoder & Decoder Online | ToolBucket">
+
+<meta property="og:description"
+content="Encode text to Base64 or decode Base64 instantly with ToolBucket. 100% free, secure, fast, and works directly in your browser.">
+
+<meta property="og:url"
+content="https://toolbucket.site/developer-tools/base64-encoder/">
+
+<meta property="og:image"
+content="https://toolbucket.site/assets/base64-encoder.webp">
+
+<meta property="og:image:alt"
+content="Base64 Encoder & Decoder Tool by ToolBucket">
+
+<meta property="og:site_name"
+content="ToolBucket">
+
+<meta property="og:locale"
+content="en_US">
+
+<!-- Twitter -->
+
+<meta name="twitter:card"
+content="summary_large_image">
+
+<meta name="twitter:title"
+content="Free Base64 Encoder & Decoder Online | ToolBucket">
+
+<meta name="twitter:description"
+content="Encode and decode Base64 online for free. Fast, secure, browser-based Base64 Encoder & Decoder by ToolBucket.">
+
+<meta name="twitter:image"
+content="https://toolbucket.site/assets/base64-encoder.webp">
+
+<meta name="twitter:image:alt"
+content="Base64 Encoder & Decoder Tool">    
+<!-- Google Fonts -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<!-- Font Awesome -->
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+
+    <div id="navbar"></div>
+
+
+    <main class="base64-tool">
+
+    <div class="container">
+
+        <div class="tool-heading">
+            <h1>Base64 Encoder & Decoder</h1>
+            <p>
+                Encode plain text to Base64 or decode Base64 back into readable text.
+                Free, fast, secure, and works entirely in your browser.
+            </p>
+        </div>
+
+        <div class="tool-card">
+
+            <!-- Input -->
+
+            <div class="input-section">
+
+                <div class="section-title">
+                    <h2>Input</h2>
+                    <span id="inputCount">0 Characters</span>
+                </div>
+
+                <textarea
+                    id="inputText"
+                    placeholder="Enter text or Base64 here..."
+                ></textarea>
+
+            </div>
+
+            <!-- Buttons -->
+
+            <div class="button-group">
+
+                <button id="encodeBtn">
+                    Encode
+                </button>
+
+                <button id="decodeBtn">
+                    Decode
+                </button>
+
+                <button id="copyBtn">
+                    Copy
+                </button>
+
+                <button id="clearBtn">
+                    Clear
+                </button>
+
+            </div>
+
+            <!-- Output -->
+
+            <div class="output-section">
+
+                <div class="section-title">
+                    <h2>Output</h2>
+                    <span id="outputCount">0 Characters</span>
+                </div>
+
+                <textarea
+                    id="outputText"
+                    readonly
+                    placeholder="Output will appear here..."
+                ></textarea>
+
+            </div>
+
+        </div>  
+
+    </div>
+
+
+
+
+
+    <section class="content-section">
+
+<h2>What is Base64?</h2>
+
+<p>
+Base64 is a text encoding format that converts plain text or binary data into ASCII characters. It is widely used by developers to safely transmit data through APIs, emails, JSON, XML, and web applications. Unlike encryption, Base64 does not protect your data—it simply changes its representation so it can be transferred without corruption.
+</p>
+
+<p>
+With ToolBucket's free Base64 Encoder & Decoder, you can instantly encode text into Base64 or decode Base64 back into readable text directly in your browser. No files are uploaded, ensuring complete privacy and security.
+</p>
+
+</section>
+
+
+
+<section class="content-section">
+
+<h2>Why Use ToolBucket Base64 Encoder?</h2>
+
+<ul>
+
+<li>Instant Base64 encoding and decoding</li>
+
+<li>Works completely in your browser</li>
+
+<li>No registration required</li>
+
+<li>100% free forever</li>
+
+<li>Fast and lightweight</li>
+
+<li>Your data never leaves your device</li>
+
+<li>Supports long text strings</li>
+
+<li>Mobile and desktop friendly</li>
+
+</ul>
+
+</section>
+
+
+<section class="content-section">
+
+<h2>How to Use the Base64 Encoder & Decoder</h2>
+
+<ol>
+
+<li>Paste your text into the input box.</li>
+
+<li>Click <strong>Encode</strong> to convert text into Base64.</li>
+
+<li>Click <strong>Decode</strong> to convert Base64 back into plain text.</li>
+
+<li>Copy the result with one click.</li>
+
+<li>Use the Clear button to start over.</li>
+
+</ol>
+
+</section>
+
+
+
+<section class="content-section">
+
+<h2>Common Uses of Base64</h2>
+
+<div class="uses-grid">
+
+<div>
+
+<h3>API Authentication</h3>
+
+<p>
+Encode usernames and passwords for HTTP Basic Authentication.
+</p>
+
+</div>
+
+<div>
+
+<h3>Email Attachments</h3>
+
+<p>
+Email systems use Base64 to send images and attachments safely.
+</p>
+
+</div>
+
+<div>
+
+<h3>Images</h3>
+
+<p>
+Convert images into Base64 strings for embedding directly in HTML or CSS.
+</p>
+
+</div>
+
+<div>
+
+<h3>Web Development</h3>
+
+<p>
+Transfer binary data through text-only protocols.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="content-section">
+
+<h2>Is Base64 Safe?</h2>
+
+<p>
+Base64 is not encryption and should not be used to protect sensitive information. Anyone can decode Base64 back into its original form. It is intended only for data encoding and transport.
+</p>
+
+</section>
+
+
+<section class="faq-section">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <h2>Frequently Asked Questions</h2>
+            <p>Everything you need to know about Base64 encoding and decoding.</p>
+        </div>
+
+        <div class="faq-container">
+
+            <div class="faq-item active">
+                <div class="faq-question">
+                    <h3>What is Base64?</h3>
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        Base64 is an encoding method that converts text or binary data into ASCII characters.
+                        It is commonly used in APIs, emails, web applications, and data transfer.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Is Base64 encryption?</h3>
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        No. Base64 is not encryption. It simply converts data into another format and can easily be decoded.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Is this Base64 tool free?</h3>
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        Yes. ToolBucket Base64 Encoder & Decoder is completely free to use with no signup required.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Does ToolBucket store my data?</h3>
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        No. Everything happens inside your browser. Your data is never uploaded to our servers.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="related-tools">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <h2>Related Developer Tools</h2>
+
+            <p>
+                Explore more free online developer tools from ToolBucket.
+            </p>
+
+        </div>
+
+        <div class="related-grid">
+
+            <a href="/developer-tools/json-formatter/" class="related-card">
+
+                <i class="fa-solid fa-code"></i>
+
+                <h3>JSON Formatter</h3>
+
+                <p>
+                    Beautify, validate and minify JSON instantly.
+                </p>
+
+            </a>
+
+            <a href="/developer-tools/url-encoder/" class="related-card">
+
+                <i class="fa-solid fa-link"></i>
+
+                <h3>URL Encoder</h3>
+
+                <p>
+                    Encode and decode URLs safely.
+                </p>
+
+            </a>
+
+            <a href="/developer-tools/uuid-generator/" class="related-card">
+
+                <i class="fa-solid fa-fingerprint"></i>
+
+                <h3>UUID Generator</h3>
+
+                <p>
+                    Generate random UUID v4 instantly.
+                </p>
+
+            </a>
+
+            <a href="/developer-tools/html-formatter/" class="related-card">
+
+                <i class="fa-brands fa-html5"></i>
+
+                <h3>HTML Formatter</h3>
+
+                <p>
+                    Format messy HTML into readable code.
+                </p>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+
+
+
+   <div id="footer"></div>
+
+<script src="../../js/include.js"></script>
+<script src="../../js/navbar.js"></script>
+<script src="./script.js"></script>
+
+</body>
+</html>
