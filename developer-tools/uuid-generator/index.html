@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Basic -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ===========================
+        SEO
+=========================== -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Free UUID Generator Online (RFC 4122 v4) | Generate Unique UUIDs - ToolBucket</title>
+
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="icon" href="/favicon.ico">
+
+<meta name="description"
+content="Generate secure RFC 4122 Version 4 UUIDs instantly with ToolBucket's free UUID Generator. Create one or multiple UUIDs, copy them with one click, or download as TXT. Fast, secure, browser-based, and completely free.">
+
+<meta name="keywords"
+content="uuid generator, uuid v4 generator, rfc 4122 uuid, generate uuid online, unique id generator, guid generator, random uuid, uuid creator, uuid tool, developer tools, free uuid generator">
+
+<meta name="author" content="ToolBucket">
+
+<meta name="robots" content="index,follow,max-image-preview:large">
+
+<meta name="theme-color" content="#0F172A">
+
+<link rel="canonical"
+href="https://toolbucket.site/developer-tools/uuid-generator/">
+
+<!-- Open Graph -->
+
+<meta property="og:type" content="website">
+
+<meta property="og:title"
+content="Free UUID Generator Online (RFC 4122 v4) | ToolBucket">
+
+<meta property="og:description"
+content="Generate secure UUID Version 4 identifiers instantly. Copy or download multiple UUIDs with one click. Free, fast, and browser-based.">
+
+<meta property="og:url"
+content="https://toolbucket.site/developer-tools/uuid-generator/">
+
+<meta property="og:image"
+content="https://toolbucket.site/assets/uuid-generator.webp">
+
+<meta property="og:image:alt"
+content="UUID Generator Tool by ToolBucket">
+
+<meta property="og:site_name"
+content="ToolBucket">
+
+<meta property="og:locale"
+content="en_US">
+
+<!-- Twitter -->
+
+<meta name="twitter:card"
+content="summary_large_image">
+
+<meta name="twitter:title"
+content="Free UUID Generator Online | ToolBucket">
+
+<meta name="twitter:description"
+content="Generate RFC 4122 Version 4 UUIDs online for free. Copy, download, and create multiple unique UUIDs instantly.">
+
+<meta name="twitter:image"
+content="https://toolbucket.site/assets/uuid-generator.webp">
+
+<meta name="twitter:image:alt"
+content="UUID Generator Tool by ToolBucket">
+
+<!-- Google Fonts -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<!-- Font Awesome -->
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+
+    <div id="navbar"></div>
+
+
+    <!-- Hero Section -->
+
+<section class="hero">
+
+    <div class="container hero-content">
+
+        <div class="hero-text">
+
+            <span class="hero-badge">
+                <i class="fa-solid fa-code"></i>
+                Developer Tool
+            </span>
+
+            <h1>
+                UUID Generator
+            </h1>
+
+            <p>
+                Generate secure RFC 4122 Version 4 UUIDs instantly. Create one or multiple unique IDs, copy them with one click, or download them as a TXT file. Free, fast, and works directly in your browser.
+            </p>
+
+            <div class="hero-features">
+
+                <div class="feature">
+                    <i class="fa-solid fa-bolt"></i>
+                    <span>Instant Generation</span>
+                </div>
+
+                <div class="feature">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span>100% Secure</span>
+                </div>
+
+                <div class="feature">
+                    <i class="fa-solid fa-copy"></i>
+                    <span>One-Click Copy</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="preview-card">
+
+            <div class="preview-header">
+
+                <i class="fa-solid fa-fingerprint"></i>
+
+                <h3>UUID Preview</h3>
+
+            </div>
+
+            <div class="uuid-preview">
+
+                <div class="uuid-item">
+                    550e8400-e29b-41d4-a716-446655440000
+                </div>
+
+                <div class="uuid-item">
+                    7f3d9b0c-5f8c-4f4f-92de-2b0e6d43d89a
+                </div>
+
+                <div class="uuid-item">
+                    c8b2f94a-6d47-4dd7-9d54-f03d9b1ab7e1
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- UUID Generator -->
+
+<section class="uuid-generator">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <h2>Generate UUIDs</h2>
+
+            <p>
+                Create secure RFC 4122 Version 4 UUIDs instantly. Generate one or multiple UUIDs, then copy or download them in a single click.
+            </p>
+
+        </div>
+
+        <div class="generator-card glass-card">
+
+            <div class="input-group">
+
+                <label for="uuidCount">
+                    Number of UUIDs
+                </label>
+
+                <input
+                    type="number"
+                    id="uuidCount"
+                    min="1"
+                    max="100"
+                    value="5"
+                >
+
+            </div>
+
+            <button id="generateBtn" class="generate-btn">
+
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                Generate UUIDs
+
+            </button>
+
+            <div class="output-box" id="outputBox">
+
+                <div class="placeholder">
+
+                    <i class="fa-solid fa-fingerprint"></i>
+
+                    <p>
+                        Your generated UUIDs will appear here.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="action-buttons">
+
+                <button id="copyBtn" class="copy-btn">
+
+                    <i class="fa-solid fa-copy"></i>
+
+                    Copy All
+
+                </button>
+
+                <button id="downloadBtn" class="download-btn">
+
+                    <i class="fa-solid fa-download"></i>
+
+                    Download TXT
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- How It Works -->
+
+<section class="how-it-works">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <h2>How It Works</h2>
+
+            <p>
+                Generate unique UUIDs in just three simple steps.
+            </p>
+
+        </div>
+
+        <div class="steps-grid">
+
+            <!-- Step 1 -->
+
+            <div class="step-card">
+
+                <div class="step-number">
+                    1
+                </div>
+
+                <i class="fa-solid fa-list-ol"></i>
+
+                <h3>Select Quantity</h3>
+
+                <p>
+                    Choose how many UUIDs you want to generate. You can create between 1 and 100 UUIDs at once.
+                </p>
+
+            </div>
+
+            <!-- Step 2 -->
+
+            <div class="step-card">
+
+                <div class="step-number">
+                    2
+                </div>
+
+                <i class="fa-solid fa-bolt"></i>
+
+                <h3>Generate UUIDs</h3>
+
+                <p>
+                    Click the Generate button to instantly create secure RFC 4122 Version 4 UUIDs using your browser.
+                </p>
+
+            </div>
+
+            <!-- Step 3 -->
+
+            <div class="step-card">
+
+                <div class="step-number">
+                    3
+                </div>
+
+                <i class="fa-solid fa-copy"></i>
+
+                <h3>Copy or Download</h3>
+
+                <p>
+                    Copy all generated UUIDs with one click or download them as a TXT file for later use.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Features -->
+
+<section class="features">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <h2>Why Use Our UUID Generator?</h2>
+
+            <p>
+                Everything you need to generate secure UUIDs quickly and efficiently.
+            </p>
+
+        </div>
+
+        <div class="features-grid">
+
+            <!-- Feature 1 -->
+
+            <div class="feature-card">
+
+                <i class="fa-solid fa-bolt"></i>
+
+                <h3>Instant Generation</h3>
+
+                <p>
+                    Generate one or multiple UUIDs instantly with a single click.
+                </p>
+
+            </div>
+
+            <!-- Feature 2 -->
+
+            <div class="feature-card">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+                <h3>100% Secure</h3>
+
+                <p>
+                    UUIDs are generated directly in your browser. Your data never leaves your device.
+                </p>
+
+            </div>
+
+            <!-- Feature 3 -->
+
+            <div class="feature-card">
+
+                <i class="fa-solid fa-fingerprint"></i>
+
+                <h3>RFC 4122 v4</h3>
+
+                <p>
+                    Generate standards-compliant Version 4 UUIDs using secure random values.
+                </p>
+
+            </div>
+
+            <!-- Feature 4 -->
+
+            <div class="feature-card">
+
+                <i class="fa-solid fa-copy"></i>
+
+                <h3>One-Click Copy</h3>
+
+                <p>
+                    Copy all generated UUIDs to your clipboard instantly.
+                </p>
+
+            </div>
+
+            <!-- Feature 5 -->
+
+            <div class="feature-card">
+
+                <i class="fa-solid fa-download"></i>
+
+                <h3>Download TXT</h3>
+
+                <p>
+                    Save generated UUIDs as a text file for future use.
+                </p>
+
+            </div>
+
+            <!-- Feature 6 -->
+
+            <div class="feature-card">
+
+                <i class="fa-solid fa-mobile-screen-button"></i>
+
+                <h3>Works Everywhere</h3>
+
+                <p>
+                    Fully responsive and compatible with desktop, tablet, and mobile devices.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="use-cases">
+
+<div class="container">
+
+<div class="section-heading">
+
+<h2>Where Are UUIDs Used?</h2>
+
+<p>
+UUIDs are widely used in modern software development to uniquely identify records, users, devices, files, and transactions.
+</p>
+
+</div>
+
+<div class="use-grid">
+
+<div class="use-card">
+<i class="fa-solid fa-database"></i>
+<h3>Databases</h3>
+<p>Use UUIDs as unique primary keys in SQL and NoSQL databases.</p>
+</div>
+
+<div class="use-card">
+<i class="fa-solid fa-cloud"></i>
+<h3>APIs</h3>
+<p>Generate secure IDs for REST APIs and distributed systems.</p>
+</div>
+
+<div class="use-card">
+<i class="fa-solid fa-mobile-screen"></i>
+<h3>Mobile Apps</h3>
+<p>Identify users, sessions and devices uniquely.</p>
+</div>
+
+<div class="use-card">
+<i class="fa-solid fa-server"></i>
+<h3>Backend Systems</h3>
+<p>Assign globally unique identifiers without collisions.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+
+<!-- FAQ -->
+
+<section class="faq">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <h2>Frequently Asked Questions</h2>
+
+            <p>
+                Find answers to the most common questions about our UUID Generator.
+            </p>
+
+        </div>
+
+        <div class="faq-container">
+
+            <!-- FAQ 1 -->
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+
+                    <span>What is a UUID?</span>
+
+                    <i class="fa-solid fa-plus"></i>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        A UUID (Universally Unique Identifier) is a 128-bit unique identifier used in databases, APIs, software applications, and distributed systems to uniquely identify objects without duplication.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- FAQ 2 -->
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+
+                    <span>Which UUID version does this tool generate?</span>
+
+                    <i class="fa-solid fa-plus"></i>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        This tool generates RFC 4122 Version 4 (UUID v4), which uses cryptographically secure random values for maximum uniqueness.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- FAQ 3 -->
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+
+                    <span>Can I generate multiple UUIDs at once?</span>
+
+                    <i class="fa-solid fa-plus"></i>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        Yes. You can generate between 1 and 100 UUIDs in a single click and copy or download them instantly.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- FAQ 4 -->
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+
+                    <span>Is this UUID Generator free?</span>
+
+                    <i class="fa-solid fa-plus"></i>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        Yes. ToolBucket's UUID Generator is completely free to use with no registration, installation, or hidden charges.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Related Tools -->
+
+<section class="related-tools">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <h2>Explore More Developer Tools</h2>
+
+            <p>
+                Discover more free online developer tools from ToolBucket.
+            </p>
+
+        </div>
+
+        <div class="tools-grid">
+
+            <a href="/json-formatter/" class="tool-card">
+
+                <i class="fa-solid fa-code"></i>
+
+                <h3>JSON Formatter</h3>
+
+                <p>Format and beautify JSON instantly.</p>
+
+            </a>
+
+            <a href="/password-generator/" class="tool-card">
+
+                <i class="fa-solid fa-key"></i>
+
+                <h3>Password Generator</h3>
+
+                <p>Create strong and secure passwords.</p>
+
+            </a>
+
+            <a href="/base64-encoder/" class="tool-card">
+
+                <i class="fa-solid fa-lock"></i>
+
+                <h3>Base64 Encoder</h3>
+
+                <p>Encode and decode Base64 text easily.</p>
+
+            </a>
+
+            <a href="/hash-generator/" class="tool-card">
+
+                <i class="fa-solid fa-fingerprint"></i>
+
+                <h3>Hash Generator</h3>
+
+                <p>Generate MD5, SHA-1 and SHA-256 hashes.</p>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+   <div id="footer"></div>
+
+<script src="../../js/include.js"></script>
+<script src="../../js/navbar.js"></script>
+<script src="./script.js"></script>
+
+</body>
+</html>
