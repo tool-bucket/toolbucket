@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Basic -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <!-- ===========================
+        SEO
+=========================== -->
+<!-- ===========================
+        SEO
+=========================== -->
+
+<title>Free URL Encoder & Decoder Online | Encode & Decode URLs - ToolBucket</title>
+
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="icon" href="/favicon.ico">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Free online URL Encoder & Decoder by ToolBucket. Instantly encode or decode URLs, query parameters, and special characters. Fast, secure, browser-based, and completely free.">
+
+<meta name="keywords"
+content="url encoder, url decoder, encode url online, decode url online, percent encoding, url encode tool, url decode tool, encode special characters, decode url parameters, developer tools">
+
+<meta name="author" content="ToolBucket">
+
+<meta name="robots" content="index,follow,max-image-preview:large">
+
+<meta name="theme-color" content="#0F172A">
+
+<link rel="canonical"
+href="https://toolbucket.site/developer-tools/url-encoder-decoder/">
+
+<!-- Open Graph -->
+
+<meta property="og:type" content="website">
+
+<meta property="og:title"
+content="Free URL Encoder & Decoder Online | ToolBucket">
+
+<meta property="og:description"
+content="Encode and decode URLs instantly with ToolBucket. Convert special characters into URL-safe format or restore encoded URLs in seconds.">
+
+<meta property="og:url"
+content="https://toolbucket.site/developer-tools/url-encoder-decoder/">
+
+<meta property="og:image"
+content="https://toolbucket.site/assets/url-encoder-decoder.webp">
+
+<meta property="og:image:alt"
+content="URL Encoder & Decoder Tool by ToolBucket">
+
+<meta property="og:site_name"
+content="ToolBucket">
+
+<meta property="og:locale"
+content="en_US">
+
+<!-- Twitter -->
+
+<meta name="twitter:card"
+content="summary_large_image">
+
+<meta name="twitter:title"
+content="Free URL Encoder & Decoder | ToolBucket">
+
+<meta name="twitter:description"
+content="Encode or decode URLs online for free. Convert special characters, query strings, and URL parameters instantly using ToolBucket.">
+
+<meta name="twitter:image"
+content="https://toolbucket.site/assets/url-encoder-decoder.webp">
+
+<meta name="twitter:image:alt"
+content="URL Encoder & Decoder Tool">
+
+<!-- Google Fonts -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<!-- Font Awesome -->
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+
+    <div id="navbar"></div>
+
+
+    <section class="tool-section">
+
+    <div class="container">
+
+        <div class="tool-header">
+
+            <h1>URL Encoder & Decoder</h1>
+
+            <p>
+                Encode or decode URLs instantly. Convert special characters into a URL-safe format or restore encoded URLs back to their original form.
+            </p>
+
+        </div>
+
+        <div class="tool-card">
+
+            <div class="input-group">
+
+                <label for="inputText">
+                    Enter URL
+                </label>
+
+                <textarea
+                    id="inputText"
+                    placeholder="https://example.com/search?name=John Doe&city=New York"
+                ></textarea>
+
+            </div>
+
+            <div class="button-group">
+
+                <button id="encodeBtn" class="primary-btn">
+                    Encode URL
+                </button>
+
+                <button id="decodeBtn" class="secondary-btn">
+                    Decode URL
+                </button>
+
+                <button id="clearBtn" class="danger-btn">
+                    Clear
+                </button>
+
+            </div>
+
+            <div class="input-group">
+
+                <label for="outputText">
+                    Result
+                </label>
+
+                <textarea
+                    id="outputText"
+                    readonly
+                    placeholder="Your encoded or decoded URL will appear here..."
+                ></textarea>
+
+            </div>
+
+            <div class="bottom-actions">
+
+                <button id="copyBtn">
+                    <i class="fa-regular fa-copy"></i>
+                    Copy Result
+                </button>
+
+                <div class="char-count">
+
+                    Characters :
+                    <span id="charCount">
+                        0
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="features">
+
+<div class="container">
+
+<h2>Why Choose ToolBucket?</h2>
+
+<div class="feature-grid">
+
+<div class="feature-card">
+<i class="fa-solid fa-bolt"></i>
+<h3>Instant Processing</h3>
+<p>Encode and decode URLs in real time without waiting.</p>
+</div>
+
+<div class="feature-card">
+<i class="fa-solid fa-shield-halved"></i>
+<h3>100% Secure</h3>
+<p>Your data never leaves your browser.</p>
+</div>
+
+<div class="feature-card">
+<i class="fa-solid fa-mobile-screen"></i>
+<h3>Works Everywhere</h3>
+<p>Compatible with desktop, tablet and mobile devices.</p>
+</div>
+
+<div class="feature-card">
+<i class="fa-solid fa-copy"></i>
+<h3>Copy in One Click</h3>
+<p>Copy the encoded or decoded result instantly.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<section class="content-section">
+
+<div class="container">
+
+<h2>How to Use This Tool</h2>
+
+<ol>
+
+<li>Paste your URL into the input box.</li>
+
+<li>Click <strong>Encode URL</strong> to encode special characters.</li>
+
+<li>Click <strong>Decode URL</strong> if your URL is already encoded.</li>
+
+<li>Copy the result with one click.</li>
+
+</ol>
+
+</div>
+
+</section>
+
+<section class="content-section">
+
+    <div class="container">
+
+        <h2>What is URL Encoding?</h2>
+
+        <p>
+
+            URL Encoding, also known as Percent Encoding, is a method of converting special characters into a format that can be safely transmitted over the internet. Web browsers and web servers use URLs to exchange information, but certain characters such as spaces, ampersands (&), question marks (?), plus signs (+), and other reserved symbols cannot always be interpreted correctly inside a URL. URL encoding replaces these characters with a percentage sign (%) followed by their hexadecimal value, ensuring that the URL remains valid and readable by browsers, servers, and APIs.
+
+        </p>
+
+        <p>
+
+            For example, a space character cannot appear directly inside a URL because it may cause unexpected behavior. Instead, it is converted into <strong>%20</strong>. Similarly, other reserved characters are encoded into their corresponding values before being sent across the internet. This process guarantees that all information contained in the URL is transmitted accurately without changing its meaning.
+
+        </p>
+
+        <p>
+
+            URL encoding is widely used in web development, search engines, REST APIs, online forms, payment gateways, authentication systems, and countless other internet applications. Whenever you submit a form, perform a search on Google, or send data to a web service, URL encoding often works silently in the background to ensure that your request is processed correctly.
+
+        </p>
+
+        <p>
+
+            ToolBucket's free URL Encoder & Decoder allows you to quickly convert normal text into a URL-safe format and decode encoded URLs back into their original readable form. Everything happens directly inside your browser, meaning your data remains private and secure without being uploaded to any server.
+
+        </p>
+
+    </div>
+
+</section>
+
+<section class="content-section">
+
+    <div class="container">
+
+        <h2>Why Use URL Encoding?</h2>
+
+        <p>
+
+            URL encoding is essential whenever a URL contains spaces, special symbols, or non-English characters. Modern websites and web applications frequently exchange data through URLs, and even a single invalid character can prevent a request from working correctly. By encoding these characters, developers ensure that browsers and servers interpret the URL exactly as intended. This process helps eliminate errors caused by reserved characters and guarantees reliable communication between web applications.
+
+        </p>
+
+        <p>
+
+            Developers commonly use URL encoding while working with search queries, API requests, online forms, authentication systems, payment gateways, and dynamic web applications. Without encoding, characters such as spaces, ampersands, question marks, equal signs, and plus signs may be interpreted as part of the URL structure rather than as actual data. Proper encoding removes this ambiguity and allows information to travel safely between the client and the server.
+
+        </p>
+
+        <p>
+
+            Even if you are not a developer, URL encoding can be useful when sharing links that contain special characters or user-generated content. It ensures that the link works correctly across different browsers, operating systems, and web services. Our free URL Encoder & Decoder makes this process quick, secure, and effortless by performing all operations directly in your browser without uploading your data anywhere.
+
+        </p>
+
+    </div>
+
+</section>
+
+<section class="content-section">
+
+    <div class="container">
+
+        <h2>How Does URL Encoding Work?</h2>
+
+        <p>
+
+            URL encoding works by replacing reserved or unsafe characters with a percent sign (%) followed by their hexadecimal ASCII value. This standardized approach is defined by internet specifications and ensures that every browser and server interprets URLs consistently. For example, a space character is converted into <strong>%20</strong>, while an ampersand becomes <strong>%26</strong>. These encoded values allow special characters to travel safely without changing the meaning of the URL.
+
+        </p>
+
+        <p>
+
+            Whenever you perform a search on Google, submit an online form, or send data to a web API, your browser often applies URL encoding automatically. This ensures that user input containing spaces, symbols, or international characters does not break the request. On the receiving end, the server decodes the values back into their original characters before processing the information.
+
+        </p>
+
+        <p>
+
+            ToolBucket performs the same encoding and decoding process instantly inside your browser using built-in JavaScript functions. Since all calculations happen locally, your URLs remain completely private and are never transmitted to our servers.
+
+        </p>
+
+    </div>
+
+</section>
+
+<section class="content-section">
+
+    <div class="container">
+
+        <h2>Benefits of URL Encoding</h2>
+
+        <p>
+
+            URL encoding improves compatibility, reliability, and security when working with web addresses. It prevents errors caused by invalid characters and ensures that URLs remain readable by browsers, servers, APIs, and networking tools. Whether you are developing a website or simply sharing a link, encoding guarantees that the data reaches its destination without corruption.
+
+        </p>
+
+        <p>
+
+            Another major benefit is improved interoperability between different programming languages and web frameworks. JavaScript, PHP, Python, Java, Node.js, and many other technologies all rely on URL encoding to exchange information correctly. This makes it an essential part of modern web development.
+
+        </p>
+
+        <p>
+
+            Using ToolBucket's free URL Encoder & Decoder saves time by instantly converting URLs without requiring software installation or technical knowledge. The tool is fast, mobile-friendly, privacy-focused, and completely free to use.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="content-section">
+
+<div class="container">
+
+<h2>What is URL Encoding?</h2>
+
+<p>
+
+URL encoding converts special characters into a format that can safely be transmitted over the internet. Spaces become <code>%20</code>, ampersands become <code>%26</code>, and many other reserved characters are converted into percent-encoded values.
+
+</p>
+
+<p>
+
+This ensures browsers and web servers correctly understand URLs, query parameters, and API requests.
+
+</p>
+
+</div>
+
+</section>
+
+
+<section class="content-section">
+
+<div class="container">
+
+<h2>Example</h2>
+
+<div class="example-box">
+
+<h3>Original URL</h3>
+
+<code>
+
+https://example.com/search?q=hello world&city=New York
+
+</code>
+
+<h3>Encoded URL</h3>
+
+<code>
+
+https://example.com/search?q=hello%20world&city=New%20York
+
+</code>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="faq">
+
+<div class="container">
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq-item">
+
+<h3>What is URL Encoding?</h3>
+
+<p>
+It converts special characters into a URL-safe format.
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>What is URL Decoding?</h3>
+
+<p>
+It restores encoded URLs back into their original readable format.
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>Is this tool secure?</h3>
+
+<p>
+Yes. Everything happens locally inside your browser.
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>Does ToolBucket store my URLs?</h3>
+
+<p>
+No. Your data is never uploaded or saved.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="related-tools">
+
+<div class="container">
+
+<h2>Related Developer Tools</h2>
+
+<div class="related-grid">
+
+<a href="/developer-tools/base64-encoder-decoder/">
+Base64 Encoder & Decoder
+</a>
+
+<a href="/developer-tools/json-formatter/">
+JSON Formatter
+</a>
+
+<a href="/developer-tools/jwt-decoder/">
+JWT Decoder
+</a>
+
+<a href="/developer-tools/password-generator/">
+Password Generator
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+   <div id="footer"></div>
+
+<script src="../../js/include.js"></script>
+<script src="../../js/navbar.js"></script>
+<script src="./script.js"></script>
+
+</body>
+</html>
