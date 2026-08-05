@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+     <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+    <!-- Basic -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <!-- SEO -->
+
+<title>Free JPG to PNG Converter Online | ToolBucket</title>
+
+<link rel="icon" type="image/png" href="/favicon.png">
+
+<meta name="description"
+content="Convert JPG to PNG online for free. Create high-quality PNG images instantly with our fast, secure and browser-based JPG to PNG converter. No registration or software required.">
+
+<meta name="keywords"
+content="jpg to png,
+jpeg to png,
+convert jpg to png,
+jpg to png converter,
+free jpg to png converter,
+online jpg to png,
+jpeg to png converter">
+
+<meta name="author" content="ToolBucket">
+
+<meta name="robots" content="index,follow">
+
+<meta name="theme-color" content="#0F172A">
+
+<link rel="canonical"
+href="https://www.toolbucket.site/jpg-to-png/">
+
+<!-- Open Graph -->
+
+<meta property="og:type" content="website">
+
+<meta property="og:title"
+content="Free JPG to PNG Converter Online | ToolBucket">
+
+<meta property="og:description"
+content="Convert JPG images to PNG online for free. Fast, secure and browser-based JPG to PNG converter with high-quality output.">
+
+<meta property="og:url"
+content="https://www.toolbucket.site/jpg-to-png/">
+
+<meta property="og:image"
+content="https://www.toolbucket.site/assets/preview.jpg">
+
+<!-- Twitter -->
+
+<meta name="twitter:card"
+content="summary_large_image">
+
+<meta name="twitter:title"
+content="Free JPG to PNG Converter Online | ToolBucket">
+
+<meta name="twitter:description"
+content="Convert JPG to PNG online instantly. High-quality, secure and free browser-based JPG to PNG converter.">
+
+<meta name="twitter:image"
+content="https://www.toolbucket.site/assets/preview.jpg">
+<!-- Favicon -->
+
+<link rel="icon" href="/favicon.ico">
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="/Image-converter/css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    
+
+</head>
+<body>
+
+
+    <div id="navbar"></div>
+
+
+<!-- =========================
+Hero
+========================= -->
+
+<section class="hero">
+
+    <div class="container hero-content">
+
+        <!-- Left Content -->
+
+        <div class="hero-text">
+
+            <span class="hero-badge">
+                <i class="fa-solid fa-repeat"></i>
+                100% Free • Fast • Secure
+            </span>
+
+            <h1>
+            Free JPG to PNG Converter
+            </h1>
+
+          <p>
+Convert JPG images to PNG online for free in seconds. Create high-quality PNG images with our secure browser-based converter. No software installation or registration required.
+</p>
+
+            <div class="hero-features">
+
+                <div class="feature">
+                    <i class="fa-solid fa-bolt"></i>
+                    Fast Conversion
+                </div>
+
+                <div class="feature">
+                    <i class="fa-solid fa-lock"></i>
+                    100% Secure
+                </div>
+
+                <div class="feature">
+    <i class="fa-solid fa-image"></i>
+JPG → PNG
+             </div>
+
+            </div>
+
+        </div>
+
+        <!-- Upload Card -->
+
+        <div class="converter-card">
+
+            <div class="upload-area" id="uploadArea">
+
+                <input
+                    type="file"
+                    id="fileInput"
+                    accept=".jpg,.jpeg,.png,.webp"
+                    hidden
+                >
+
+                <i class="fa-solid fa-cloud-arrow-up upload-icon"></i>
+
+                <h3>Drag & Drop Image</h3>
+
+                <p>or</p>
+
+                <button class="upload-btn" id="selectBtn">
+                    Select Image
+                </button>
+
+                <small>
+   Upload JPG Image
+</small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+Converter Panel
+========================= -->
+
+<section class="converter">
+
+    <div class="container">
+
+        <div class="converter-wrapper">
+
+            <!-- Original -->
+
+            <div class="preview-card">
+
+                <h2>Original Image</h2>
+
+                <img
+                    id="previewImage"
+                    src=""
+                    alt=""
+                    style="display:none;"
+                >
+
+                <div class="placeholder" id="placeholder">
+
+                    <i class="fa-solid fa-image"></i>
+
+                    <p>No image selected</p>
+
+                </div>
+
+            </div>
+
+            <!-- Controls -->
+
+            <div class="controls-card">
+
+                <h2>Convert Settings</h2>
+
+                <div class="info-box">
+
+                    <div>
+                        <span>File Name</span>
+                        <strong id="fileName">-</strong>
+                    </div>
+
+                    <div>
+                        <span>Size</span>
+                        <strong id="fileSize">-</strong>
+                    </div>
+
+                    <div>
+                        <span>Format</span>
+                        <strong id="fileFormat">-</strong>
+                    </div>
+
+                    <div>
+                        <span>Dimensions</span>
+                        <strong id="dimensions">-</strong>
+                    </div>
+
+                </div>
+
+                <label>Convert To</label>
+
+                <select id="formatSelect">
+
+                    <option value="png">PNG</option>
+
+                    <option value="jpeg">JPG</option>
+
+                    <option value="webp">WEBP</option>
+
+                </select>
+
+                <div id="qualityBox">
+
+    <label>
+        Quality
+        <span id="qualityValue">90%</span>
+    </label>
+
+    <input
+        type="range"
+        id="qualityRange"
+        min="10"
+        max="100"
+        value="90"
+    >
+
+</div>
+
+                <button id="convertBtn">
+
+                    <i class="fa-solid fa-repeat"></i>
+
+                    Convert Image
+
+                </button>
+
+                <a
+                    id="downloadBtn"
+                    style="display:none;"
+                >
+
+                    <i class="fa-solid fa-download"></i>
+
+                    Download
+
+                </a>
+
+            </div>
+
+            <!-- Converted -->
+
+            <div class="preview-card">
+
+                <h2>Converted Image</h2>
+
+                <img
+                    id="convertedImage"
+                    src=""
+                    alt=""
+                    style="display:none;"
+                >
+
+                <div class="placeholder" id="convertedPlaceholder">
+
+                    <i class="fa-solid fa-image"></i>
+
+                    <p>Converted image will appear here</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     JPG TO PNG CONTENT - PART 1
+========================================== -->
+
+<section class="tool-content">
+
+<div class="container">
+
+<!-- Introduction -->
+
+<div class="content-block">
+
+<span class="section-badge">
+<i class="fa-solid fa-repeat"></i>
+Fast • Secure • Browser Based
+</span>
+
+<h2>Free JPG to PNG Converter Online</h2>
+
+<p>
+
+ToolBucket JPG to PNG Converter lets you convert JPG images into PNG format quickly and securely without installing any software. Everything happens directly inside your browser, ensuring your images remain private while delivering high-quality PNG files.
+
+</p>
+
+<p>
+
+JPG is one of the most common image formats used for photos because it offers smaller file sizes. However, when you need better image quality for editing, graphics, logos, or future design work, PNG is often the preferred choice. Converting JPG to PNG creates a lossless image format that works well across different devices and editing software.
+
+</p>
+
+<p>
+
+Whether you're preparing graphics for a website, creating presentations, editing images, designing logos, or organizing digital artwork, ToolBucket helps you convert JPG images into high-quality PNG files within seconds.
+
+</p>
+
+</div>
+
+<!-- Why Convert -->
+
+<div class="content-block">
+
+<h2>Why Convert JPG to PNG?</h2>
+
+<p>
+
+Although JPG is excellent for photographs, PNG offers several advantages for graphics and design projects. PNG supports lossless image quality, making it a better choice whenever image clarity is important.
+
+</p>
+
+<p>
+
+Many users convert JPG images into PNG before editing them because PNG preserves image details more effectively during repeated editing and saving. It is also widely used for digital artwork, illustrations, screenshots, and web graphics.
+
+</p>
+
+<div class="benefits-grid">
+
+<div class="benefit-card">
+
+<i class="fa-solid fa-image"></i>
+
+<h3>Lossless Quality</h3>
+
+<p>
+
+PNG preserves image quality without introducing additional compression artifacts.
+
+</p>
+
+</div>
+
+<div class="benefit-card">
+
+<i class="fa-solid fa-pen-ruler"></i>
+
+<h3>Better for Editing</h3>
+
+<p>
+
+PNG files are commonly used in graphic design, editing software, and creative projects.
+
+</p>
+
+</div>
+
+<div class="benefit-card">
+
+<i class="fa-solid fa-display"></i>
+
+<h3>Sharper Graphics</h3>
+
+<p>
+
+PNG works well for screenshots, diagrams, illustrations, and digital graphics where image clarity matters.
+
+</p>
+
+</div>
+
+<div class="benefit-card">
+
+<i class="fa-solid fa-laptop-code"></i>
+
+<h3>Ideal for Web Graphics</h3>
+
+<p>
+
+PNG images are frequently used for UI elements, icons, banners, and website graphics.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- How To Convert -->
+
+<div class="content-block">
+
+<h2>How to Convert JPG to PNG Online</h2>
+
+<p>
+
+Converting JPG images into PNG format with ToolBucket is simple and takes only a few seconds.
+
+</p>
+
+<div class="steps">
+
+<div class="step">
+
+<span>01</span>
+
+<div>
+
+<h3>Upload Your JPG Image</h3>
+
+<p>
+
+Click the Select Image button or drag and drop your JPG or JPEG file into the upload area.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="step">
+
+<span>02</span>
+
+<div>
+
+<h3>PNG is Selected Automatically</h3>
+
+<p>
+
+The converter automatically prepares your JPG image for PNG conversion.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="step">
+
+<span>03</span>
+
+<div>
+
+<h3>Click Convert</h3>
+
+<p>
+
+Press the Convert JPG to PNG button and let ToolBucket process your image instantly.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="step">
+
+<span>04</span>
+
+<div>
+
+<h3>Preview Your PNG Image</h3>
+
+<p>
+
+Check the converted PNG image before downloading it to ensure everything looks perfect.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="step">
+
+<span>05</span>
+
+<div>
+
+<h3>Download Your PNG</h3>
+
+<p>
+
+Download your high-quality PNG image instantly and use it for editing, presentations, websites, or personal projects.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ==========================================
+JPG TO PNG CONTENT - PART 2
+========================================== -->
+<!-- ==========================================
+     JPG TO PNG CONTENT - PART 2
+========================================== -->
+
+<!-- Features -->
+
+<div class="content-block">
+
+<h2>Features of ToolBucket JPG to PNG Converter</h2>
+
+<p>
+
+ToolBucket provides a fast, secure, and high-quality JPG to PNG conversion experience directly inside your browser. Whether you're creating graphics, editing images, or preparing files for presentations, our converter delivers reliable PNG output in just a few clicks.
+
+</p>
+
+<div class="feature-grid">
+
+<div class="feature-card">
+
+<i class="fa-solid fa-bolt"></i>
+
+<h3>Fast Conversion</h3>
+
+<p>
+
+Convert JPG images into PNG format within seconds using our browser-based converter.
+
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<i class="fa-solid fa-shield-halved"></i>
+
+<h3>Private & Secure</h3>
+
+<p>
+
+Your images are processed locally in your browser, keeping your files safe and private.
+
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<i class="fa-solid fa-image"></i>
+
+<h3>High Quality PNG</h3>
+
+<p>
+
+Generate PNG images with excellent clarity that are suitable for editing, graphics, and presentations.
+
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<i class="fa-solid fa-palette"></i>
+
+<h3>Perfect for Designers</h3>
+
+<p>
+
+Ideal for graphic designers, students, marketers, and anyone creating digital artwork.
+
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<i class="fa-solid fa-mobile-screen-button"></i>
+
+<h3>Works on Every Device</h3>
+
+<p>
+
+Compatible with Windows, macOS, Linux, Android, iPhone, and all modern browsers.
+
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<i class="fa-solid fa-download"></i>
+
+<h3>Instant Download</h3>
+
+<p>
+
+Download your converted PNG image immediately after conversion with one click.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- JPG vs PNG -->
+
+<div class="content-block">
+
+<h2>JPG vs PNG</h2>
+
+<p>
+
+JPG and PNG are two of the most commonly used image formats. Choosing the right format depends on how you plan to use your image.
+
+</p>
+
+<div class="format-grid">
+
+<div class="format-card">
+
+<h3>JPG</h3>
+
+<p>
+
+Smaller file sizes make JPG ideal for photographs, websites, blogs, email attachments, and social media.
+
+</p>
+
+</div>
+
+<div class="format-card">
+
+<h3>PNG</h3>
+
+<p>
+
+PNG preserves image quality and is commonly used for graphics, logos, screenshots, and digital illustrations.
+
+</p>
+
+</div>
+
+<div class="format-card">
+
+<h3>When to Use JPG</h3>
+
+<p>
+
+Use JPG for everyday photos where smaller file size is more important than maximum editing quality.
+
+</p>
+
+</div>
+
+<div class="format-card">
+
+<h3>When to Use PNG</h3>
+
+<p>
+
+Choose PNG for editing projects, presentations, graphics, diagrams, and artwork that require sharp image quality.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Image Quality -->
+
+<div class="content-block">
+
+<h2>Convert JPG to PNG with Excellent Image Quality</h2>
+
+<p>
+
+ToolBucket creates high-quality PNG images from your JPG files, helping preserve visual details for editing and creative work. While converting cannot restore details already lost in the original JPG, it provides a high-quality PNG version suitable for future use.
+
+</p>
+
+<p>
+
+The converted PNG files are ideal for presentations, documents, digital artwork, website graphics, and further image editing.
+
+</p>
+
+</div>
+
+<!-- Common Uses -->
+
+<div class="content-block">
+
+<h2>Common Uses of JPG to PNG Converter</h2>
+
+<p>
+
+People convert JPG images into PNG format for many professional and personal projects. Here are some of the most common use cases.
+
+</p>
+
+<div class="use-case-grid">
+
+<div class="use-card">
+
+<i class="fa-solid fa-pen-ruler"></i>
+
+<h3>Graphic Design</h3>
+
+<p>
+
+Create graphics, posters, banners, and marketing materials using PNG images.
+
+</p>
+
+</div>
+
+<div class="use-card">
+
+<i class="fa-solid fa-display"></i>
+
+<h3>Presentations</h3>
+
+<p>
+
+Insert high-quality PNG images into PowerPoint, Google Slides, and business presentations.
+
+</p>
+
+</div>
+
+<div class="use-card">
+
+<i class="fa-solid fa-image"></i>
+
+<h3>Digital Artwork</h3>
+
+<p>
+
+Prepare images for editing in Photoshop, Illustrator, Canva, and other design software.
+
+</p>
+
+</div>
+
+<div class="use-card">
+
+<i class="fa-solid fa-file-word"></i>
+
+<h3>Office Documents</h3>
+
+<p>
+
+Use PNG graphics inside Word documents, reports, PDFs, and educational materials.
+
+</p>
+
+</div>
+
+<div class="use-card">
+
+<i class="fa-solid fa-laptop-code"></i>
+
+<h3>Website Graphics</h3>
+
+<p>
+
+Create icons, UI elements, and graphics for websites and applications.
+
+</p>
+
+</div>
+
+<div class="use-card">
+
+<i class="fa-solid fa-graduation-cap"></i>
+
+<h3>Student Projects</h3>
+
+<p>
+
+Prepare high-quality images for assignments, research papers, and academic presentations.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ==========================================
+     END PART 2
+========================================== -->
+<!-- ==========================================
+     JPG TO PNG CONTENT - PART 3
+========================================== -->
+
+<!-- Benefits -->
+
+<div class="content-block">
+
+<h2>Benefits of Converting JPG to PNG</h2>
+
+<p>
+
+Converting JPG images into PNG format provides several advantages, especially when image quality is more important than file size. PNG files preserve visual details better and are widely used for editing, graphics, presentations, and digital artwork.
+
+</p>
+
+<p>
+
+Although PNG files are generally larger than JPG images, they offer better quality for projects that may require multiple edits or professional presentation.
+
+</p>
+
+<div class="benefits-grid">
+
+<div class="benefit-card">
+
+<i class="fa-solid fa-image"></i>
+
+<h3>Sharper Image Quality</h3>
+
+<p>
+
+PNG preserves image details without introducing additional compression, making it suitable for editing and design work.
+
+</p>
+
+</div>
+
+<div class="benefit-card">
+
+<i class="fa-solid fa-pen-ruler"></i>
+
+<h3>Ideal for Editing</h3>
+
+<p>
+
+Graphic designers and content creators often prefer PNG because it maintains better image quality during editing.
+
+</p>
+
+</div>
+
+<div class="benefit-card">
+
+<i class="fa-solid fa-desktop"></i>
+
+<h3>Perfect for Graphics</h3>
+
+<p>
+
+PNG images work well for presentations, diagrams, UI elements, banners, and digital graphics.
+
+</p>
+
+</div>
+
+<div class="benefit-card">
+
+<i class="fa-solid fa-check"></i>
+
+<h3>Reliable Compatibility</h3>
+
+<p>
+
+PNG is supported by all modern browsers, operating systems, editing software, and design applications.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Privacy -->
+
+<div class="content-block">
+
+<h2>Your Privacy Comes First</h2>
+
+<p>
+
+ToolBucket processes every JPG image directly inside your browser. Your files are never permanently uploaded, stored, or shared with third-party servers during conversion.
+
+</p>
+
+<p>
+
+Because everything happens locally on your device, your personal images remain private while enjoying fast conversion speeds.
+
+</p>
+
+</div>
+
+<!-- Tips -->
+
+<div class="content-block">
+
+<h2>Tips for Better JPG to PNG Conversion</h2>
+
+<p>
+
+Use these simple tips to achieve the best PNG image after conversion.
+
+</p>
+
+<div class="tips-list">
+
+<div class="tip-item">
+
+<i class="fa-solid fa-check"></i>
+
+<p>
+
+Use PNG for graphics, presentations, screenshots, and editing projects where image quality matters.
+
+</p>
+
+</div>
+
+<div class="tip-item">
+
+<i class="fa-solid fa-check"></i>
+
+<p>
+
+Remember that converting JPG to PNG cannot recover details that were already lost due to JPG compression.
+
+</p>
+
+</div>
+
+<div class="tip-item">
+
+<i class="fa-solid fa-check"></i>
+
+<p>
+
+PNG files are usually larger than JPG images, so use PNG only when higher image quality is needed.
+
+</p>
+
+</div>
+
+<div class="tip-item">
+
+<i class="fa-solid fa-check"></i>
+
+<p>
+
+Preview the converted PNG image before downloading it.
+
+</p>
+
+</div>
+
+<div class="tip-item">
+
+<i class="fa-solid fa-check"></i>
+
+<p>
+
+Use PNG when you plan to continue editing the image in design software.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Why Choose -->
+
+<div class="content-block">
+
+<h2>Why Choose ToolBucket JPG to PNG Converter?</h2>
+
+<p>
+
+ToolBucket combines speed, privacy, and excellent image quality in one easy-to-use online converter. Our browser-based technology allows anyone to convert JPG images into PNG files without downloading software or creating an account.
+
+</p>
+
+<div class="why-grid">
+
+<div class="why-card">100% Free</div>
+
+<div class="why-card">Browser Based</div>
+
+<div class="why-card">Fast Conversion</div>
+
+<div class="why-card">Secure Processing</div>
+
+<div class="why-card">High Quality PNG</div>
+
+<div class="why-card">Works on All Devices</div>
+
+</div>
+
+</div>
+
+<!-- Related Tools -->
+
+<div class="content-block">
+
+<h2>Related Image Tools</h2>
+
+<p>
+
+Need another image conversion tool? Explore more free online tools from ToolBucket.
+
+</p>
+
+<div class="related-tools">
+
+<a href="/png-to-jpg/">PNG to JPG</a>
+
+<a href="/webp-to-jpg/">WEBP to JPG</a>
+
+<a href="/image-compressor/">Image Compressor</a>
+
+<a href="/image-resizer/">Image Resizer</a>
+
+</div>
+
+</div>
+
+<!-- ==========================================
+     END PART 3
+========================================== -->
+
+<div class="section-title">
+
+    <span class="section-badge">
+        <i class="fa-solid fa-circle-question"></i>
+        FAQ
+    </span>
+
+    <h2>
+        Frequently Asked
+        <span>Questions</span>
+    </h2>
+
+    <p>
+        Find answers to common questions about converting JPG images to PNG, image quality, transparency, file size, privacy, and compatibility.
+    </p>
+
+</div>
+
+<div class="faq-container">
+
+    <div class="faq-item">
+
+        <button class="faq-question">
+            Is ToolBucket JPG to PNG Converter free?
+            <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+
+            <p>
+                Yes. ToolBucket JPG to PNG Converter is completely free. Convert unlimited JPG and JPEG images into PNG format without creating an account or paying any fees.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="faq-item">
+
+        <button class="faq-question">
+            Does converting JPG to PNG improve image quality?
+            <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+
+            <p>
+                Converting JPG to PNG does not restore image details that were already lost due to JPG compression. However, the converted PNG file is better suited for future editing because it avoids additional quality loss from repeated saves.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="faq-item">
+
+        <button class="faq-question">
+            Will my PNG file have a transparent background?
+            <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+
+            <p>
+                No. Converting a JPG image to PNG does not automatically create transparency. The PNG file will keep the same background as the original JPG image unless the background is removed separately.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="faq-item">
+
+        <button class="faq-question">
+            Are my JPG images uploaded to your server?
+            <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+
+            <p>
+                No. ToolBucket processes your images directly inside your browser. Your files are never permanently uploaded or stored on our servers, keeping your data private and secure.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="faq-item">
+
+        <button class="faq-question">
+            Why should I convert JPG to PNG?
+            <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+
+            <p>
+                PNG is commonly used for graphics, illustrations, screenshots, presentations, and design projects because it preserves image quality better than JPG during editing and repeated saving.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="faq-item">
+
+        <button class="faq-question">
+            Can I convert JPG to PNG on my phone?
+            <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+
+            <p>
+                Yes. ToolBucket works perfectly on Android phones, iPhones, tablets, laptops, and desktop computers. No software installation is required.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+<div id="footer"></div>
+
+
+
+
+<script src="../js/navbar.js"></script>
+<script src="../js/include.js"></script>
+<script src="/Image-converter/js/script.js"></script>
+
+<body>
+</html>
+    
