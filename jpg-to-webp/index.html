@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+     <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+    <!-- Basic -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <!-- SEO -->
+
+<title>Free JPG to WEBP Converter Online | ToolBucket</title>
+
+<link rel="icon" type="image/png" href="/favicon.png">
+
+<meta name="description"
+content="Convert JPG to WEBP online for free. Reduce image file size while maintaining excellent visual quality with our fast, secure and browser-based JPG to WEBP converter.">
+
+<meta name="keywords"
+content="jpg to webp,
+jpeg to webp,
+convert jpg to webp,
+jpg to webp converter,
+free jpg to webp,
+online jpg to webp,
+jpeg image to webp">
+
+<meta name="author" content="ToolBucket">
+
+<meta name="robots" content="index,follow">
+
+<meta name="theme-color" content="#0F172A">
+
+<link rel="canonical"
+href="https://www.toolbucket.site/jpg-to-webp/">
+
+<!-- Open Graph -->
+
+<meta property="og:type" content="website">
+
+<meta property="og:title"
+content="Free JPG to WEBP Converter Online | ToolBucket">
+
+<meta property="og:description"
+content="Convert JPG images to WEBP online for free. Reduce image size and improve website performance with our fast browser-based converter.">
+
+<meta property="og:url"
+content="https://www.toolbucket.site/jpg-to-webp/">
+
+<meta property="og:image"
+content="https://www.toolbucket.site/assets/preview.jpg">
+
+<!-- Twitter -->
+
+<meta name="twitter:card"
+content="summary_large_image">
+
+<meta name="twitter:title"
+content="Free JPG to WEBP Converter Online | ToolBucket">
+
+<meta name="twitter:description"
+content="Convert JPG to WEBP online instantly. Free, secure and browser-based WEBP converter for faster websites.">
+
+<meta name="twitter:image"
+content="https://www.toolbucket.site/assets/preview.jpg">
+
+
+<!-- Favicon -->
+
+<link rel="icon" href="/favicon.ico">
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="/Image-converter/css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    
+
+</head>
+<body>
+
+
+    <div id="navbar"></div>
+
+
+<!-- =========================
+Hero
+========================= -->
+
+<section class="hero">
+
+    <div class="container hero-content">
+
+        <!-- Left Content -->
+
+        <div class="hero-text">
+
+            <span class="hero-badge">
+                <i class="fa-solid fa-repeat"></i>
+                100% Free • Fast • Secure
+            </span>
+
+       <h1>
+Free JPG to WEBP Converter
+</h1>
+
+        <p>
+Convert JPG images to WEBP online for free in seconds. Reduce image file size while maintaining excellent visual quality. Perfect for websites, blogs, portfolios, and online stores.
+</p>
+
+
+            <div class="hero-features">
+
+                <div class="feature">
+                    <i class="fa-solid fa-bolt"></i>
+                    Fast Conversion
+                </div>
+
+                <div class="feature">
+                    <i class="fa-solid fa-lock"></i>
+                    100% Secure
+                </div>
+
+                <div class="feature">
+    <i class="fa-solid fa-image"></i>
+JPG → WEBP
+             </div>
+
+            </div>
+
+        </div>
+
+        <!-- Upload Card -->
+
+        <div class="converter-card">
+
+            <div class="upload-area" id="uploadArea">
+
+                <input
+                    type="file"
+                    id="fileInput"
+                    accept=".jpg,.jpeg,.png,.webp"
+                    hidden
+                >
+
+                <i class="fa-solid fa-cloud-arrow-up upload-icon"></i>
+
+                <h3>Drag & Drop Image</h3>
+
+                <p>or</p>
+
+                <button class="upload-btn" id="selectBtn">
+                    Select Image
+                </button>
+
+                <small>
+Upload JPG Image
+</small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+Converter Panel
+========================= -->
+
+<section class="converter">
+
+    <div class="container">
+
+        <div class="converter-wrapper">
+
+            <!-- Original -->
+
+            <div class="preview-card">
+
+                <h2>Original Image</h2>
+
+                <img
+                    id="previewImage"
+                    src=""
+                    alt=""
+                    style="display:none;"
+                >
+
+                <div class="placeholder" id="placeholder">
+
+                    <i class="fa-solid fa-image"></i>
+
+                    <p>No image selected</p>
+
+                </div>
+
+            </div>
+
+            <!-- Controls -->
+
+            <div class="controls-card">
+
+                <h2>Convert Settings</h2>
+
+                <div class="info-box">
+
+                    <div>
+                        <span>File Name</span>
+                        <strong id="fileName">-</strong>
+                    </div>
+
+                    <div>
+                        <span>Size</span>
+                        <strong id="fileSize">-</strong>
+                    </div>
+
+                    <div>
+                        <span>Format</span>
+                        <strong id="fileFormat">-</strong>
+                    </div>
+
+                    <div>
+                        <span>Dimensions</span>
+                        <strong id="dimensions">-</strong>
+                    </div>
+
+                </div>
+
+                <label>Convert To</label>
+
+                <select id="formatSelect">
+
+                    <option value="png">PNG</option>
+
+                    <option value="jpeg">JPG</option>
+
+                    <option value="webp">WEBP</option>
+
+                </select>
+
+                <div id="qualityBox">
+
+    <label>
+        Quality
+        <span id="qualityValue">90%</span>
+    </label>
+
+    <input
+        type="range"
+        id="qualityRange"
+        min="10"
+        max="100"
+        value="90"
+    >
+
+</div>
+
+                <button id="convertBtn">
+
+                    <i class="fa-solid fa-repeat"></i>
+
+                    Convert Image
+
+                </button>
+
+                <a
+                    id="downloadBtn"
+                    style="display:none;"
+                >
+
+                    <i class="fa-solid fa-download"></i>
+
+                    Download
+
+                </a>
+
+            </div>
+
+            <!-- Converted -->
+
+            <div class="preview-card">
+
+                <h2>Converted Image</h2>
+
+                <img
+                    id="convertedImage"
+                    src=""
+                    alt=""
+                    style="display:none;"
+                >
+
+                <div class="placeholder" id="convertedPlaceholder">
+
+                    <i class="fa-solid fa-image"></i>
+
+                    <p>Converted image will appear here</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     JPG TO WEBP CONTENT - PART 1
+========================================== -->
+
+<section class="tool-content">
+
+<div class="container">
+
+<!-- Introduction -->
+
+<div class="content-block">
+
+<span class="section-badge">
+<i class="fa-solid fa-repeat"></i>
+Fast • Secure • Browser Based
+</span>
+
+<h2>Free JPG to WEBP Converter Online</h2>
+
+<p>
+
+ToolBucket JPG to WEBP Converter helps you convert JPG and JPEG images into modern WEBP format quickly and securely. Everything happens directly inside your browser, so your photos remain private while you get optimized WEBP images in just a few seconds.
+
+</p>
+
+<p>
+
+JPG is one of the most popular image formats for photographs because of its wide compatibility. However, WEBP can often produce much smaller image files while maintaining excellent visual quality. This makes WEBP an ideal choice for websites, blogs, portfolios, online stores, and modern web applications.
+
+</p>
+
+<p>
+
+Whether you're optimizing your website, improving page speed, reducing storage usage, or preparing images for faster online delivery, ToolBucket makes JPG to WEBP conversion simple, fast, and completely free.
+
+</p>
+
+</div>
+
+<!-- Why Convert -->
+
+<div class="content-block">
+
+<h2>Why Convert JPG to WEBP?</h2>
+
+<p>
+
+JPG images are widely used across the internet, but they are often larger than necessary for modern websites. WEBP uses advanced compression techniques to reduce image file size while maintaining impressive visual quality.
+
+</p>
+
+<p>
+
+Developers, bloggers, photographers, digital marketers, and business owners frequently convert JPG images into WEBP to improve website speed, reduce bandwidth usage, and deliver a better browsing experience for visitors.
+
+</p>
+
+<div class="benefits-grid">
+
+<div class="benefit-card">
+
+<i class="fa-solid fa-compress"></i>
+
+<h3>Smaller File Size</h3>
+
+<p>
+
+WEBP images are generally much smaller than JPG files without a noticeable drop in visual quality.
+
+</p>
+
+</div>
+
+<div class="benefit-card">
+
+<i class="fa-solid fa-gauge-high"></i>
+
+<h3>Faster Website Loading</h3>
+
+<p>
+
+Smaller image files help web pages load faster on desktop and mobile devices.
+
+</p>
+
+</div>
+
+<div class="benefit-card">
+
+<i class="fa-solid fa-chart-line"></i>
+
+<h3>Better User Experience</h3>
+
+<p>
+
+Faster-loading images improve browsing speed and create a smoother experience for visitors.
+
+</p>
+
+</div>
+
+<div class="benefit-card">
+
+<i class="fa-solid fa-server"></i>
+
+<h3>Lower Storage & Bandwidth</h3>
+
+<p>
+
+Optimized WEBP images reduce storage requirements and consume less hosting bandwidth.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- How To Convert -->
+
+<div class="content-block">
+
+<h2>How to Convert JPG to WEBP Online</h2>
+
+<p>
+
+Converting JPG images into WEBP format with ToolBucket only takes a few simple steps.
+
+</p>
+
+<div class="steps">
+
+<div class="step">
+
+<span>01</span>
+
+<div>
+
+<h3>Upload Your JPG Image</h3>
+
+<p>
+
+Click the Select Image button or drag and drop your JPG or JPEG file into the upload area.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="step">
+
+<span>02</span>
+
+<div>
+
+<h3>WEBP is Selected Automatically</h3>
+
+<p>
+
+The converter automatically prepares your JPG image for WEBP conversion using the recommended settings.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="step">
+
+<span>03</span>
+
+<div>
+
+<h3>Click Convert</h3>
+
+<p>
+
+Press the Convert JPG to WEBP button and let ToolBucket optimize your image instantly.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="step">
+
+<span>04</span>
+
+<div>
+
+<h3>Preview Your WEBP Image</h3>
+
+<p>
+
+Check the converted WEBP image before downloading to ensure it meets your expectations.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="step">
+
+<span>05</span>
+
+<div>
+
+<h3>Download Your WEBP Image</h3>
+
+<p>
+
+Download your optimized WEBP image instantly and use it on websites, blogs, portfolios, landing pages, or online stores.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ==========================================
+JPG TO WEBP CONTENT - PART 2
+========================================== -->
+<!-- ==========================================
+     JPG TO WEBP CONTENT - PART 2
+========================================== -->
+
+<!-- Features -->
+
+<div class="content-block">
+
+<h2>Features of ToolBucket JPG to WEBP Converter</h2>
+
+<p>
+
+ToolBucket helps you convert JPG images into modern WEBP format quickly, securely, and without installing any software. Our browser-based converter is designed for website owners, bloggers, developers, photographers, and anyone who wants smaller image files without sacrificing visual quality.
+
+</p>
+
+<div class="feature-grid">
+
+<div class="feature-card">
+
+<i class="fa-solid fa-bolt"></i>
+
+<h3>Fast Conversion</h3>
+
+<p>
+
+Convert JPG images into WEBP format within seconds directly inside your browser.
+
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<i class="fa-solid fa-compress"></i>
+
+<h3>Smaller File Size</h3>
+
+<p>
+
+WEBP images are significantly smaller than JPG files while maintaining impressive visual quality.
+
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<i class="fa-solid fa-shield-halved"></i>
+
+<h3>Private & Secure</h3>
+
+<p>
+
+Your images remain on your device because every conversion happens locally inside your browser.
+
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<i class="fa-solid fa-globe"></i>
+
+<h3>Optimized for Websites</h3>
+
+<p>
+
+WEBP images help websites load faster and provide a smoother browsing experience.
+
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<i class="fa-solid fa-mobile-screen-button"></i>
+
+<h3>Works on Every Device</h3>
+
+<p>
+
+Compatible with Windows, macOS, Linux, Android, iPhone, and all modern web browsers.
+
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<i class="fa-solid fa-download"></i>
+
+<h3>Instant Download</h3>
+
+<p>
+
+Download your optimized WEBP image immediately after conversion with one click.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- JPG vs WEBP -->
+
+<div class="content-block">
+
+<h2>JPG vs WEBP</h2>
+
+<p>
+
+JPG and WEBP are both excellent image formats, but they are designed for different purposes. JPG offers broad compatibility across almost every device, while WEBP focuses on reducing file size and improving website performance.
+
+</p>
+
+<div class="format-grid">
+
+<div class="format-card">
+
+<h3>JPG</h3>
+
+<p>
+
+A widely supported image format that works on virtually every device, browser, printer, and image editor.
+
+</p>
+
+</div>
+
+<div class="format-card">
+
+<h3>WEBP</h3>
+
+<p>
+
+A modern image format designed to provide excellent image quality with significantly smaller file sizes.
+
+</p>
+
+</div>
+
+<div class="format-card">
+
+<h3>When to Use JPG</h3>
+
+<p>
+
+Choose JPG for photographs, printing, email attachments, and situations where maximum compatibility is required.
+
+</p>
+
+</div>
+
+<div class="format-card">
+
+<h3>When to Use WEBP</h3>
+
+<p>
+
+Use WEBP for websites, blogs, landing pages, portfolios, and eCommerce stores to improve loading speed.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Image Quality -->
+
+<div class="content-block">
+
+<h2>Convert JPG to WEBP Without Noticeable Quality Loss</h2>
+
+<p>
+
+ToolBucket creates high-quality WEBP images while significantly reducing file size. You can also adjust the output quality before downloading to achieve the ideal balance between image clarity and compression.
+
+</p>
+
+<p>
+
+This makes WEBP an excellent choice for websites that need faster loading times without compromising the visual appearance of images.
+
+</p>
+
+</div>
+
+<!-- Common Uses -->
+
+<div class="content-block">
+
+<h2>Common Uses of JPG to WEBP Converter</h2>
+
+<p>
+
+Converting JPG images into WEBP format is useful in many situations where faster loading speed and smaller image files are important.
+
+</p>
+
+<div class="use-case-grid">
+
+<div class="use-card">
+
+<i class="fa-solid fa-globe"></i>
+
+<h3>Website Optimization</h3>
+
+<p>
+
+Improve website performance by replacing large JPG images with optimized WEBP files.
+
+</p>
+
+</div>
+
+<div class="use-card">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+<h3>Online Stores</h3>
+
+<p>
+
+Optimize product images to create a faster shopping experience for customers.
+
+</p>
+
+</div>
+
+<div class="use-card">
+
+<i class="fa-solid fa-blog"></i>
+
+<h3>Blogs & News Websites</h3>
+
+<p>
+
+Reduce page size and improve loading speed by using modern WEBP images.
+
+</p>
+
+</div>
+
+<div class="use-card">
+
+<i class="fa-solid fa-mobile-screen"></i>
+
+<h3>Mobile Performance</h3>
+
+<p>
+
+Smaller WEBP images help websites load faster on smartphones and slower internet connections.
+
+</p>
+
+</div>
+
+<div class="use-card">
+
+<i class="fa-solid fa-cloud"></i>
+
+<h3>Cloud Storage</h3>
+
+<p>
+
+Save storage space by converting large JPG photo collections into smaller WEBP files.
+
+</p>
+
+</div>
+
+<div class="use-card">
+
+<i class="fa-solid fa-chart-line"></i>
+
+<h3>SEO Optimization</h3>
+
+<p>
+
+Smaller image files contribute to faster page loading, improving overall website performance and user experience.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ==========================================
+     END PART 2
+========================================== -->
+<!-- ==========================================
+     JPG TO WEBP CONTENT - PART 3
+========================================== -->
+
+<!-- Benefits -->
+
+<div class="content-block">
+
+<h2>Benefits of Converting JPG to WEBP</h2>
+
+<p>
+
+Converting JPG images into WEBP format is one of the easiest ways to reduce image file size without noticeably affecting visual quality. Smaller images improve website performance, reduce bandwidth usage, and create a faster browsing experience across desktop and mobile devices.
+
+</p>
+
+<p>
+
+Whether you manage a personal blog, business website, online store, portfolio, or web application, using WEBP images can help improve loading speed while keeping your pages visually appealing.
+
+</p>
+
+<div class="benefits-grid">
+
+<div class="benefit-card">
+
+<i class="fa-solid fa-compress"></i>
+
+<h3>Smaller Image Files</h3>
+
+<p>
+
+WEBP usually creates significantly smaller image files than JPG, helping save storage space and reduce page size.
+
+</p>
+
+</div>
+
+<div class="benefit-card">
+
+<i class="fa-solid fa-gauge-high"></i>
+
+<h3>Faster Loading Pages</h3>
+
+<p>
+
+Optimized WEBP images load quickly, improving the browsing experience for visitors on all devices.
+
+</p>
+
+</div>
+
+<div class="benefit-card">
+
+<i class="fa-solid fa-server"></i>
+
+<h3>Lower Bandwidth Usage</h3>
+
+<p>
+
+Smaller images require less data to transfer, helping reduce hosting bandwidth and CDN usage.
+
+</p>
+
+</div>
+
+<div class="benefit-card">
+
+<i class="fa-solid fa-globe"></i>
+
+<h3>Modern Web Format</h3>
+
+<p>
+
+WEBP is supported by all major modern browsers and has become a popular format for web optimization.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Privacy -->
+
+<div class="content-block">
+
+<h2>Your Privacy Comes First</h2>
+
+<p>
+
+ToolBucket processes every JPG image directly inside your browser. Your files are never permanently uploaded, stored, or shared with external servers.
+
+</p>
+
+<p>
+
+Since everything happens locally on your device, your personal and professional images remain private while enjoying fast conversion.
+
+</p>
+
+</div>
+
+<!-- Tips -->
+
+<div class="content-block">
+
+<h2>Tips for Better JPG to WEBP Conversion</h2>
+
+<p>
+
+Follow these recommendations to get the best balance between image quality and file size.
+
+</p>
+
+<div class="tips-list">
+
+<div class="tip-item">
+
+<i class="fa-solid fa-check"></i>
+
+<p>
+
+Adjust the quality slider to achieve the ideal balance between compression and visual appearance.
+
+</p>
+
+</div>
+
+<div class="tip-item">
+
+<i class="fa-solid fa-check"></i>
+
+<p>
+
+Use WEBP images on websites, blogs, landing pages, and online stores for faster loading speeds.
+
+</p>
+
+</div>
+
+<div class="tip-item">
+
+<i class="fa-solid fa-check"></i>
+
+<p>
+
+Keep the original JPG image as a backup if you may need the original version later.
+
+</p>
+
+</div>
+
+<div class="tip-item">
+
+<i class="fa-solid fa-check"></i>
+
+<p>
+
+Preview the converted WEBP image before downloading it.
+
+</p>
+
+</div>
+
+<div class="tip-item">
+
+<i class="fa-solid fa-check"></i>
+
+<p>
+
+Use WEBP wherever modern browser support is available to maximize website performance.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Why Choose -->
+
+<div class="content-block">
+
+<h2>Why Choose ToolBucket JPG to WEBP Converter?</h2>
+
+<p>
+
+ToolBucket combines speed, privacy, and high-quality image optimization in one simple online tool. Convert JPG images into modern WEBP files instantly without installing software or creating an account.
+
+</p>
+
+<div class="why-grid">
+
+<div class="why-card">100% Free</div>
+
+<div class="why-card">Browser Based</div>
+
+<div class="why-card">Fast Conversion</div>
+
+<div class="why-card">Secure Processing</div>
+
+<div class="why-card">Optimized for Websites</div>
+
+<div class="why-card">Works on All Devices</div>
+
+</div>
+
+</div>
+
+<!-- Related Tools -->
+
+<div class="content-block">
+
+<h2>Related Image Tools</h2>
+
+<p>
+
+Need another image conversion tool? Explore more free online tools from ToolBucket.
+
+</p>
+
+<div class="related-tools">
+
+<a href="/png-to-webp/">PNG to WEBP</a>
+
+<a href="/webp-to-jpg/">WEBP to JPG</a>
+
+<a href="/png-to-jpg/">PNG to JPG</a>
+
+<a href="/image-compressor/">Image Compressor</a>
+
+</div>
+
+</div>
+
+<!-- ==========================================
+     END PART 3
+========================================== -->
+<div class="section-title">
+
+    <span class="section-badge">
+        <i class="fa-solid fa-circle-question"></i>
+        FAQ
+    </span>
+
+    <h2>
+        Frequently Asked
+        <span>Questions</span>
+    </h2>
+
+    <p>
+        Find answers to common questions about converting JPG images to WEBP, image quality, website optimization, file size, privacy, and browser compatibility.
+    </p>
+
+</div>
+
+<div class="faq-container">
+
+    <div class="faq-item">
+
+        <button class="faq-question">
+            Is ToolBucket JPG to WEBP Converter free?
+            <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+
+            <p>
+                Yes. ToolBucket JPG to WEBP Converter is completely free. You can convert unlimited JPG and JPEG images into WEBP format without creating an account or paying any fees.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="faq-item">
+
+        <button class="faq-question">
+            Will converting JPG to WEBP reduce image quality?
+            <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+
+            <p>
+                WEBP is designed to provide excellent visual quality while significantly reducing file size. You can also adjust the quality level before downloading to achieve the perfect balance between image quality and compression.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="faq-item">
+
+        <button class="faq-question">
+            Why should I convert JPG to WEBP?
+            <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+
+            <p>
+                WEBP images are much smaller than JPG files, making websites load faster, reducing bandwidth usage, and improving the browsing experience for visitors on desktop and mobile devices.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="faq-item">
+
+        <button class="faq-question">
+            Are my JPG images uploaded to your server?
+            <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+
+            <p>
+                No. All image conversion takes place directly inside your browser. Your files are never permanently uploaded or stored on our servers, ensuring complete privacy and security.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="faq-item">
+
+        <button class="faq-question">
+            Does WEBP work in modern web browsers?
+            <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+
+            <p>
+                Yes. WEBP is supported by all major modern browsers, including Google Chrome, Microsoft Edge, Firefox, Safari, and Opera, making it an excellent choice for websites and web applications.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="faq-item">
+
+        <button class="faq-question">
+            Can I convert JPG to WEBP on my phone?
+            <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+
+            <p>
+                Yes. ToolBucket works on Android phones, iPhones, tablets, laptops, and desktop computers. No software installation or account is required.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<div id="footer"></div>
+
+
+
+
+<script src="../js/navbar.js"></script>
+<script src="../js/include.js"></script>
+<script src="/Image-converter/js/script.js"></script>
+
+<body>
+</html>
+    
