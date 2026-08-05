@@ -1,0 +1,1241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+     <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+    <!-- Basic -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <!-- SEO -->
+
+<title>Free PNG to WEBP Converter Online | ToolBucket</title>
+
+<link rel="icon" type="image/png" href="/favicon.png">
+
+<meta name="description"
+content="Convert PNG to WEBP online for free. Reduce image file size while maintaining excellent quality with our fast, secure and browser-based PNG to WEBP converter.">
+
+<meta name="keywords"
+content="png to webp,
+convert png to webp,
+png to webp converter,
+free png to webp,
+online png to webp,
+png image to webp,
+webp converter">
+
+<meta name="author" content="ToolBucket">
+
+<meta name="robots" content="index,follow">
+
+<meta name="theme-color" content="#0F172A">
+
+<link rel="canonical"
+href="https://www.toolbucket.site/png-to-webp/">
+
+<!-- Open Graph -->
+
+<meta property="og:type" content="website">
+
+<meta property="og:title"
+content="Free PNG to WEBP Converter Online | ToolBucket">
+
+<meta property="og:description"
+content="Convert PNG images to WEBP online for free. Reduce image size for websites without sacrificing visual quality.">
+
+<meta property="og:url"
+content="https://www.toolbucket.site/png-to-webp/">
+
+<meta property="og:image"
+content="https://www.toolbucket.site/assets/preview.jpg">
+
+<!-- Twitter -->
+
+<meta name="twitter:card"
+content="summary_large_image">
+
+<meta name="twitter:title"
+content="Free PNG to WEBP Converter Online | ToolBucket">
+
+<meta name="twitter:description"
+content="Convert PNG to WEBP online instantly. Free, secure and browser-based WEBP converter for faster websites.">
+
+<meta name="twitter:image"
+content="https://www.toolbucket.site/assets/preview.jpg">
+<!-- Favicon -->
+
+<link rel="icon" href="/favicon.ico">
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="/Image-converter/css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    
+
+</head>
+<body>
+
+
+    <div id="navbar"></div>
+
+
+<!-- =========================
+Hero
+========================= -->
+
+<section class="hero">
+
+    <div class="container hero-content">
+
+        <!-- Left Content -->
+
+        <div class="hero-text">
+
+            <span class="hero-badge">
+                <i class="fa-solid fa-repeat"></i>
+                100% Free • Fast • Secure
+            </span>
+
+        <h1>
+Free PNG to WEBP Converter
+</h1>
+
+        <p>
+Convert PNG images to WEBP online for free in seconds. Reduce image file size while maintaining excellent visual quality. Perfect for websites, blogs, online stores, and faster page loading.
+</p>
+
+
+            <div class="hero-features">
+
+                <div class="feature">
+                    <i class="fa-solid fa-bolt"></i>
+                    Fast Conversion
+                </div>
+
+                <div class="feature">
+                    <i class="fa-solid fa-lock"></i>
+                    100% Secure
+                </div>
+
+                <div class="feature">
+    <i class="fa-solid fa-image"></i>
+PNG → WEBP
+             </div>
+
+            </div>
+
+        </div>
+
+        <!-- Upload Card -->
+
+        <div class="converter-card">
+
+            <div class="upload-area" id="uploadArea">
+
+                <input
+                    type="file"
+                    id="fileInput"
+                    accept=".jpg,.jpeg,.png,.webp"
+                    hidden
+                >
+
+                <i class="fa-solid fa-cloud-arrow-up upload-icon"></i>
+
+                <h3>Drag & Drop Image</h3>
+
+                <p>or</p>
+
+                <button class="upload-btn" id="selectBtn">
+                    Select Image
+                </button>
+
+                <small>
+Upload PNG Image
+</small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+Converter Panel
+========================= -->
+
+<section class="converter">
+
+    <div class="container">
+
+        <div class="converter-wrapper">
+
+            <!-- Original -->
+
+            <div class="preview-card">
+
+                <h2>Original Image</h2>
+
+                <img
+                    id="previewImage"
+                    src=""
+                    alt=""
+                    style="display:none;"
+                >
+
+                <div class="placeholder" id="placeholder">
+
+                    <i class="fa-solid fa-image"></i>
+
+                    <p>No image selected</p>
+
+                </div>
+
+            </div>
+
+            <!-- Controls -->
+
+            <div class="controls-card">
+
+                <h2>Convert Settings</h2>
+
+                <div class="info-box">
+
+                    <div>
+                        <span>File Name</span>
+                        <strong id="fileName">-</strong>
+                    </div>
+
+                    <div>
+                        <span>Size</span>
+                        <strong id="fileSize">-</strong>
+                    </div>
+
+                    <div>
+                        <span>Format</span>
+                        <strong id="fileFormat">-</strong>
+                    </div>
+
+                    <div>
+                        <span>Dimensions</span>
+                        <strong id="dimensions">-</strong>
+                    </div>
+
+                </div>
+
+                <label>Convert To</label>
+
+                <select id="formatSelect">
+
+                    <option value="png">PNG</option>
+
+                    <option value="jpeg">JPG</option>
+
+                    <option value="webp">WEBP</option>
+
+                </select>
+
+                <div id="qualityBox">
+
+    <label>
+        Quality
+        <span id="qualityValue">90%</span>
+    </label>
+
+    <input
+        type="range"
+        id="qualityRange"
+        min="10"
+        max="100"
+        value="90"
+    >
+
+</div>
+
+                <button id="convertBtn">
+
+                    <i class="fa-solid fa-repeat"></i>
+
+                    Convert Image
+
+                </button>
+
+                <a
+                    id="downloadBtn"
+                    style="display:none;"
+                >
+
+                    <i class="fa-solid fa-download"></i>
+
+                    Download
+
+                </a>
+
+            </div>
+
+            <!-- Converted -->
+
+            <div class="preview-card">
+
+                <h2>Converted Image</h2>
+
+                <img
+                    id="convertedImage"
+                    src=""
+                    alt=""
+                    style="display:none;"
+                >
+
+                <div class="placeholder" id="convertedPlaceholder">
+
+                    <i class="fa-solid fa-image"></i>
+
+                    <p>Converted image will appear here</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     PNG TO WEBP CONTENT - PART 1
+========================================== -->
+
+<section class="tool-content">
+
+<div class="container">
+
+<!-- Introduction -->
+
+<div class="content-block">
+
+<span class="section-badge">
+<i class="fa-solid fa-repeat"></i>
+Fast • Secure • Browser Based
+</span>
+
+<h2>Free PNG to WEBP Converter Online</h2>
+
+<p>
+
+ToolBucket PNG to WEBP Converter helps you convert PNG images into modern WEBP format quickly and securely without installing any software. Everything happens directly inside your browser, so your images stay private while you get high-quality WEBP files in seconds.
+
+</p>
+
+<p>
+
+PNG images provide excellent quality but often have much larger file sizes. WEBP is a modern image format developed to deliver similar visual quality while significantly reducing file size. This makes WEBP an excellent choice for websites, blogs, online stores, and web applications.
+
+</p>
+
+<p>
+
+Whether you're optimizing a website, improving page speed, reducing bandwidth usage, or preparing images for online publishing, ToolBucket makes PNG to WEBP conversion simple, fast, and completely free.
+
+</p>
+
+</div>
+
+<!-- Why Convert -->
+
+<div class="content-block">
+
+<h2>Why Convert PNG to WEBP?</h2>
+
+<p>
+
+PNG images are widely used because they provide high-quality visuals and support transparency. However, their large file size can slow down websites and increase storage requirements. WEBP offers a much smaller file size while maintaining excellent image quality.
+
+</p>
+
+<p>
+
+Many developers, bloggers, photographers, and business owners convert PNG images into WEBP to improve website performance, reduce loading time, and enhance user experience without noticeable quality loss.
+
+</p>
+
+<div class="benefits-grid">
+
+<div class="benefit-card">
+
+<i class="fa-solid fa-compress"></i>
+
+<h3>Smaller File Size</h3>
+
+<p>
+
+WEBP images are significantly smaller than PNG files, helping save storage space and bandwidth.
+
+</p>
+
+</div>
+
+<div class="benefit-card">
+
+<i class="fa-solid fa-gauge-high"></i>
+
+<h3>Faster Website Speed</h3>
+
+<p>
+
+Smaller images load faster, creating a better browsing experience for visitors.
+
+</p>
+
+</div>
+
+<div class="benefit-card">
+
+<i class="fa-solid fa-magnifying-glass-chart"></i>
+
+<h3>Better SEO Performance</h3>
+
+<p>
+
+Optimized images contribute to faster pages, which can support overall website performance and user experience.
+
+</p>
+
+</div>
+
+<div class="benefit-card">
+
+<i class="fa-solid fa-server"></i>
+
+<h3>Reduced Bandwidth Usage</h3>
+
+<p>
+
+Smaller image files require less data, helping reduce hosting bandwidth and improve loading efficiency.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- How To Convert -->
+
+<div class="content-block">
+
+<h2>How to Convert PNG to WEBP Online</h2>
+
+<p>
+
+Converting PNG images into WEBP format with ToolBucket takes only a few simple steps.
+
+</p>
+
+<div class="steps">
+
+<div class="step">
+
+<span>01</span>
+
+<div>
+
+<h3>Upload Your PNG Image</h3>
+
+<p>
+
+Click the Select Image button or drag and drop your PNG file into the upload area.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="step">
+
+<span>02</span>
+
+<div>
+
+<h3>WEBP is Selected Automatically</h3>
+
+<p>
+
+The converter automatically prepares your PNG image for WEBP conversion using the recommended settings.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="step">
+
+<span>03</span>
+
+<div>
+
+<h3>Click Convert</h3>
+
+<p>
+
+Press the Convert PNG to WEBP button and let ToolBucket process your image instantly.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="step">
+
+<span>04</span>
+
+<div>
+
+<h3>Preview Your WEBP Image</h3>
+
+<p>
+
+Review the converted WEBP image before downloading it to ensure it meets your requirements.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="step">
+
+<span>05</span>
+
+<div>
+
+<h3>Download Your WEBP Image</h3>
+
+<p>
+
+Download your optimized WEBP image instantly and use it on websites, blogs, online stores, or web applications.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ==========================================
+PNG TO WEBP CONTENT - PART 2
+========================================== -->
+
+<!-- ==========================================
+     PNG TO WEBP CONTENT - PART 2
+========================================== -->
+
+<!-- Features -->
+
+<div class="content-block">
+
+<h2>Features of ToolBucket PNG to WEBP Converter</h2>
+
+<p>
+
+ToolBucket makes PNG to WEBP conversion fast, secure, and effortless. Whether you're optimizing images for websites, blogs, eCommerce stores, or web applications, our converter helps you create smaller WEBP images without compromising visual quality.
+
+</p>
+
+<div class="feature-grid">
+
+<div class="feature-card">
+
+<i class="fa-solid fa-bolt"></i>
+
+<h3>Fast Conversion</h3>
+
+<p>
+
+Convert PNG images into WEBP format within seconds directly inside your browser.
+
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<i class="fa-solid fa-compress"></i>
+
+<h3>Smaller File Size</h3>
+
+<p>
+
+WEBP significantly reduces image size, making files easier to upload, store, and deliver online.
+
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<i class="fa-solid fa-shield-halved"></i>
+
+<h3>Secure Processing</h3>
+
+<p>
+
+Your images never leave your device. Everything is processed locally for maximum privacy.
+
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<i class="fa-solid fa-gauge-high"></i>
+
+<h3>Optimized for Websites</h3>
+
+<p>
+
+Smaller WEBP images help websites load faster and improve overall user experience.
+
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<i class="fa-solid fa-mobile-screen-button"></i>
+
+<h3>Works on Every Device</h3>
+
+<p>
+
+Compatible with Windows, macOS, Linux, Android, iPhone, and all modern browsers.
+
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<i class="fa-solid fa-download"></i>
+
+<h3>Instant Download</h3>
+
+<p>
+
+Download your optimized WEBP image immediately after conversion.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- PNG vs WEBP -->
+
+<div class="content-block">
+
+<h2>PNG vs WEBP</h2>
+
+<p>
+
+PNG and WEBP are both excellent image formats, but they serve different purposes. PNG focuses on image quality and transparency, while WEBP is designed to provide similar visual quality with much smaller file sizes.
+
+</p>
+
+<div class="format-grid">
+
+<div class="format-card">
+
+<h3>PNG</h3>
+
+<p>
+
+Best for logos, graphics, screenshots, and images that require transparent backgrounds.
+
+</p>
+
+</div>
+
+<div class="format-card">
+
+<h3>WEBP</h3>
+
+<p>
+
+Designed for websites and online applications where fast loading speed and smaller image size are important.
+
+</p>
+
+</div>
+
+<div class="format-card">
+
+<h3>When to Use PNG</h3>
+
+<p>
+
+Choose PNG when editing images or when transparency must be preserved for design projects.
+
+</p>
+
+</div>
+
+<div class="format-card">
+
+<h3>When to Use WEBP</h3>
+
+<p>
+
+Use WEBP for websites, blogs, landing pages, eCommerce stores, and portfolios to improve loading performance.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Image Quality -->
+
+<div class="content-block">
+
+<h2>Convert PNG to WEBP Without Noticeable Quality Loss</h2>
+
+<p>
+
+ToolBucket creates high-quality WEBP images that look great while taking up much less storage space than PNG files. This makes WEBP an excellent choice for websites where performance matters.
+
+</p>
+
+<p>
+
+You can also adjust the quality level before downloading to find the perfect balance between image quality and file size.
+
+</p>
+
+</div>
+
+<!-- Common Uses -->
+
+<div class="content-block">
+
+<h2>Common Uses of PNG to WEBP Converter</h2>
+
+<p>
+
+Converting PNG images into WEBP format is useful for many online projects where performance and speed are important.
+
+</p>
+
+<div class="use-case-grid">
+
+<div class="use-card">
+
+<i class="fa-solid fa-globe"></i>
+
+<h3>Website Optimization</h3>
+
+<p>
+
+Reduce image sizes to improve website loading speed and visitor experience.
+
+</p>
+
+</div>
+
+<div class="use-card">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+<h3>eCommerce Stores</h3>
+
+<p>
+
+Optimize product images to help online stores load faster without sacrificing image quality.
+
+</p>
+
+</div>
+
+<div class="use-card">
+
+<i class="fa-solid fa-blog"></i>
+
+<h3>Blogs & Articles</h3>
+
+<p>
+
+Improve page speed by replacing large PNG images with smaller WEBP files.
+
+</p>
+
+</div>
+
+<div class="use-card">
+
+<i class="fa-solid fa-mobile-screen"></i>
+
+<h3>Mobile Websites</h3>
+
+<p>
+
+Smaller images help pages load faster on smartphones and slower internet connections.
+
+</p>
+
+</div>
+
+<div class="use-card">
+
+<i class="fa-solid fa-cloud"></i>
+
+<h3>Cloud Storage</h3>
+
+<p>
+
+Save storage space by converting large PNG images into compressed WEBP files.
+
+</p>
+
+</div>
+
+<div class="use-card">
+
+<i class="fa-solid fa-chart-line"></i>
+
+<h3>Performance Optimization</h3>
+
+<p>
+
+Reduce bandwidth usage and improve overall website performance with modern WEBP images.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ==========================================
+     END PART 2
+========================================== -->
+
+<!-- ==========================================
+     PNG TO WEBP CONTENT - PART 3
+========================================== -->
+
+<!-- Benefits -->
+
+<div class="content-block">
+
+<h2>Benefits of Converting PNG to WEBP</h2>
+
+<p>
+
+Converting PNG images into WEBP format helps reduce image file size while maintaining excellent visual quality. Smaller images improve website performance, reduce bandwidth usage, and provide a faster browsing experience for visitors.
+
+</p>
+
+<p>
+
+Whether you manage a personal blog, business website, online store, portfolio, or web application, WEBP images help optimize loading speed without noticeably affecting image appearance.
+
+</p>
+
+<div class="benefits-grid">
+
+<div class="benefit-card">
+
+<i class="fa-solid fa-compress"></i>
+
+<h3>Reduce File Size</h3>
+
+<p>
+
+WEBP images are usually much smaller than PNG files, helping save storage space and bandwidth.
+
+</p>
+
+</div>
+
+<div class="benefit-card">
+
+<i class="fa-solid fa-gauge-high"></i>
+
+<h3>Improve Page Speed</h3>
+
+<p>
+
+Smaller images load faster, creating a smoother experience for website visitors.
+
+</p>
+
+</div>
+
+<div class="benefit-card">
+
+<i class="fa-solid fa-server"></i>
+
+<h3>Lower Bandwidth Usage</h3>
+
+<p>
+
+Optimized WEBP images transfer less data, making websites more efficient.
+
+</p>
+
+</div>
+
+<div class="benefit-card">
+
+<i class="fa-solid fa-globe"></i>
+
+<h3>Modern Web Format</h3>
+
+<p>
+
+WEBP is supported by all major modern browsers and is widely used for web optimization.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Privacy -->
+
+<div class="content-block">
+
+<h2>Your Privacy Comes First</h2>
+
+<p>
+
+ToolBucket converts your PNG images directly inside your browser. Your files are never permanently uploaded, stored, or shared with any external server.
+
+</p>
+
+<p>
+
+Because everything happens locally on your device, your images remain private while benefiting from fast and secure conversion.
+
+</p>
+
+</div>
+
+<!-- Tips -->
+
+<div class="content-block">
+
+<h2>Tips for Better PNG to WEBP Conversion</h2>
+
+<p>
+
+Follow these simple recommendations to get the best results when converting PNG images into WEBP format.
+
+</p>
+
+<div class="tips-list">
+
+<div class="tip-item">
+
+<i class="fa-solid fa-check"></i>
+
+<p>
+
+Adjust the quality slider to find the best balance between image quality and file size.
+
+</p>
+
+</div>
+
+<div class="tip-item">
+
+<i class="fa-solid fa-check"></i>
+
+<p>
+
+Use WEBP images on websites, blogs, and landing pages where faster loading speed is important.
+
+</p>
+
+</div>
+
+<div class="tip-item">
+
+<i class="fa-solid fa-check"></i>
+
+<p>
+
+If your PNG contains transparency, WEBP can also preserve transparent backgrounds.
+
+</p>
+
+</div>
+
+<div class="tip-item">
+
+<i class="fa-solid fa-check"></i>
+
+<p>
+
+Preview the converted WEBP image before downloading it.
+
+</p>
+
+</div>
+
+<div class="tip-item">
+
+<i class="fa-solid fa-check"></i>
+
+<p>
+
+Keep the original PNG file if you plan to perform extensive graphic editing later.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Why Choose -->
+
+<div class="content-block">
+
+<h2>Why Choose ToolBucket PNG to WEBP Converter?</h2>
+
+<p>
+
+ToolBucket combines speed, privacy, and high-quality image optimization in one easy-to-use online tool. Convert PNG images into modern WEBP files instantly without downloading software or creating an account.
+
+</p>
+
+<div class="why-grid">
+
+<div class="why-card">100% Free</div>
+
+<div class="why-card">Browser Based</div>
+
+<div class="why-card">Fast Conversion</div>
+
+<div class="why-card">Secure Processing</div>
+
+<div class="why-card">Smaller File Size</div>
+
+<div class="why-card">Works on All Devices</div>
+
+</div>
+
+</div>
+
+<!-- Related Tools -->
+
+<div class="content-block">
+
+<h2>Related Image Tools</h2>
+
+<p>
+
+Looking for more free image conversion tools? Explore these useful tools from ToolBucket.
+
+</p>
+
+<div class="related-tools">
+
+<a href="/webp-to-png/">WEBP to PNG</a>
+
+<a href="/webp-to-jpg/">WEBP to JPG</a>
+
+<a href="/jpg-to-png/">JPG to PNG</a>
+
+<a href="/image-compressor/">Image Compressor</a>
+
+</div>
+
+</div>
+
+<!-- ==========================================
+     END PART 3
+========================================== -->
+
+
+<div class="section-title">
+
+    <span class="section-badge">
+        <i class="fa-solid fa-circle-question"></i>
+        FAQ
+    </span>
+
+    <h2>
+        Frequently Asked
+        <span>Questions</span>
+    </h2>
+
+    <p>
+        Find answers to common questions about converting PNG images to WEBP, image quality, file size, transparency, website performance, and privacy.
+    </p>
+
+</div>
+
+<div class="faq-container">
+
+    <div class="faq-item">
+
+        <button class="faq-question">
+            Is ToolBucket PNG to WEBP Converter free?
+            <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+
+            <p>
+                Yes. ToolBucket PNG to WEBP Converter is completely free. You can convert unlimited PNG images into WEBP format without creating an account or paying any fees.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="faq-item">
+
+        <button class="faq-question">
+            Will converting PNG to WEBP reduce image quality?
+            <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+
+            <p>
+                WEBP is designed to provide excellent image quality with much smaller file sizes. You can also adjust the quality setting before downloading to achieve the best balance between quality and compression.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="faq-item">
+
+        <button class="faq-question">
+            Does WEBP support transparent backgrounds?
+            <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+
+            <p>
+                Yes. WEBP supports transparency. If your original PNG image contains a transparent background, the converted WEBP image can preserve it.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="faq-item">
+
+        <button class="faq-question">
+            Are my PNG images uploaded to your server?
+            <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+
+            <p>
+                No. All image conversion is performed directly inside your browser. Your images are never permanently uploaded or stored on our servers, ensuring complete privacy.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="faq-item">
+
+        <button class="faq-question">
+            Why should I convert PNG to WEBP?
+            <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+
+            <p>
+                WEBP images are much smaller than PNG files while maintaining excellent visual quality. They help websites load faster, reduce bandwidth usage, and improve the overall browsing experience.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="faq-item">
+
+        <button class="faq-question">
+            Can I convert PNG to WEBP on mobile?
+            <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+
+            <p>
+                Yes. ToolBucket works on Android phones, iPhones, tablets, laptops, and desktop computers. No software or app installation is required.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<div id="footer"></div>
+
+
+
+
+<script src="../js/navbar.js"></script>
+<script src="../js/include.js"></script>
+<script src="/Image-converter/js/script.js"></script>
+
+<body>
+</html>
+    
