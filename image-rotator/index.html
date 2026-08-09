@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+    <!-- Basic -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    
+    <title>Image Rotator Online - Rotate Images Free | ToolBucket</title>
+
+    <meta name="description"
+          content="Rotate images online for free with ToolBucket. Easily rotate JPG, PNG, and WebP images clockwise or counterclockwise and download them instantly.">
+
+    <meta name="robots"
+          content="index, follow">
+
+    <link rel="canonical"
+          href="https://toolbucket.site/image-rotator/">
+
+
+    <!-- =====================================================
+         OPEN GRAPH
+    ====================================================== -->
+
+    <meta property="og:title"
+          content="Image Rotator Online - Rotate Images Free">
+
+    <meta property="og:description"
+          content="Rotate JPG, PNG and WebP images online for free with ToolBucket.">
+
+    <meta property="og:type"
+          content="website">
+
+    <meta property="og:url"
+          content="https://toolbucket.site/image-rotator/">
+
+    <meta property="og:image"
+          content="https://toolbucket.site/assets/preview.jpg">
+
+
+    <!-- =====================================================
+         FAVICON
+    ====================================================== -->
+
+    <link rel="icon"
+          href="../assets/favicon.ico">
+
+
+    <!-- =====================================================
+         GOOGLE FONT
+    ====================================================== -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="css/style.css">
+    
+
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/cropperjs@1.6.2/dist/cropper.min.css">
+
+</head>
+<body>
+
+<div id="navbar"></div>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main>
+
+
+        <!-- =================================================
+             HERO SECTION
+        ================================================== -->
+
+        <section class="hero-section">
+
+            <div class="container hero-container">
+
+
+                <!-- HERO CONTENT -->
+
+                <div class="hero-content">
+
+                    <span class="hero-badge">
+
+                        <i class="fa-solid fa-rotate"></i>
+
+                        100% Free • Fast • Secure
+
+                    </span>
+
+
+                    <h1>
+                        Rotate Images Online
+                        <span>For Free</span>
+                    </h1>
+
+
+                    <p>
+                        Easily rotate JPG, PNG, and WebP images
+                        online. Choose your rotation angle,
+                        preview your image, and download it
+                        instantly.
+                    </p>
+
+
+                    <div class="hero-features">
+
+                        <span>
+                            <i class="fa-solid fa-bolt"></i>
+                            Fast Processing
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-lock"></i>
+                            100% Secure
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-user-slash"></i>
+                            No Signup
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     IMAGE ROTATOR TOOL
+                ================================================== -->
+
+                <div class="tool-card">
+
+
+                    <!-- UPLOAD AREA -->
+
+                    <div class="upload-area"
+                         id="uploadArea">
+
+
+                        <div class="upload-icon">
+
+                            <i class="fa-solid fa-cloud-arrow-up"></i>
+
+                        </div>
+
+
+                        <h2>
+                            Upload Your Image
+                        </h2>
+
+
+                        <p>
+                            Drag & drop your image here
+                        </p>
+
+
+                        <span class="upload-or">
+                            OR
+                        </span>
+
+
+                        <button class="primary-btn"
+                                id="selectBtn"
+                                type="button">
+
+                            <i class="fa-solid fa-image"></i>
+
+                            Select Image
+
+                        </button>
+
+
+                        <input type="file"
+                               id="fileInput"
+                               accept="image/jpeg,image/png,image/webp"
+                               hidden>
+
+
+                        <small>
+                            JPG, PNG & WebP • Max file size 20MB
+                        </small>
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         IMAGE WORKSPACE
+                    ================================================== -->
+
+                    <div class="image-workspace"
+                         id="imageWorkspace"
+                         hidden>
+
+
+                        <!-- IMAGE PREVIEW -->
+
+                        <div class="preview-container">
+
+                            <div class="preview-label">
+                                Preview
+                            </div>
+
+
+                            <div class="image-preview-box">
+
+                                <img id="previewImage"
+                                     src=""
+                                     alt="Image preview">
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- ROTATION CONTROLS -->
+
+                        <div class="rotation-controls">
+
+
+                            <h3>
+                                Rotate Image
+                            </h3>
+
+
+                            <div class="rotation-buttons">
+
+
+                                <button class="control-btn"
+                                        id="rotateLeftBtn"
+                                        type="button">
+
+                                    <i class="fa-solid fa-rotate-left"></i>
+
+                                    Rotate Left
+
+                                </button>
+
+
+                                <button class="control-btn"
+                                        id="rotateRightBtn"
+                                        type="button">
+
+                                    <i class="fa-solid fa-rotate-right"></i>
+
+                                    Rotate Right
+
+                                </button>
+
+                            </div>
+
+
+
+                            <!-- ANGLE -->
+
+                            <div class="angle-control">
+
+                                <label for="angleRange">
+                                    Rotation Angle
+                                </label>
+
+
+                                <div class="angle-row">
+
+                                    <input type="range"
+                                           id="angleRange"
+                                           min="0"
+                                           max="360"
+                                           value="0"
+                                           step="1">
+
+
+                                    <span id="angleValue">
+                                        0°
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- RESET -->
+
+                            <button class="reset-btn"
+                                    id="resetBtn"
+                                    type="button">
+
+                                <i class="fa-solid fa-arrow-rotate-left"></i>
+
+                                Reset Rotation
+
+                            </button>
+
+                        </div>
+
+
+
+                        <!-- DOWNLOAD -->
+
+                        <div class="download-section">
+
+                            <button class="download-btn"
+                                    id="downloadBtn"
+                                    type="button">
+
+                                <i class="fa-solid fa-download"></i>
+
+                                Rotate & Download
+
+                            </button>
+
+
+                            <button class="change-image-btn"
+                                    id="changeImageBtn"
+                                    type="button">
+
+                                <i class="fa-solid fa-image"></i>
+
+                                Choose Another Image
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             TRUST / BENEFITS
+        ====================================================== -->
+
+        <section class="trust-section">
+
+            <div class="container">
+
+                <div class="trust-grid">
+
+
+                    <div class="trust-item">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                        <div>
+
+                            <strong>
+                                100% Secure
+                            </strong>
+
+                            <span>
+                                Your images stay private
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="trust-item">
+
+                        <i class="fa-solid fa-bolt"></i>
+
+                        <div>
+
+                            <strong>
+                                Fast Processing
+                            </strong>
+
+                            <span>
+                                Rotate images in seconds
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="trust-item">
+
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+
+                        <div>
+
+                            <strong>
+                                All Devices
+                            </strong>
+
+                            <span>
+                                Works on mobile and desktop
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="trust-item">
+
+                        <i class="fa-solid fa-user-check"></i>
+
+                        <div>
+
+                            <strong>
+                                No Signup
+                            </strong>
+
+                            <span>
+                                Use the tool instantly
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             ABOUT IMAGE ROTATOR
+        ====================================================== -->
+
+        <section class="content-section">
+
+            <div class="container content-container">
+
+                <span class="section-tag">
+                    IMAGE ROTATOR
+                </span>
+
+
+                <h2>
+                    Rotate Images Online Easily
+                </h2>
+
+
+                <p>
+                    ToolBucket's free image rotator lets you
+                    quickly rotate images without installing
+                    any software. Upload your image, choose
+                    the desired rotation angle, preview the
+                    result, and download your rotated image.
+                </p>
+
+
+                <p>
+                    The tool supports popular image formats
+                    including JPG, PNG, and WebP. Whether you
+                    need to fix an incorrectly oriented photo
+                    or simply change the direction of an image,
+                    ToolBucket makes the process simple and fast.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             HOW TO USE
+        ====================================================== -->
+
+        <section class="how-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-tag">
+                        HOW IT WORKS
+                    </span>
+
+                    <h2>
+                        How to Rotate an Image
+                    </h2>
+
+                    <p>
+                        Rotate your image in just a few simple steps.
+                    </p>
+
+                </div>
+
+
+                <div class="steps-grid">
+
+
+                    <div class="step-card">
+
+                        <span class="step-number">
+                            01
+                        </span>
+
+                        <i class="fa-solid fa-upload"></i>
+
+                        <h3>
+                            Upload Image
+                        </h3>
+
+                        <p>
+                            Select an image from your device
+                            or drag and drop it into the tool.
+                        </p>
+
+                    </div>
+
+
+                    <div class="step-card">
+
+                        <span class="step-number">
+                            02
+                        </span>
+
+                        <i class="fa-solid fa-rotate"></i>
+
+                        <h3>
+                            Rotate Image
+                        </h3>
+
+                        <p>
+                            Choose the rotation angle or
+                            rotate the image left or right.
+                        </p>
+
+                    </div>
+
+
+                    <div class="step-card">
+
+                        <span class="step-number">
+                            03
+                        </span>
+
+                        <i class="fa-solid fa-download"></i>
+
+                        <h3>
+                            Download
+                        </h3>
+
+                        <p>
+                            Preview your result and download
+                            the rotated image instantly.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             FEATURES
+        ====================================================== -->
+
+        <section class="features-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-tag">
+                        FEATURES
+                    </span>
+
+                    <h2>
+                        Why Use Our Image Rotator?
+                    </h2>
+
+                </div>
+
+
+                <div class="features-grid">
+
+
+                    <div class="feature-card">
+
+                        <i class="fa-solid fa-rotate"></i>
+
+                        <h3>
+                            Easy Rotation
+                        </h3>
+
+                        <p>
+                            Rotate images quickly using simple
+                            controls and custom angles.
+                        </p>
+
+                    </div>
+
+
+                    <div class="feature-card">
+
+                        <i class="fa-solid fa-gauge-high"></i>
+
+                        <h3>
+                            Fast & Lightweight
+                        </h3>
+
+                        <p>
+                            Process images quickly without
+                            unnecessary software or downloads.
+                        </p>
+
+                    </div>
+
+
+                    <div class="feature-card">
+
+                        <i class="fa-solid fa-file-image"></i>
+
+                        <h3>
+                            Multiple Formats
+                        </h3>
+
+                        <p>
+                            Supports JPG, PNG and WebP images.
+                        </p>
+
+                    </div>
+
+
+                    <div class="feature-card">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <h3>
+                            Private & Secure
+                        </h3>
+
+                        <p>
+                            Your image processing happens
+                            directly in your browser.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+     DETAILED SEO CONTENT
+====================================================== -->
+
+<section class="seo-content-section">
+
+    <div class="container seo-content-container">
+
+        <span class="section-tag">
+            IMAGE ROTATOR GUIDE
+        </span>
+
+        <h2>
+            Rotate Images Online for Free
+        </h2>
+
+        <p>
+            Rotating an image is one of the simplest ways to
+            correct the orientation of a photo or prepare an
+            image for a website, social media post, presentation,
+            document, or other digital project. With ToolBucket's
+            free image rotator, you can rotate images online
+            directly from your browser without installing desktop
+            software or creating an account. Simply upload your
+            image, choose the rotation you need, preview the result,
+            and download the finished image.
+        </p>
+
+        <p>
+            Our online image rotator is designed to make image
+            rotation quick and convenient for everyone. Whether
+            your photo was captured sideways, an image needs to
+            be turned upside down, or you simply want to change
+            its orientation, the tool provides simple controls
+            that make the process easy. You can work with common
+            image formats such as JPG, PNG, and WebP and make the
+            required adjustment in just a few clicks.
+        </p>
+
+
+        <h2>
+            What Is an Image Rotator?
+        </h2>
+
+        <p>
+            An image rotator is an online tool or software feature
+            that changes the orientation of a digital image. It
+            allows you to turn an image clockwise or counterclockwise
+            so that it appears in the correct direction. Image
+            rotation is different from image resizing or cropping
+            because the main purpose is to change the orientation
+            while keeping the visual content of the image intact.
+        </p>
+
+        <p>
+            For example, if you take a photograph with your phone
+            and it appears sideways when opened on another device,
+            you can use an image rotator to correct it. Similarly,
+            scanned documents, screenshots, product photos, and
+            graphics may sometimes need to be rotated before they
+            are uploaded or shared. An online image rotator gives
+            you a convenient way to make these adjustments without
+            needing advanced photo editing software.
+        </p>
+
+
+        <h2>
+            Why Use ToolBucket's Image Rotator?
+        </h2>
+
+        <p>
+            ToolBucket's image rotator is built for users who want
+            a simple and fast way to rotate pictures online. You
+            don't need professional image editing skills or
+            complicated software. The interface focuses on the
+            essential controls so you can upload an image, rotate
+            it, preview the result, and download it with minimal
+            effort.
+        </p>
+
+        <p>
+            The tool is also useful when you only need to make a
+            small change to an image. Installing a large photo
+            editing application for a simple rotation can take
+            unnecessary time. With an online image rotator, the
+            adjustment can be completed directly in your browser.
+            This makes it especially useful when working from a
+            school computer, office computer, laptop, tablet, or
+            mobile device.
+        </p>
+
+
+        <h2>
+            Rotate JPG, PNG, and WebP Images
+        </h2>
+
+        <p>
+            ToolBucket supports popular image formats including
+            JPG, PNG, and WebP. JPG is commonly used for photographs
+            and web images, while PNG is frequently used for
+            graphics, screenshots, logos, and images that require
+            transparency. WebP is a modern image format designed
+            to provide efficient image delivery on the web.
+        </p>
+
+        <p>
+            You can upload a supported image and rotate it without
+            needing to manually convert the file before processing.
+            After making the required adjustment, you can download
+            the resulting image and use it wherever you need it.
+            Always check the final file format and image appearance
+            before using the result for important projects.
+        </p>
+
+
+        <h2>
+            How to Rotate an Image Online
+        </h2>
+
+        <p>
+            Rotating an image with ToolBucket is straightforward.
+            Start by opening the Image Rotator tool and selecting
+            an image from your device. You can use the file
+            selection button or drag and drop the image into the
+            upload area when supported by your browser.
+        </p>
+
+        <p>
+            Once the image has been loaded, it will appear in the
+            preview area. Use the rotate-left or rotate-right
+            controls to change its orientation. You can also use
+            the rotation control to select the angle you need.
+            Preview the image carefully to make sure it has the
+            desired orientation.
+        </p>
+
+        <p>
+            When you are satisfied with the result, select the
+            download option. The rotated image will be prepared
+            for download so you can save it to your device. The
+            complete process is designed to take only a few
+            moments, making it convenient for quick image editing
+            tasks.
+        </p>
+
+
+        <h2>
+            Common Reasons to Rotate an Image
+        </h2>
+
+        <p>
+            There are many situations where an image may need to
+            be rotated. One of the most common reasons is correcting
+            a photo that was captured in the wrong orientation.
+            Smartphone cameras can sometimes produce images that
+            appear differently depending on the application or
+            device being used.
+        </p>
+
+        <p>
+            Another common situation involves scanned documents.
+            A document may be scanned sideways or upside down, and
+            rotating it makes the content easier to read. Students
+            may also need to rotate screenshots, diagrams, notes,
+            or project images before adding them to assignments
+            and presentations.
+        </p>
+
+        <p>
+            Website owners, bloggers, designers, and online sellers
+            can also benefit from an image rotator. Product images
+            may need orientation corrections before being uploaded
+            to an online store. Blog images may need to be adjusted
+            before publication, while social media graphics may
+            require a different orientation depending on the
+            platform.
+        </p>
+
+
+        <h2>
+            Image Rotation Without Complicated Software
+        </h2>
+
+        <p>
+            Traditional image editing applications often provide
+            many advanced features that can be useful for professional
+            designers but unnecessary for a simple rotation task.
+            If your only goal is to turn an image, using a dedicated
+            online image rotator can save time and reduce complexity.
+        </p>
+
+        <p>
+            ToolBucket keeps the image rotation process focused on
+            the task you actually want to complete. Instead of
+            searching through multiple menus and editing tools,
+            you can upload the image and use the rotation controls
+            directly. This makes the tool suitable for beginners as
+            well as users who regularly work with digital images.
+        </p>
+
+
+        <h2>
+            Is the Image Rotator Free?
+        </h2>
+
+        <p>
+            Yes. ToolBucket's Image Rotator is designed as a free
+            online image rotation tool. You can use it without
+            purchasing expensive image editing software or creating
+            an account. This makes it useful for occasional users
+            who only need to rotate a picture once as well as users
+            who regularly perform basic image editing tasks.
+        </p>
+
+
+        <h2>
+            Is It Safe to Rotate Images Online?
+        </h2>
+
+        <p>
+            Privacy is important whenever you work with personal
+            images. ToolBucket's browser-based image processing
+            approach is designed to keep basic image operations
+            convenient while minimizing unnecessary uploads to a
+            remote server. Your browser handles the image processing
+            required by the tool, depending on the functionality
+            implemented on the page.
+        </p>
+
+        <p>
+            For highly sensitive or confidential images, you should
+            always review the privacy practices of any online tool
+            before using it. Avoid uploading files containing
+            sensitive information to services you do not trust.
+            ToolBucket aims to provide a simple and privacy-conscious
+            experience for everyday image editing.
+        </p>
+
+
+        <h2>
+            Rotate Images on Mobile and Desktop
+        </h2>
+
+        <p>
+            You can use an online image rotator from different
+            devices, including desktop computers, laptops, tablets,
+            and smartphones. This is particularly useful when a
+            photo is already stored on your phone and you need to
+            quickly correct its orientation before sharing it.
+        </p>
+
+        <p>
+            The responsive design of the ToolBucket interface makes
+            the tool suitable for different screen sizes. Whether
+            you are working from a Windows PC, Mac, Android device,
+            or iPhone, you can open the tool in a modern web browser
+            and perform basic image rotation without installing a
+            separate application.
+        </p>
+
+
+        <h2>
+            Image Rotator for Everyday Tasks
+        </h2>
+
+        <p>
+            A dedicated image rotator can be useful for many
+            everyday situations. You may need to correct vacation
+            photos, rotate screenshots, fix scanned documents,
+            prepare images for a presentation, adjust product
+            pictures, or correct graphics before publishing them
+            online. In each case, the goal is simple: change the
+            image orientation while keeping the content easy to
+            view.
+        </p>
+
+        <p>
+            ToolBucket brings this basic functionality into one
+            convenient online tool. Instead of opening a full
+            graphics editor for a small adjustment, you can use
+            the Image Rotator to complete the task quickly. This
+            makes it a useful addition to a collection of everyday
+            image tools that also includes image compression,
+            resizing, cropping, and conversion.
+        </p>
+
+
+        <h2>
+            More Free Image Tools from ToolBucket
+        </h2>
+
+        <p>
+            If rotating an image is only one part of your editing
+            workflow, ToolBucket provides additional image tools
+            that can help with other common tasks. You can compress
+            large images to reduce file size, resize images to
+            specific dimensions, crop unwanted areas, or convert
+            images between supported formats.
+        </p>
+
+        <p>
+            Using the right tool for each task can make image
+            preparation much faster. For example, you can first
+            rotate a photo to correct its orientation, then resize
+            it for a website, and finally compress it to reduce
+            the file size. Combining simple image tools can help
+            you prepare images for websites, documents, social
+            media, online stores, and other digital projects.
+        </p>
+
+
+        <h2>
+            Frequently Asked Questions About Image Rotation
+        </h2>
+
+        <p>
+            Image rotation is a simple editing operation, but users
+            often have questions about supported formats, rotation
+            angles, image quality, privacy, and downloads. ToolBucket
+            is designed to keep the process simple and transparent.
+            You can preview your image before downloading it and
+            make adjustments until the orientation looks correct.
+        </p>
+
+        <p>
+            Whether you need to rotate a single photograph or make
+            quick orientation corrections to images for your daily
+            work, an online image rotator can save time. ToolBucket
+            provides an easy-to-use solution that works directly
+            from a web browser and does not require complicated
+            editing software.
+        </p>
+
+
+        <div class="content-highlight">
+
+            <i class="fa-solid fa-circle-check"></i>
+
+            <div>
+
+                <h3>
+                    Rotate Your Image in Seconds
+                </h3>
+
+                <p>
+                    Upload your image, choose the rotation you need,
+                    preview the result, and download your image
+                    quickly with ToolBucket's free online Image
+                    Rotator.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+        <!-- =====================================================
+             FAQ
+        ====================================================== -->
+
+        <section class="faq-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-tag">
+                        FAQ
+                    </span>
+
+                    <h2>
+                        Image Rotator FAQs
+                    </h2>
+
+                </div>
+
+
+                <div class="faq-list">
+
+
+                    <div class="faq-item">
+
+                        <button class="faq-question"
+                                type="button">
+
+                            <span>
+                                Can I rotate an image online for free?
+                            </span>
+
+                            <i class="fa-solid fa-plus"></i>
+
+                        </button>
+
+
+                        <div class="faq-answer">
+
+                            <p>
+                                Yes. ToolBucket's image rotator
+                                is completely free to use and
+                                does not require an account.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="faq-item">
+
+                        <button class="faq-question"
+                                type="button">
+
+                            <span>
+                                Which image formats are supported?
+                            </span>
+
+                            <i class="fa-solid fa-plus"></i>
+
+                        </button>
+
+
+                        <div class="faq-answer">
+
+                            <p>
+                                You can rotate JPG, PNG and
+                                WebP images using the tool.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="faq-item">
+
+                        <button class="faq-question"
+                                type="button">
+
+                            <span>
+                                Can I rotate an image by a custom angle?
+                            </span>
+
+                            <i class="fa-solid fa-plus"></i>
+
+                        </button>
+
+
+                        <div class="faq-answer">
+
+                            <p>
+                                Yes. You can use the rotation
+                                slider to select the angle you
+                                need.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="faq-item">
+
+                        <button class="faq-question"
+                                type="button">
+
+                            <span>
+                                Are my uploaded images secure?
+                            </span>
+
+                            <i class="fa-solid fa-plus"></i>
+
+                        </button>
+
+
+                        <div class="faq-answer">
+
+                            <p>
+                                Yes. Image processing can be
+                                performed directly in your
+                                browser, helping keep your
+                                images private.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             RELATED TOOLS
+        ====================================================== -->
+
+        <section class="related-tools">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-tag">
+                        MORE TOOLS
+                    </span>
+
+                    <h2>
+                        Related Image Tools
+                    </h2>
+
+                </div>
+
+
+                <div class="related-grid">
+
+
+                    <a href="../image-compressor/"
+                       class="related-card">
+
+                        <i class="fa-solid fa-compress"></i>
+
+                        <div>
+
+                            <h3>
+                                Image Compressor
+                            </h3>
+
+                            <p>
+                                Compress images online.
+                            </p>
+
+                        </div>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+
+                    <a href="../image-resizer/"
+                       class="related-card">
+
+                        <i class="fa-solid fa-expand"></i>
+
+                        <div>
+
+                            <h3>
+                                Image Resizer
+                            </h3>
+
+                            <p>
+                                Resize images easily.
+                            </p>
+
+                        </div>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+
+                    <a href="../image-cropper/"
+                       class="related-card">
+
+                        <i class="fa-solid fa-crop"></i>
+
+                        <div>
+
+                            <h3>
+                                Image Cropper
+                            </h3>
+
+                            <p>
+                                Crop images online.
+                            </p>
+
+                        </div>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+
+                    <a href="../image-converter/"
+                       class="related-card">
+
+                        <i class="fa-solid fa-repeat"></i>
+
+                        <div>
+
+                            <h3>
+                                Image Converter
+                            </h3>
+
+                            <p>
+                                Convert image formats.
+                            </p>
+
+                        </div>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+<div id="footer"></div>
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/cropperjs@1.6.2/dist/cropper.min.js"></script>
+
+<script src="../js/navbar.js"></script>
+<script src="../js/include.js"></script>
+
+<script src="js/script.js"></script>
+</body>
+</html>
