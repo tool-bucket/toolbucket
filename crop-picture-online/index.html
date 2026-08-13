@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+    <!-- Basic -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+<title>Crop Picture Online Free - Easy Picture Cropper | ToolBucket</title>
+<link rel="icon" type="image/png" href="/favicon.png">
+
+   <meta name="description" content="Crop picture online with ToolBucket&#x27;s free browser-based cropper. Trim unwanted areas, choose aspect ratios and download clean JPG, PNG or WEBP images.">
+
+   <meta name="keywords" content="crop picture online, image cropper, free image cropper, crop photos online, ToolBucket">
+
+    <meta name="author" content="ToolBucket">
+
+    <meta name="robots" content="index,follow">
+
+    <meta name="theme-color" content="#0F172A">
+
+    <link rel="canonical" href="https://www.toolbucket.site/crop-picture-online/">
+
+    <!-- Open Graph -->
+
+    <meta property="og:type" content="website">
+
+    <meta property="og:title" content="Crop Picture Online Free - Easy Picture Cropper | ToolBucket">
+
+     <meta property="og:description" content="Crop picture online with ToolBucket&#x27;s free browser-based cropper. Trim unwanted areas, choose aspect ratios and download clean JPG, PNG or WEBP images.">
+
+    <meta property="og:url" content="https://www.toolbucket.site/crop-picture-online/">
+
+
+
+    <!-- Twitter -->
+
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta name="twitter:title" content="Crop Picture Online Free - Easy Picture Cropper | ToolBucket">
+
+    <meta name="twitter:description" content="Crop picture online with ToolBucket&#x27;s free browser-based cropper. Trim unwanted areas, choose aspect ratios and download clean JPG, PNG or WEBP images.">
+
+    
+
+    <!-- Favicon -->
+
+    <link rel="icon" href="favicon.ico">
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/cropperjs@1.6.2/dist/cropper.min.css">
+
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebApplication",
+  "name":"ToolBucket Crop Picture Online",
+  "url":"https://www.toolbucket.site/crop-picture-online/",
+  "applicationCategory":"MultimediaApplication",
+  "operatingSystem":"Web Browser",
+  "description":"Crop picture online with ToolBucket's free browser-based cropper. Trim unwanted areas, choose aspect ratios and download clean JPG, PNG or WEBP images.",
+  "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}
+}
+</script>
+
+</head>
+<body>
+
+    <div id="navbar"></div>
+
+<section class="hero">
+
+    <div class="container">
+
+        <!-- Left -->
+
+        <div class="hero-content">
+
+            <span class="badge"><i class="fa-solid fa-crop-simple"></i>Crop Picture Online</span>
+
+            <h1>Crop a Picture <span>Online</span><br>In Seconds</h1>
+
+            <p>Crop picture online without installing software. Select the area to keep, adjust the frame, rotate or zoom, then download the finished image.</p>
+
+            <div class="hero-features">
+
+                <div>
+                    <i class="fa-solid fa-bolt"></i>
+                    Fast
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-lock"></i>
+                    Secure
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-mobile-screen"></i>
+                    Mobile Friendly
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Right -->
+
+        <div class="preview-card">
+
+            <div class="upload-area" id="uploadArea">
+
+                <input type="file"
+                    id="fileInput"
+                    accept="image/*"
+                    hidden>
+
+                <i class="fa-solid fa-cloud-arrow-up upload-icon"></i>
+
+                <h3>Drag & Drop Image</h3>
+
+                <p>or</p>
+
+                <button class="upload-btn"
+                    id="uploadBtn">
+
+                    Select Image
+
+                </button>
+
+            </div>
+
+            <!-- Cropper -->
+
+            <div class="cropper-container hidden" id="cropperContainer">
+
+                <img id="image" alt="Preview">
+
+            </div>
+
+            <!-- Controls -->
+
+            <div class="controls hidden" id="controls">
+
+    <div class="toolbar">
+
+        <select id="aspectRatio">
+            <option value="NaN">Free</option>
+            <option value="1">1 : 1</option>
+            <option value="1.3333">4 : 3</option>
+            <option value="1.7777">16 : 9</option>
+            <option value="0.5625">9 : 16</option>
+        </select>
+
+        <button id="rotateLeft">
+            <i class="fa-solid fa-rotate-left"></i>
+        </button>
+
+        <button id="rotateRight">
+            <i class="fa-solid fa-rotate-right"></i>
+        </button>
+
+        <button id="zoomIn">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+        </button>
+
+        <button id="zoomOut">
+            <i class="fa-solid fa-magnifying-glass-minus"></i>
+        </button>
+
+        <button id="resetBtn">
+            <i class="fa-solid fa-arrow-rotate-left"></i>
+        </button>
+
+    </div>
+
+    <button class="crop-btn" id="cropBtn">
+        Crop Image
+    </button>
+
+    <a
+        id="downloadBtn"
+        class="download-btn hidden"
+        download="cropped-image.png">
+        
+
+        Download Image
+
+    </a>
+
+</div>
+
+<div class="image-info hidden" id="imageInfo">
+
+    <div class="info-box">
+
+        <h3>Original Image</h3>
+
+        <p>
+            <i class="fa-solid fa-expand"></i>
+            <span id="originalDimensions">-</span>
+        </p>
+
+        <p>
+            <i class="fa-solid fa-file"></i>
+            <span id="originalSize">-</span>
+        </p>
+
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="info-box">
+
+        <h3>Cropped Image</h3>
+
+        <p>
+            <i class="fa-solid fa-expand"></i>
+            <span id="croppedDimensions">-</span>
+        </p>
+
+        <p>
+            <i class="fa-solid fa-file"></i>
+            <span id="croppedSize">-</span>
+        </p>
+
+    </div>
+
+</div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+<!-- ==========================================
+     IMAGE CROPPER CONTENT - PART 1
+========================================== -->
+
+<section class="tool-content">
+
+    <div class="container">
+
+<div class="content-block">
+<span class="section-badge"><i class="fa-solid fa-crop-simple"></i> Crop Picture Online</span>
+<h2>Crop Picture Online: A Practical Way to Crop Images</h2>
+<p>When you want to crop picture online, the ideal workflow should be quick: select the picture, define the area you want to keep and save the result. ToolBucket is built around that simple process so you can make useful image edits without opening a heavyweight design program.</p><p>Online cropping is helpful when the picture needs a new composition for a website, profile, social post, product listing or document. Removing extra edges can make a subject more prominent and can also help an image fit a specific content box.</p><p>ToolBucket includes free cropping plus useful preset ratios, rotation and zoom controls. That gives you enough control for everyday image preparation while keeping the interface easy to understand.</p>
+</div>
+
+<div class="content-block">
+<h2>Why Use a Crop Picture Online?</h2>
+<p>The phrase crop picture online usually indicates immediate editing intent. The user already has a picture and needs a result, not a tutorial about photo editing in general. A focused browser cropper therefore needs to put the editing controls close to the top of the page and keep the supporting information practical.</p><p>Cropping is especially valuable for digital publishing because different layouts have different shapes. A wide website banner, square avatar and vertical story cannot all use the same framing. A crop tool lets you adapt one original picture to each destination while preserving the most relevant content.</p><p>With ToolBucket, the crop area remains visible while you make adjustments, which makes the process more intuitive than entering numerical coordinates.</p>
+<h3>Make the subject easier to see</h3>
+<p>A good crop gives the viewer a clearer starting point. Instead of forcing people to look through empty borders or unrelated objects, you can frame the image around the information that matters. This is particularly useful when a picture will appear in a small card, profile area, thumbnail or product grid.</p>
+<h3>Prepare one image for different layouts</h3>
+<p>The same original image can be adapted for several destinations. A square version can work for a profile, a wide version can fit a website banner, and a vertical version can work better on a mobile screen. Cropping gives you control over that framing without changing the underlying subject.</p>
+</div>
+
+<div class="content-block">
+<h2>How to Crop Picture Online</h2>
+<p>Use the following simple workflow to turn an original image into a cleaner, purpose-built crop. You can make the decisions visually, so there is no need to understand complicated editing settings.</p>
+<div class="steps"><div class="step"><span>01</span><div><h3>Upload your picture</h3><p>Select the image file you want to crop and wait for it to appear in the editor.</p></div></div>
+<div class="step"><span>02</span><div><h3>Set the crop area</h3><p>Drag the crop frame around the portion of the picture that should remain.</p></div></div>
+<div class="step"><span>03</span><div><h3>Choose a ratio</h3><p>Select Free or a preset ratio when the destination needs a particular shape.</p></div></div>
+<div class="step"><span>04</span><div><h3>Adjust position and scale</h3><p>Use the crop frame, zoom and rotation controls to improve the framing.</p></div></div>
+<div class="step"><span>05</span><div><h3>Generate the crop</h3><p>Use the crop action to create the selected portion as a new image.</p></div></div>
+<div class="step"><span>06</span><div><h3>Download</h3><p>Review the dimensions and save the finished picture to your device.</p></div></div></div>
+</div>
+
+<div class="content-block">
+<h2>Features That Make the Cropper Easy to Use</h2>
+<p>ToolBucket keeps the editing controls focused on the jobs people commonly need when cropping. The goal is a clear result rather than a crowded interface.</p>
+<div class="feature-grid">
+<div class="feature-card">
+<i class="fa-solid fa-scissors"></i><h3>Easy Trimming</h3><p>Remove unwanted edges without navigating a complex editing application.</p></div>
+<div class="feature-card">
+<i class="fa-solid fa-crop"></i><h3>Visual Crop Area</h3><p>See the selected region clearly while deciding what should remain.</p></div>
+<div class="feature-card">
+<i class="fa-solid fa-border-all"></i><h3>Aspect Ratios</h3><p>Use fixed proportions when preparing pictures for specific layouts.</p></div>
+<div class="feature-card">
+<i class="fa-solid fa-rotate-right"></i><h3>Rotate</h3><p>Correct orientation before the final crop.</p></div>
+<div class="feature-card">
+<i class="fa-solid fa-magnifying-glass-plus"></i><h3>Zoom In</h3><p>Fine-tune the position of small subjects and details.</p></div>
+<div class="feature-card">
+<i class="fa-solid fa-cloud-arrow-down"></i><h3>Download</h3><p>Save the finished picture as soon as the crop is complete.</p></div>
+</div>
+</div>
+
+<div class="content-block">
+<h2>Popular Image Crop Ratios</h2>
+<p>Aspect ratio controls are useful when the destination has a known shape. A ratio does not decide the composition for you; it simply keeps the crop frame consistent while you position the image.</p>
+<div class="format-grid">
+<div class="format-card"><h3>1:1 Square</h3><p>Useful for profile images, product tiles and square social media layouts.</p></div>
+<div class="format-card"><h3>4:3</h3><p>A familiar photo proportion for presentations, general web content and educational graphics.</p></div>
+<div class="format-card"><h3>16:9</h3><p>A wide ratio suited to banners, thumbnails, video graphics and headers.</p></div>
+<div class="format-card"><h3>9:16</h3><p>A vertical ratio for stories and other mobile-first visual formats.</p></div>
+</div>
+<p>Choose a ratio based on the final placement rather than the original dimensions alone. If the image will be used in a flexible website area, Free may be more appropriate. If a platform or design template expects a specific shape, a fixed ratio can make the final upload more predictable.</p>
+</div>
+
+<div class="content-block">
+<h2>Benefits of Cropping Images Before You Publish</h2>
+<p>Good cropping can improve more than appearance. It can make a visual easier to understand, help it fit a layout and reduce distractions around the main subject. For businesses, creators, students and everyday users, these small improvements can make image-based communication more effective.</p>
+<div class="benefits-grid">
+<div class="benefit-card"><i class="fa-solid fa-eye"></i><h3>Clearer Focus</h3><p>Keep attention on the subject instead of unnecessary borders and background space.</p></div>
+<div class="benefit-card"><i class="fa-solid fa-layer-group"></i><h3>Better Layout Fit</h3><p>Prepare an image that matches the shape and space available in a page or template.</p></div>
+<div class="benefit-card"><i class="fa-solid fa-clock"></i><h3>Save Editing Time</h3><p>Use a focused cropper when a full photo editor would be more work than necessary.</p></div>
+<div class="benefit-card"><i class="fa-solid fa-share-nodes"></i><h3>Ready to Share</h3><p>Create cleaner versions of images before publishing them to websites or social platforms.</p></div>
+</div>
+</div>
+
+<div class="content-block">
+<h2>Common Uses for a Crop Picture Online</h2>
+<p>Image cropping is useful across personal, professional and educational workflows. The best crop depends on what the viewer needs to see and where the image will appear.</p>
+<div class="use-case-grid">
+<div class="use-card">
+<i class="fa-solid fa-id-card"></i><h3>Profile Images</h3><p>Crop around a face or subject for a clean avatar.</p></div>
+<div class="use-card">
+<i class="fa-solid fa-shop"></i><h3>Store Photos</h3><p>Create consistent product framing for online shops.</p></div>
+<div class="use-card">
+<i class="fa-solid fa-blog"></i><h3>Blog Graphics</h3><p>Trim images to fit article layouts and content cards.</p></div>
+<div class="use-card">
+<i class="fa-solid fa-mobile-screen"></i><h3>Mobile Content</h3><p>Prepare pictures for vertical story and mobile designs.</p></div>
+<div class="use-card">
+<i class="fa-solid fa-chalkboard"></i><h3>Learning Material</h3><p>Crop diagrams, screenshots and supporting visuals for coursework.</p></div>
+<div class="use-card">
+<i class="fa-solid fa-camera"></i><h3>Everyday Photos</h3><p>Remove distracting edges and improve the composition of personal images.</p></div>
+</div>
+</div>
+
+<div class="content-block">
+<h2>How to Get a Better Crop</h2>
+<p>A technically correct crop can still look awkward if the framing is too tight or removes useful context. Use these practical tips when you want a cleaner result.</p>
+<div class="tips-list">
+<div class="tip-item"><i class="fa-solid fa-check"></i><p>Choose the final destination before deciding how tightly to crop.</p></div><div class="tip-item"><i class="fa-solid fa-check"></i><p>Keep important objects away from the extreme edge when the image may be resized later.</p></div><div class="tip-item"><i class="fa-solid fa-check"></i><p>Use a fixed ratio if your website or social template has a defined image slot.</p></div><div class="tip-item"><i class="fa-solid fa-check"></i><p>Use zoom to inspect small details instead of repeatedly moving the crop frame.</p></div><div class="tip-item"><i class="fa-solid fa-check"></i><p>Always review the final crop before downloading so no important information has been cut away.</p></div>
+</div>
+</div>
+
+<div class="content-block">
+<h2>Crop Images While Keeping the Important Details</h2>
+<p>Cropping is a selective edit: the area outside the crop frame is removed, while the selected area becomes the new image. That makes it important to check the frame carefully before creating the final file. Look at faces, text, logos, product labels and other details that could lose meaning if they are cut away.</p>
+<p>For small display areas, a stronger crop can often work better because the subject becomes more prominent. For large layouts, a little extra space may help the composition feel natural. The right choice depends on the destination and the story the picture needs to communicate.</p>
+<p>If you are preparing several versions of one original image, keep the original file safely stored and create separate crops for each destination. That gives you the flexibility to return to the full composition later.</p>
+</div>
+
+<div class="content-block">
+<h2>Browser-Based Image Cropping</h2>
+<p>A browser-based cropper is convenient because the editing interface is available from a web page rather than tied to one desktop application. This is useful when you are working from different devices or only need a small image adjustment.</p>
+<p>ToolBucket is designed around the crop task itself. The page provides the image area, crop controls, aspect ratios and download action in one workflow. For straightforward cropping, that can be easier than opening a large application with tools you do not need.</p>
+<p>As with any online editing workflow, you should use a trusted environment for sensitive images and understand how the particular tool handles files. ToolBucket's cropper is designed around browser-based processing so the editing experience stays simple and direct.</p>
+</div>
+
+
+<div class="content-block">
+<h2>When Cropping a Picture Online Makes Sense</h2>
+<p>There are many situations where you do not need a full photo editor. If the only problem is extra space around a subject, an incorrectly shaped frame or an unwanted section at the edge, a focused crop tool is usually enough. This is why crop picture online searches are common among people preparing quick content for websites, social media and documents.</p>
+<p>Online cropping is especially convenient when you are working from a device that does not have your usual editing software installed. A browser-based workflow can be used from a laptop at college, a desktop at work or a smartphone while travelling. The same basic steps remain familiar: select the picture, adjust the crop, check the result and download it.</p>
+<p>Before you crop, consider whether the image needs to preserve context. A close crop may look stronger for a product or portrait, but a wider frame may be better for a travel scene or an explanatory diagram. If the image contains text, leave enough of the surrounding layout for the text to remain understandable.</p>
+<h3>Create versions for different destinations</h3>
+<p>One original picture can have several useful crops. A square version can work as an avatar, a wide version can work in a website section, and a vertical version can work in a story layout. Keeping these versions separate makes it easier to reuse the original image across different projects.</p>
+</div>
+
+
+<div class="content-block">
+<h2>More Practical Uses for Image Cropping</h2>
+<p>Cropping is also a useful step when preparing images for a consistent content library. If you manage a website, blog, store or social profile, images often come from different cameras and sources, which means their original framing can vary widely. Creating a consistent crop before publishing can make cards and galleries look more organised. Start by deciding which visual elements must remain visible, then choose a suitable aspect ratio and position the crop around those elements. Do not assume every image needs exactly the same amount of zoom; the subject may naturally require a slightly different frame. Consistency should make the collection easier to view while still allowing each picture to communicate its subject clearly.</p>
+</div>
+<div class="content-block">
+<h2>Why Choose ToolBucket for Crop Picture Online?</h2>
+<p>ToolBucket focuses on useful online utilities with a clean interface and practical controls. For image cropping, that means giving you the tools needed to frame a picture without turning a simple task into a complicated editing project.</p>
+<div class="why-grid">
+<div class="why-card">Free to Use</div>
+<div class="why-card">Simple Workflow</div>
+<div class="why-card">No Watermark</div>
+<div class="why-card">Mobile Friendly</div>
+<div class="why-card">Common Image Formats</div>
+<div class="why-card">Fast Browser Editing</div>
+</div>
+<p>Whether you are preparing one profile picture or adjusting images for a larger project, the same basic crop workflow can be repeated whenever you need it.</p>
+</div>
+
+<div class="content-block">
+<h2>Explore More Image Tools</h2>
+<p>After cropping, you may need another simple image operation. ToolBucket's image tools can be used as separate steps depending on what your project requires.</p>
+<ul><li><a href="/Image-compressor/">Image Compressor</a> — Compress an image after cropping if you need a smaller file.</li>
+<li><a href="/Image-resizer/">Image Resizer</a> — Change the final pixel dimensions after cropping.</li>
+<li><a href="/Image-converter/">Image Converter</a> — Convert the cropped image to another supported format.</li>
+<li><a href="/crop-image-online/">Crop Image Online</a> — Open another crop-focused page.</li>
+<li><a href="/online-photo-cropper/">Online Photo Cropper</a> — Open another crop-focused page.</li>
+<li><a href="/photo-cropper/">Photo Cropper</a> — Open another crop-focused page.</li>
+<li><a href="/picture-cropper/">Picture Cropper</a> — Open another crop-focused page.</li></ul>
+<p>Using separate tools for separate tasks keeps the workflow straightforward. Crop first when framing is the priority, resize when dimensions need to change, compress when file size matters, and convert when the output format needs to change.</p>
+</div>
+</div>
+</section>
+
+
+<div class="section-title">
+    <span class="section-badge"><i class="fa-solid fa-circle-question"></i> FAQ</span>
+    <h2>Frequently Asked <span>Questions</span></h2>
+    <p>Answers to common questions about crop picture online and the ToolBucket image cropper.</p>
+</div>
+<div class="faq-container">
+<div class="faq-item">
+    <button class="faq-question">Can I crop a picture online without installing an app?<span>+</span></button>
+    <div class="faq-answer"><p>Yes. ToolBucket provides the crop workflow in your browser, so you can perform basic cropping without installing a separate application.</p></div>
+</div><div class="faq-item">
+    <button class="faq-question">Is the crop picture online tool free?<span>+</span></button>
+    <div class="faq-answer"><p>Yes. The ToolBucket cropper is intended for free everyday image cropping.</p></div>
+</div><div class="faq-item">
+    <button class="faq-question">Can I crop a picture to 16:9?<span>+</span></button>
+    <div class="faq-answer"><p>Yes. Select the 16:9 preset and position the crop area around the content you want to keep.</p></div>
+</div><div class="faq-item">
+    <button class="faq-question">Does the tool work with PNG and WEBP?<span>+</span></button>
+    <div class="faq-answer"><p>Yes. Common formats such as PNG, JPG and WEBP are supported by the browser-based crop workflow.</p></div>
+</div><div class="faq-item">
+    <button class="faq-question">Can I crop a picture on a smartphone?<span>+</span></button>
+    <div class="faq-answer"><p>Yes. You can use the page from a modern mobile browser.</p></div>
+</div><div class="faq-item">
+    <button class="faq-question">Can I rotate the picture before cropping?<span>+</span></button>
+    <div class="faq-answer"><p>Yes. Rotation controls are available in the editing interface.</p></div>
+</div>
+</div>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/cropperjs@1.6.2/dist/cropper.min.js"></script>
+<div id="footer"></div>
+
+
+
+
+<script src="../js/navbar.js"></script>
+<script src="../js/include.js"></script>
+
+<script src="/Image-cropper/js/script.js"></script>
+
+</body>
+</html>
